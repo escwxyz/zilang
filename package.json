@@ -1,0 +1,25 @@
+{
+	"name": "zilang",
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint",
+		"format": "biome format --write",
+		"check-types": "turbo run check-types"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.0.5",
+		"turbo": "^2.5.4",
+		"typescript": "catalog:"
+	},
+	"packageManager": "pnpm@10.10.0",
+	"engines": {
+		"node": ">=18"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+		  "sharp"
+		]
+	  }
+}
