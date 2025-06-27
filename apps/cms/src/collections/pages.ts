@@ -1,11 +1,7 @@
 import { SlugField } from "@nouance/payload-better-fields-plugin/Slug";
-import {
-	FixedToolbarFeature,
-	HeadingFeature,
-	InlineToolbarFeature,
-	lexicalEditor,
-} from "@payloadcms/richtext-lexical";
 import type { CollectionConfig } from "payload";
+import { isAdmin, isAuthenticated, isAuthenticatedOrPublished } from "@/access";
+import { HeroBlock } from "@/blocks/hero";
 import { MediaBlock } from "@/blocks/media";
 
 export const Pages: CollectionConfig = {
@@ -16,6 +12,13 @@ export const Pages: CollectionConfig = {
 	},
 	admin: {
 		group: "内容相关",
+		useAsTitle: "title",
+	},
+	access: {
+		read: isAuthenticatedOrPublished,
+		create: isAuthenticated,
+		update: isAuthenticated,
+		delete: isAdmin,
 	},
 	fields: [
 		{
@@ -28,64 +31,6 @@ export const Pages: CollectionConfig = {
 		{
 			type: "tabs",
 			tabs: [
-				{
-					label: "页面横幅",
-					admin: {
-						description:
-							"页面横幅是页面顶部的区域，通常用于展示页面主题或吸引用户注意。",
-					},
-					fields: [
-						{
-							type: "group",
-							name: "hero",
-							fields: [
-								{
-									name: "type",
-									type: "select",
-									defaultValue: "lowImpact",
-									label: "Type",
-									options: [
-										{
-											label: "None",
-											value: "none",
-										},
-										{
-											label: "High Impact",
-											value: "highImpact",
-										},
-										{
-											label: "Medium Impact",
-											value: "mediumImpact",
-										},
-										{
-											label: "Low Impact",
-											value: "lowImpact",
-										},
-									],
-									required: true,
-								},
-								{
-									name: "richText",
-									type: "richText",
-									editor: lexicalEditor({
-										features: ({ rootFeatures }) => {
-											return [
-												...rootFeatures,
-												HeadingFeature({
-													enabledHeadingSizes: ["h1", "h2", "h3", "h4"],
-												}),
-												FixedToolbarFeature(),
-												InlineToolbarFeature(),
-											];
-										},
-									}),
-									label: false,
-								},
-							],
-						},
-					],
-				},
-
 				{
 					label: "页面内容",
 					admin: {
@@ -105,7 +50,7 @@ export const Pages: CollectionConfig = {
 							admin: {
 								initCollapsed: true,
 							},
-							blocks: [MediaBlock],
+							blocks: [MediaBlock, HeroBlock],
 						},
 					],
 				},

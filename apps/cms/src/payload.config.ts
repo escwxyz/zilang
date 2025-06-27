@@ -8,8 +8,9 @@ import sharp from "sharp";
 import { Media } from "./collections/media";
 import { Packaging } from "./collections/packaging";
 import { Pages } from "./collections/pages";
-import { Products } from "./collections/products";
-import { Users } from "./collections/Users";
+import { PumpControllers } from "./collections/pump-controllers";
+import { Testmonials } from "./collections/testmonials";
+import { Users } from "./collections/users";
 import { Company } from "./globals/company";
 import { Footer } from "./globals/footer";
 import { Header } from "./globals/header";
@@ -29,7 +30,7 @@ export default buildConfig({
 		supportedLanguages: { zh },
 		fallbackLanguage: "zh",
 	},
-	collections: [Users, Media, Products, Pages, Packaging],
+	collections: [Users, Media, Pages, PumpControllers, Packaging, Testmonials],
 	globals: [Header, Footer, Site, Company],
 	editor: lexicalEditor(),
 	secret: process.env.PAYLOAD_SECRET || "",

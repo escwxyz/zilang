@@ -69,9 +69,10 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
-    products: Product;
     pages: Page;
+    'pump-controllers': PumpController;
     packaging: Packaging;
+    testmonials: Testmonial;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -80,9 +81,10 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
-    products: ProductsSelect<false> | ProductsSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
+    'pump-controllers': PumpControllersSelect<false> | PumpControllersSelect<true>;
     packaging: PackagingSelect<false> | PackagingSelect<true>;
+    testmonials: TestmonialsSelect<false> | TestmonialsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -135,6 +137,7 @@ export interface UserAuthOperations {
  */
 export interface User {
   id: string;
+  role: 'admin' | 'editor';
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -152,10 +155,13 @@ export interface User {
  */
 export interface Media {
   id: string;
+  /**
+   * 替代文本是媒体内容的描述，当媒体无法显示时，替代文本会显示在客户端
+   */
   alt: string;
   caption?: string | null;
   /**
-   * 用于在客户端显示模糊的预览图
+   * 用于在客户端显示模糊的预览图，无需手动设置
    */
   blurDataUrl?: string | null;
   updatedAt: string;
@@ -172,13 +178,67 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "products".
+ * via the `definition` "pages".
  */
-export interface Product {
+export interface Page {
   id: string;
   title: string;
   slug?: string | null;
   slugLock?: boolean | null;
+  content: (MediaBlockType | HeroBlockType)[];
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "MediaBlockType".
+ */
+export interface MediaBlockType {
+  /**
+   * 选择一个媒体文件
+   */
+  media: string | Media;
+  description?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'mediaBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HeroBlockType".
+ */
+export interface HeroBlockType {
+  carousel?:
+    | {
+        media: string | Media;
+        title: string;
+        description: string;
+        primaryCTA: string;
+        primaryCTAUrl: string;
+        secondaryCTA?: string | null;
+        secondaryCTAUrl?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * 如果勾选，则滚动横幅会循环播放
+   */
+  loop?: boolean | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'heroBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pump-controllers".
+ */
+export interface PumpController {
+  id: string;
+  title: string;
+  slug?: string | null;
+  slugLock?: boolean | null;
+  series: 'gs+' | 'gs' | 'ps';
   category: 'standard' | 'smart' | 'auto';
   excerpt?: string | null;
   modelName: string;
@@ -198,9 +258,9 @@ export interface Product {
     };
     [k: string]: unknown;
   };
-  voltage?: {
-    min?: number | null;
-    max?: number | null;
+  voltage: {
+    min: number;
+    max: number;
   };
   contactLoad: string;
   relayLife: number;
@@ -208,9 +268,9 @@ export interface Product {
   maxPower: number;
   maxPressure: number;
   extremePressure: number;
-  startingPressure?: {
-    min?: number | null;
-    max?: number | null;
+  startingPressure: {
+    min: number;
+    max: number;
   };
   frequency?: {
     min?: number | null;
@@ -225,7 +285,7 @@ export interface Product {
   buffer?: string | null;
   verticalHeight: number;
   packaging: string | Packaging;
-  relatedProducts?: (string | Product)[] | null;
+  related?: (string | PumpController)[] | null;
   /**
    * 根据数量不同填写不同的交货时间
    */
@@ -263,49 +323,17 @@ export interface Packaging {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages".
+ * via the `definition` "testmonials".
  */
-export interface Page {
+export interface Testmonial {
   id: string;
-  title: string;
-  slug?: string | null;
-  slugLock?: boolean | null;
-  hero: {
-    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact';
-    richText?: {
-      root: {
-        type: string;
-        children: {
-          type: string;
-          version: number;
-          [k: string]: unknown;
-        }[];
-        direction: ('ltr' | 'rtl') | null;
-        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-        indent: number;
-        version: number;
-      };
-      [k: string]: unknown;
-    } | null;
-  };
-  content: MediaBlockType[];
+  name: string;
+  avatar?: (string | null) | Media;
+  country: string;
+  star: 'one' | 'two' | 'three' | 'four' | 'five';
+  content: string;
   updatedAt: string;
   createdAt: string;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "MediaBlockType".
- */
-export interface MediaBlockType {
-  /**
-   * 选择一个媒体文件
-   */
-  media: string | Media;
-  description?: string | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'mediaBlock';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -323,16 +351,20 @@ export interface PayloadLockedDocument {
         value: string | Media;
       } | null)
     | ({
-        relationTo: 'products';
-        value: string | Product;
-      } | null)
-    | ({
         relationTo: 'pages';
         value: string | Page;
       } | null)
     | ({
+        relationTo: 'pump-controllers';
+        value: string | PumpController;
+      } | null)
+    | ({
         relationTo: 'packaging';
         value: string | Packaging;
+      } | null)
+    | ({
+        relationTo: 'testmonials';
+        value: string | Testmonial;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -381,6 +413,7 @@ export interface PayloadMigration {
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
+  role?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
@@ -413,12 +446,62 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "products_select".
+ * via the `definition` "pages_select".
  */
-export interface ProductsSelect<T extends boolean = true> {
+export interface PagesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   slugLock?: T;
+  content?:
+    | T
+    | {
+        mediaBlock?: T | MediaBlockTypeSelect<T>;
+        heroBlock?: T | HeroBlockTypeSelect<T>;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "MediaBlockType_select".
+ */
+export interface MediaBlockTypeSelect<T extends boolean = true> {
+  media?: T;
+  description?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HeroBlockType_select".
+ */
+export interface HeroBlockTypeSelect<T extends boolean = true> {
+  carousel?:
+    | T
+    | {
+        media?: T;
+        title?: T;
+        description?: T;
+        primaryCTA?: T;
+        primaryCTAUrl?: T;
+        secondaryCTA?: T;
+        secondaryCTAUrl?: T;
+        id?: T;
+      };
+  loop?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pump-controllers_select".
+ */
+export interface PumpControllersSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  slugLock?: T;
+  series?: T;
   category?: T;
   excerpt?: T;
   modelName?: T;
@@ -457,7 +540,7 @@ export interface ProductsSelect<T extends boolean = true> {
   buffer?: T;
   verticalHeight?: T;
   packaging?: T;
-  relatedProducts?: T;
+  related?: T;
   leadTime?:
     | T
     | {
@@ -468,39 +551,6 @@ export interface ProductsSelect<T extends boolean = true> {
       };
   updatedAt?: T;
   createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages_select".
- */
-export interface PagesSelect<T extends boolean = true> {
-  title?: T;
-  slug?: T;
-  slugLock?: T;
-  hero?:
-    | T
-    | {
-        type?: T;
-        richText?: T;
-      };
-  content?:
-    | T
-    | {
-        mediaBlock?: T | MediaBlockTypeSelect<T>;
-      };
-  updatedAt?: T;
-  createdAt?: T;
-  _status?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "MediaBlockType_select".
- */
-export interface MediaBlockTypeSelect<T extends boolean = true> {
-  media?: T;
-  description?: T;
-  id?: T;
-  blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -518,6 +568,19 @@ export interface PackagingSelect<T extends boolean = true> {
       };
   quantity?: T;
   weight?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "testmonials_select".
+ */
+export interface TestmonialsSelect<T extends boolean = true> {
+  name?: T;
+  avatar?: T;
+  country?: T;
+  star?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -559,6 +622,21 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Header {
   id: string;
+  logo: string | Media;
+  /**
+   * 如果勾选，则会在顶部导航栏显示品牌名称
+   */
+  showName?: boolean | null;
+  name?: string | null;
+  links?:
+    | {
+        type: 'internal' | 'external' | 'page';
+        page?: (string | null) | Page;
+        url?: string | null;
+        label?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -568,6 +646,20 @@ export interface Header {
  */
 export interface Footer {
   id: string;
+  links?:
+    | {
+        label: string;
+        /**
+         * 如果链接地址以 / 开头，则会被视为内部链接
+         */
+        url: string;
+        /**
+         * 点击链接时，是否在新窗口打开，如果是外部链接，则在新窗口打开
+         */
+        target?: ('_self' | '_blank') | null;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -608,6 +700,18 @@ export interface Company {
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
+  logo?: T;
+  showName?: T;
+  name?: T;
+  links?:
+    | T
+    | {
+        type?: T;
+        page?: T;
+        url?: T;
+        label?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -617,6 +721,14 @@ export interface HeaderSelect<T extends boolean = true> {
  * via the `definition` "footer_select".
  */
 export interface FooterSelect<T extends boolean = true> {
+  links?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+        target?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

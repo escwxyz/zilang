@@ -4,27 +4,51 @@ import type { CollectionConfig } from "payload";
 import { leadTime } from "@/fields/leadtime";
 import { RangeField } from "@/fields/range";
 
-export const Products: CollectionConfig = {
-	slug: "products",
+export const PumpControllers: CollectionConfig = {
+	slug: "pump-controllers",
 	labels: {
-		singular: "产品",
-		plural: "产品",
+		singular: "水泵控制器",
+		plural: "水泵控制器",
 	},
 	admin: {
 		group: "产品相关",
+		useAsTitle: "title",
 	},
 	fields: [
 		{
 			name: "title",
 			type: "text",
-			label: "产品名称",
+			label: "名称",
 			required: true,
 		},
 		...SlugField(),
 		{
+			name: "series",
+			type: "select",
+			label: "系列",
+			required: true,
+			admin: {
+				position: "sidebar",
+			},
+			options: [
+				{
+					label: "GS+",
+					value: "gs+",
+				},
+				{
+					label: "GS",
+					value: "gs",
+				},
+				{
+					label: "PS",
+					value: "ps",
+				},
+			],
+		},
+		{
 			name: "category",
 			type: "select",
-			label: "产品分类",
+			label: "分类",
 			required: true,
 			options: [
 				{
@@ -48,7 +72,7 @@ export const Products: CollectionConfig = {
 		{
 			name: "excerpt",
 			type: "textarea",
-			label: "产品概要",
+			label: "简介",
 			required: false,
 			admin: {
 				position: "sidebar",
@@ -70,7 +94,7 @@ export const Products: CollectionConfig = {
 						{
 							name: "gallery",
 							type: "upload",
-							label: "产品媒体文件",
+							label: "媒体文件",
 							relationTo: "media",
 							minRows: 1,
 							maxRows: 10,
@@ -79,18 +103,19 @@ export const Products: CollectionConfig = {
 						{
 							name: "description",
 							type: "richText",
-							label: "产品描述",
+							label: "详情描述",
 							required: true,
 						},
 					],
 				},
 				{
-					label: "产品参数",
+					label: "参数",
 					fields: [
 						RangeField({
 							name: "voltage",
 							label: "使用电压范围",
 							unit: "V",
+							required: true,
 						}),
 						{
 							type: "row",
@@ -189,6 +214,7 @@ export const Products: CollectionConfig = {
 									unit: "bar",
 									decimalScale: 1,
 									fixedDecimalScale: true,
+									required: true,
 								}),
 							],
 						},
@@ -311,10 +337,10 @@ export const Products: CollectionConfig = {
 							label: "包装规格",
 						},
 						{
-							name: "relatedProducts",
+							name: "related",
 							type: "relationship",
-							relationTo: "products",
-							label: "相关产品",
+							relationTo: "pump-controllers",
+							label: "相关水泵控制器",
 							hasMany: true,
 							maxRows: 6,
 						},

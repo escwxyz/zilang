@@ -5,6 +5,7 @@ export const Packaging: CollectionConfig = {
 	slug: "packaging",
 	admin: {
 		group: "产品相关",
+		useAsTitle: "title",
 	},
 	labels: {
 		singular: "包装规格",
