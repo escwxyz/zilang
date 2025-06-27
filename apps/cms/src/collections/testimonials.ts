@@ -1,7 +1,7 @@
 import type { CollectionConfig } from "payload";
 
-export const Testmonials: CollectionConfig = {
-	slug: "testmonials",
+export const Testimonials: CollectionConfig = {
+	slug: "testimonials",
 	labels: {
 		singular: "客户评价",
 		plural: "客户评价",

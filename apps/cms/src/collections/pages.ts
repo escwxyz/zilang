@@ -3,6 +3,7 @@ import type { CollectionConfig } from "payload";
 import { isAdmin, isAuthenticated, isAuthenticatedOrPublished } from "@/access";
 import { HeroBlock } from "@/blocks/hero";
 import { MediaBlock } from "@/blocks/media";
+import { TestimonialsBlock } from "@/blocks/testimonials";
 
 export const Pages: CollectionConfig = {
 	slug: "pages",
@@ -50,7 +51,7 @@ export const Pages: CollectionConfig = {
 							admin: {
 								initCollapsed: true,
 							},
-							blocks: [MediaBlock, HeroBlock],
+							blocks: [MediaBlock, HeroBlock, TestimonialsBlock],
 						},
 					],
 				},
@@ -60,7 +61,7 @@ export const Pages: CollectionConfig = {
 	versions: {
 		drafts: {
 			autosave: {
-				interval: 1000,
+				interval: 100,
 			},
 		},
 		maxPerDoc: 5,

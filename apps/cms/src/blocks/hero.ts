@@ -1,4 +1,15 @@
-import type { Block } from "payload";
+import { APIError, type Block, type TextFieldValidation } from "payload";
+
+const validateUrl: TextFieldValidation = (value) => {
+	if (!value) return true;
+
+	try {
+		new URL(value, value.startsWith("/") ? "http://example.com" : undefined);
+		return true;
+	} catch {
+		throw new APIError("请输入有效的URL");
+	}
+};
 
 export const HeroBlock: Block = {
 	slug: "heroBlock",
@@ -52,6 +63,7 @@ export const HeroBlock: Block = {
 							type: "text",
 							label: "主按钮链接",
 							required: true,
+							validate: validateUrl,
 						},
 					],
 				},
@@ -69,6 +81,7 @@ export const HeroBlock: Block = {
 							type: "text",
 							label: "次按钮链接",
 							required: false,
+							validate: validateUrl,
 						},
 					],
 				},
