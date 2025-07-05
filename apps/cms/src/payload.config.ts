@@ -6,11 +6,13 @@ import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { zh } from "@payloadcms/translations/languages/zh";
 import { buildConfig } from "payload";
 import sharp from "sharp";
+import { Faqs } from "./collections/faqs";
+import { Inquiries } from "./collections/inquiries";
 import { Media } from "./collections/media";
+import { Newsletters } from "./collections/newsletters";
 import { Packaging } from "./collections/packaging";
 import { Pages } from "./collections/pages";
 import { PumpControllers } from "./collections/pump-controllers";
-import { Testimonials } from "./collections/testimonials";
 import { Users } from "./collections/users";
 import { Company } from "./globals/company";
 import { Footer } from "./globals/footer";
@@ -31,7 +33,16 @@ export default buildConfig({
 		supportedLanguages: { zh },
 		fallbackLanguage: "zh",
 	},
-	collections: [Users, Media, Pages, PumpControllers, Packaging, Testimonials],
+	collections: [
+		Users,
+		Media,
+		Pages,
+		PumpControllers,
+		Packaging,
+		Faqs,
+		Inquiries,
+		Newsletters,
+	],
 	globals: [Header, Footer, Site, Company],
 	editor: lexicalEditor(),
 	secret: process.env.PAYLOAD_SECRET || "",
@@ -42,8 +53,8 @@ export default buildConfig({
 		url: process.env.DATABASE_URI || "",
 	}),
 	email: resendAdapter({
-		defaultFromAddress: "dev@payloadcms.com",
-		defaultFromName: "Payload CMS",
+		defaultFromAddress: process.env.RESEND_FROM_ADDRESS || "",
+		defaultFromName: process.env.RESEND_FROM_NAME || "",
 		apiKey: process.env.RESEND_API_KEY || "",
 	}),
 	// Version issue
@@ -61,4 +72,33 @@ export default buildConfig({
 		},
 	],
 	telemetry: false,
+	onInit: async (payload) => {
+		const email =
+			process.env.NODE_ENV === "production"
+				? process.env.ADMIN_EMAIL
+				: "admin@admin.com";
+		const password =
+			process.env.NODE_ENV === "production"
+				? process.env.ADMIN_PASSWORD
+				: "admin";
+
+		const existing = await payload.find({
+			collection: "users",
+			where: { email: { equals: email } },
+		});
+
+		if (!existing.docs.length) {
+			await payload.create({
+				collection: "users",
+				data: {
+					email,
+					password,
+					role: "admin",
+				},
+			});
+			payload.logger.info(`Admin user ${email} created`);
+		} else {
+			payload.logger.info(`Admin user ${email} already exists`);
+		}
+	},
 });

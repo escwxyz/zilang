@@ -18,15 +18,6 @@ export const Footer: GlobalConfig = {
 			},
 		},
 		{
-			name: "showAddress",
-			type: "checkbox",
-			label: "显示地址",
-			defaultValue: true,
-			admin: {
-				description: "如果勾选，则会在页脚显示地址",
-			},
-		},
-		{
 			name: "links",
 			type: "array",
 			label: "导航链接",

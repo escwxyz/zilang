@@ -1,6 +1,7 @@
 import { NumberField } from "@nouance/payload-better-fields-plugin/Number";
 import { SlugField } from "@nouance/payload-better-fields-plugin/Slug";
 import type { CollectionConfig } from "payload";
+import { FeaturesBlock } from "@/blocks/features";
 import { leadTime } from "@/fields/leadtime";
 import { RangeField } from "@/fields/range";
 
@@ -22,6 +23,14 @@ export const PumpControllers: CollectionConfig = {
 			required: true,
 		},
 		...SlugField(),
+		{
+			name: "featured",
+			type: "checkbox",
+			label: "是否推荐放在首页",
+			admin: {
+				position: "sidebar",
+			},
+		},
 		{
 			name: "series",
 			type: "select",
@@ -105,6 +114,12 @@ export const PumpControllers: CollectionConfig = {
 							type: "richText",
 							label: "详情描述",
 							required: true,
+						},
+						{
+							name: "features",
+							type: "blocks",
+							label: "产品特性",
+							blocks: [FeaturesBlock],
 						},
 					],
 				},

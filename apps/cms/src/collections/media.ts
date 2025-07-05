@@ -5,8 +5,8 @@ import { generateBlurDataUrl } from "@/hooks/generate-blurdata-url";
 export const Media: CollectionConfig = {
 	slug: "media",
 	labels: {
-		singular: "媒体",
-		plural: "媒体",
+		singular: "媒体资源",
+		plural: "媒体资源",
 	},
 	admin: {
 		group: "媒体管理",

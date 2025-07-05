@@ -11,9 +11,9 @@ const validateUrl: TextFieldValidation = (value) => {
 	}
 };
 
-export const HeroBlock: Block = {
-	slug: "heroBlock",
-	interfaceName: "HeroBlockType",
+export const CarouselHeroBlock: Block = {
+	slug: "carouselHero",
+	interfaceName: "CarouselHeroBlock",
 	labels: {
 		singular: "滚动横幅区块",
 		plural: "滚动横幅区块",

@@ -1,15 +1,20 @@
 import { SlugField } from "@nouance/payload-better-fields-plugin/Slug";
 import type { CollectionConfig } from "payload";
 import { isAdmin, isAuthenticated, isAuthenticatedOrPublished } from "@/access";
-import { HeroBlock } from "@/blocks/hero";
+import { CarouselHeroBlock } from "@/blocks/carousel-hero";
+import { FaqsBlock } from "@/blocks/faqs";
+import { FeaturedProductsBlock } from "@/blocks/featured-products";
+import { FeaturesBlock } from "@/blocks/features";
 import { MediaBlock } from "@/blocks/media";
+import { MediaGridBlock } from "@/blocks/media-grid";
 import { TestimonialsBlock } from "@/blocks/testimonials";
+import { TextBlock } from "@/blocks/text";
 
 export const Pages: CollectionConfig = {
 	slug: "pages",
 	labels: {
-		singular: "页面",
-		plural: "页面",
+		singular: "网站页面",
+		plural: "网站页面",
 	},
 	admin: {
 		group: "内容相关",
@@ -51,7 +56,16 @@ export const Pages: CollectionConfig = {
 							admin: {
 								initCollapsed: true,
 							},
-							blocks: [MediaBlock, HeroBlock, TestimonialsBlock],
+							blocks: [
+								MediaBlock,
+								CarouselHeroBlock,
+								FeaturedProductsBlock,
+								TestimonialsBlock,
+								FaqsBlock,
+								TextBlock,
+								FeaturesBlock,
+								MediaGridBlock,
+							],
 						},
 					],
 				},
