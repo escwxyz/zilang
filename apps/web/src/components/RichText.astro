@@ -1,0 +1,62 @@
+---
+import type {
+  DefaultNodeTypes,
+  SerializedLinkNode,
+  DefaultTypedEditorState,
+} from "@payloadcms/richtext-lexical";
+
+import type { HTMLAttributes } from "astro/types";
+import { cn } from "@/lib/utils";
+
+import {
+  LinkHTMLConverter,
+  type HTMLConvertersFunction,
+  convertLexicalToHTML,
+} from "@payloadcms/richtext-lexical/html";
+
+// TODO: Depends if we use blocks inside rich text
+type NodeTypes = DefaultNodeTypes;
+//   | SerializedBlockNode<CTABlockProps | MediaBlockProps | BannerBlockProps | CodeBlockProps>
+
+const internalDocToHref = ({ linkNode }: { linkNode: SerializedLinkNode }) => {
+  const { value, relationTo } = linkNode.fields.doc!;
+  if (typeof value !== "object") {
+    throw new Error("Expected value to be an object");
+  }
+  const slug = value.slug;
+  //   return relationTo === "posts" ? `/posts/${slug}` : `/${slug}`;
+  return `/${slug}`;
+};
+
+const htmlConverters: HTMLConvertersFunction<NodeTypes> = ({
+  defaultConverters,
+}) => ({
+  ...defaultConverters,
+  ...LinkHTMLConverter({ internalDocToHref }),
+  blocks: {},
+});
+
+type Props = {
+  data: DefaultTypedEditorState;
+  enableGutter?: boolean;
+  enableProse?: boolean;
+} & HTMLAttributes<"div">;
+
+const { data, enableGutter = true, enableProse = true, ...rest } = Astro.props;
+
+const html = convertLexicalToHTML({
+  data,
+  converters: htmlConverters,
+});
+---
+
+<div
+  {...rest}
+  class={cn("payload-richtext", {
+    container: enableGutter,
+    "max-w-none": !enableGutter,
+    "mx-auto prose md:prose-md dark:prose-invert": enableProse,
+  })}
+>
+  <div class="prose dark:prose-invert" set:html={html} />
+</div>

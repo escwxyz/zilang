@@ -3,7 +3,6 @@ import {
   Dialog,
   DialogTrigger,
   DialogContent,
-  DialogClose,
 } from "@/components/starwind/dialog";
 import { Button } from "@/components/starwind/button";
 import type { CarouselImage } from "./types";
@@ -79,15 +78,11 @@ const {
                   />
                 </DialogTrigger>
                 <DialogContent class="flex flex-col items-center justify-center max-w-[90vw] max-h-[90vh]">
-                  <div class="flex flex-col items-center justify-center" />
                   <img
                     src={img.url}
                     alt={img.title}
                     class={`w-full h-full object-contain ${classNameImage}`}
                   />
-                  <DialogClose class="absolute top-4 right-4">
-                    Close
-                  </DialogClose>
                 </DialogContent>
               </Dialog>
             </div>
@@ -172,7 +167,7 @@ const {
       console.log(currentImageIndex.get());
     });
 
-    currentImageIndex.subscribe((idx) => {
+    const unsubscribe = currentImageIndex.subscribe((idx) => {
       if (embla.selectedScrollSnap() !== idx) {
         embla.scrollTo(idx);
       }
@@ -184,5 +179,9 @@ const {
     document
       .getElementById("emblaNext")
       ?.addEventListener("click", () => embla.scrollNext());
+
+    window.addEventListener("beforeunload", () => {
+      unsubscribe();
+    });
   }
 </script>

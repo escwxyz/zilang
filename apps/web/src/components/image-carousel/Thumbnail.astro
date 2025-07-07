@@ -25,7 +25,7 @@ const { image, className, index } = Astro.props;
   import { currentImageIndex } from "./store";
 
   document.querySelectorAll("[data-thumb-idx]").forEach((btn) => {
-    currentImageIndex.subscribe((index) => {
+    const unsubscribe = currentImageIndex.subscribe((index) => {
       const idx = Number(btn.getAttribute("data-thumb-idx"));
       const isActive = index === idx;
       btn.classList.remove("opacity-100", "opacity-50");
@@ -35,6 +35,10 @@ const { image, className, index } = Astro.props;
     btn.addEventListener("click", (e) => {
       const idx = Number(btn.getAttribute("data-thumb-idx"));
       currentImageIndex.set(idx);
+    });
+
+    window.addEventListener("beforeunload", () => {
+      unsubscribe();
     });
   });
 </script>
