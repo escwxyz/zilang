@@ -5,7 +5,9 @@
 		"build": "turbo run build",
 		"dev": "turbo run dev",
 		"lint": "turbo run lint",
-		"format": "biome format --write",
+		"format": "pnpm run format:biome && pnpm run format:prettier",
+		"format:biome": "biome format --write",
+		"format:prettier": "prettier --write \"**/*.{astro,json,md,css,html}\"",
 		"check-types": "turbo run check-types"
 	},
 	"devDependencies": {

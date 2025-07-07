@@ -3,7 +3,7 @@
 	"build": {
 		"builder": "NIXPACKS",
 		"buildCommand": "pnpm --filter \"@repo/cms\" run build",
-		"watchPatterns": ["/apps/cms/**", "pnpm-lock.yaml"]
+		"watchPatterns": ["/apps/cms/**", "pnpm-lock.yaml", "/packages/**"]
 	},
 	"deploy": {
 		"runtime": "V2",
