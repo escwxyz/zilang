@@ -105,25 +105,38 @@ export default buildConfig({
 				? process.env.ADMIN_PASSWORD
 				: "admin";
 
-		const existing = await payload.find({
-			collection: "users",
-			where: { email: { equals: email } },
-		});
-
-		if (email && password) {
-			if (!existing.docs.length) {
-				await payload.create({
-					collection: "users",
-					data: {
-						email,
-						password,
-						role: "admin",
-					},
-				});
-				payload.logger.info(`Admin user ${email} created`);
-			} else {
-				payload.logger.info(`Admin user ${email} already exists`);
+		if (process.env.NODE_ENV === "production") {
+			if (!email || !password) {
+				payload.logger.error(
+					"ADMIN_EMAIL and ADMIN_PASSWORD are required in production",
+				);
+				return;
 			}
+		}
+
+		try {
+			const existing = await payload.find({
+				collection: "users",
+				where: { email: { equals: email } },
+			});
+
+			if (email && password) {
+				if (!existing.docs.length) {
+					await payload.create({
+						collection: "users",
+						data: {
+							email,
+							password,
+							role: "admin",
+						},
+					});
+					payload.logger.info(`Admin user ${email} created`);
+				} else {
+					payload.logger.info(`Admin user ${email} already exists`);
+				}
+			}
+		} catch (error) {
+			payload.logger.error("Error creating admin user", error);
 		}
 	},
 });

@@ -1,5 +1,6 @@
 import type { CollectionConfig } from "payload";
 import { isAdmin, isAuthenticated, isPublic } from "@/access";
+import { validatePhone } from "@/validations/validate-phone";
 
 export const Inquiries: CollectionConfig = {
 	slug: "inquiries",
@@ -72,6 +73,7 @@ export const Inquiries: CollectionConfig = {
 			admin: {
 				readOnly: true,
 			},
+			validate: validatePhone,
 		},
 		{
 			name: "company",

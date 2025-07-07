@@ -41,7 +41,7 @@ export const FeatureBlock: Block = {
 					// @ts-expect-error - siblingData is not typed
 					validate: (value, { siblingData }) => {
 						if (siblingData.type === "text" && !value) {
-							return " ";
+							return "标题是必填项";
 						}
 						return true;
 					},
@@ -57,7 +57,7 @@ export const FeatureBlock: Block = {
 					// @ts-expect-error - siblingData is not typed
 					validate: (value, { siblingData }) => {
 						if (siblingData.type === "number" && !value) {
-							return "Number is required when type is number";
+							return "数字是必填项";
 						}
 						return true;
 					},

@@ -22,7 +22,6 @@ export const IconPreview: React.FC<{ name: string }> = React.memo(
 				loading="lazy"
 				className="w-4 h-4 mr-2 flex-shrink-0 dark:invert"
 				onError={(e) => {
-					console.log("error", e);
 					e.currentTarget.style.display = "none";
 				}}
 				unoptimized
