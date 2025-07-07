@@ -1,11 +1,15 @@
 import { TelephoneField } from "@nouance/payload-better-fields-plugin/Telephone";
 import type { GlobalConfig } from "payload";
+import { isPublic } from "@/access";
 
 export const Company: GlobalConfig = {
 	slug: "company",
 	label: "公司信息",
 	admin: {
 		group: "设置相关",
+	},
+	access: {
+		read: isPublic,
 	},
 	fields: [
 		{
@@ -17,14 +21,14 @@ export const Company: GlobalConfig = {
 					type: "text",
 					label: "公司名称",
 					required: true,
-					defaultValue: "Zhejiang Zilang Technology Co., Ltd.",
+					defaultValue: "Taizhou Zilang Electrical Technology Co., Ltd.",
 				},
 				{
 					name: "logo",
 					type: "upload",
 					label: "公司 Logo",
 					relationTo: "media",
-					required: true,
+					required: false,
 				},
 				{
 					name: "slogan",
@@ -50,30 +54,36 @@ export const Company: GlobalConfig = {
 							admin: {
 								width: "100%",
 							},
+							defaultValue: "Huxin Industrial Zone, Chumen Town",
 						},
 					],
 				},
 
 				{
-					name: "zip",
-					type: "text",
-					label: "邮编",
-					required: true,
-					defaultValue: "317606",
-				},
-				{
-					name: "city",
-					type: "text",
-					label: "城市",
-					required: true,
-					defaultValue: "玉环",
+					type: "row",
+					fields: [
+						{
+							name: "zip",
+							type: "text",
+							label: "邮编",
+							required: true,
+							defaultValue: "317606",
+						},
+						{
+							name: "city",
+							type: "text",
+							label: "城市",
+							required: true,
+							defaultValue: "Yuhuan",
+						},
+					],
 				},
 				{
 					name: "country",
 					type: "text",
 					label: "国家",
 					required: true,
-					defaultValue: "中国",
+					defaultValue: "China",
 				},
 			],
 		},
@@ -91,9 +101,9 @@ export const Company: GlobalConfig = {
 							label: "邮件地址",
 							required: true,
 							admin: {
-								placeholder: "info@example.com",
 								width: "35%",
 							},
+							defaultValue: process.env.RESEND_EMAIL_ADDRESS || "",
 						},
 					],
 				},

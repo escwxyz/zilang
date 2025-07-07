@@ -1,0 +1,187 @@
+---
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+} from "@/components/starwind/dialog";
+import { Button } from "@/components/starwind/button";
+import type { CarouselImage } from "./types";
+import Thumbnail from "./Thumbnail.astro";
+
+export interface Props {
+  images: CarouselImage[];
+  aspectRatio?: "square" | "video" | "wide" | "auto";
+  showThumbs?: boolean;
+  showCarouselControls?: boolean;
+  thumbPosition?: "bottom" | "top" | "left" | "right";
+  classNameImage?: string;
+  classNameThumbnail?: string;
+}
+
+const {
+  images = [],
+  aspectRatio = "wide",
+  showThumbs = true,
+  showCarouselControls = true,
+  thumbPosition = "bottom",
+  classNameImage = "",
+  classNameThumbnail = "",
+} = Astro.props;
+---
+
+<div
+  class={thumbPosition === "left" || thumbPosition === "right"
+    ? "flex flex-row gap-4 items-start"
+    : ""}
+>
+  {
+    showThumbs && thumbPosition === "left" && (
+      <div class="flex flex-col gap-2 justify-center items-center">
+        {images.map((img, idx) => (
+          <Thumbnail image={img} index={idx} className={classNameThumbnail} />
+        ))}
+      </div>
+    )
+  }
+
+  <div class="relative w-full max-w-3xl mx-auto">
+    {
+      showThumbs && thumbPosition === "top" && (
+        <div class="flex gap-2 mb-4 justify-center">
+          {images.map((img, idx) => (
+            <Thumbnail image={img} index={idx} className={classNameThumbnail} />
+          ))}
+        </div>
+      )
+    }
+
+    <div class="embla" id="embla">
+      <div class="embla__container">
+        {
+          images.map((img, idx) => (
+            <div class="embla__slide p-2">
+              <Dialog>
+                <DialogTrigger class="block w-full cursor-pointer">
+                  <img
+                    src={img.url}
+                    alt={img.title}
+                    class={`w-full rounded-lg object-cover ${classNameImage}`}
+                    style={`aspect-ratio: ${
+                      aspectRatio === "square"
+                        ? "1/1"
+                        : aspectRatio === "video"
+                          ? "16/9"
+                          : aspectRatio === "wide"
+                            ? "4/3"
+                            : "auto"
+                    }`}
+                  />
+                </DialogTrigger>
+                <DialogContent class="flex flex-col items-center justify-center max-w-[90vw] max-h-[90vh]">
+                  <img
+                    src={img.url}
+                    alt={img.title}
+                    class={`w-full h-full object-contain ${classNameImage}`}
+                  />
+                </DialogContent>
+              </Dialog>
+            </div>
+          ))
+        }
+      </div>
+      {
+        showCarouselControls && (
+          <div class="absolute inset-y-0 left-0 flex items-center z-10">
+            <Button
+              id="emblaPrev"
+              variant="outline"
+              size="icon"
+              aria-label="Previous"
+            >
+              &larr;
+            </Button>
+          </div>
+        )
+      }
+      {
+        showCarouselControls && (
+          <div class="absolute inset-y-0 right-0 flex items-center z-10">
+            <Button
+              id="emblaNext"
+              variant="outline"
+              size="icon"
+              aria-label="Next"
+            >
+              &rarr;
+            </Button>
+          </div>
+        )
+      }
+    </div>
+
+    {
+      showThumbs && thumbPosition === "bottom" && (
+        <div class="flex gap-2 mt-4 items-center">
+          {images.map((img, idx) => (
+            <Thumbnail image={img} index={idx} className={classNameThumbnail} />
+          ))}
+        </div>
+      )
+    }
+  </div>
+
+  {
+    showThumbs && thumbPosition === "right" && (
+      <div class="flex flex-col gap-2 justify-center items-center">
+        {images.map((img, idx) => (
+          <Thumbnail image={img} index={idx} className={classNameThumbnail} />
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+</style>
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import { currentImageIndex } from "./store";
+  const emblaNode: HTMLDivElement | null = document.querySelector(".embla");
+  if (emblaNode) {
+    const embla = EmblaCarousel(emblaNode, {
+      loop: true,
+    });
+
+    embla.on("select", () => {
+      currentImageIndex.set(embla.selectedScrollSnap());
+      console.log(currentImageIndex.get());
+    });
+
+    const unsubscribe = currentImageIndex.subscribe((idx) => {
+      if (embla.selectedScrollSnap() !== idx) {
+        embla.scrollTo(idx);
+      }
+    });
+
+    document
+      .getElementById("emblaPrev")
+      ?.addEventListener("click", () => embla.scrollPrev());
+    document
+      .getElementById("emblaNext")
+      ?.addEventListener("click", () => embla.scrollNext());
+
+    window.addEventListener("beforeunload", () => {
+      unsubscribe();
+    });
+  }
+</script>

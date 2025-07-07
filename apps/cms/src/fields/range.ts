@@ -11,6 +11,7 @@ type RangeFieldOptions = {
 	defaultMax?: number;
 	decimalScale?: number;
 	fixedDecimalScale?: boolean;
+	required?: boolean;
 };
 
 export function RangeField({
@@ -22,14 +23,14 @@ export function RangeField({
 	fixedDecimalScale,
 	defaultMax,
 	defaultMin,
-	...rest
+	required,
 }: RangeFieldOptions): GroupField {
 	return {
 		name,
 		type: "group",
 		label,
 		validate: validateRange,
-		...rest,
+		required,
 		fields: [
 			{
 				type: "row",
@@ -40,6 +41,7 @@ export function RangeField({
 							label: "最小值",
 							min,
 							defaultValue: defaultMin,
+							required,
 						},
 						{
 							suffix: unit ? ` ${unit}` : undefined,
@@ -53,6 +55,7 @@ export function RangeField({
 							label: "最大值",
 							min,
 							defaultValue: defaultMax,
+							required,
 						},
 						{
 							suffix: unit ? ` ${unit}` : undefined,

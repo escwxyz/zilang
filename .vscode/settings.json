@@ -1,6 +1,6 @@
 {
 	"npm.packageManager": "pnpm",
-
+	"prettier.prettierPath": "apps/web/node_modules/prettier",
 	"editor.defaultFormatter": null,
 	"[astro]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -19,5 +19,14 @@
 	"editor.codeActionsOnSave": {
 		"source.organizeImports.biome": "explicit",
 		"source.fixAll.biome": "explicit"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
 	}
 }

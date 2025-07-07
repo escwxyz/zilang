@@ -1,0 +1,38 @@
+---
+import type { HeaderLinks, FooterLinks } from "@repo/types";
+
+type Props = NonNullable<HeaderLinks | FooterLinks>[number] & {
+  className?: string;
+  variant?: "default" | "minimal";
+};
+
+const { page, url, variant = "default", type, className } = Astro.props;
+
+if (type === "page" && typeof page !== "object") {
+  throw new Error("Page is not populated in the link");
+}
+
+const isExternal = type === "external";
+
+const href = isExternal
+  ? url
+  : type === "page" && typeof page === "object"
+    ? `/${page?.slug}`
+    : url;
+
+const isActive = Astro.url.pathname === href;
+---
+
+<a
+  href={href}
+  class:list={[
+    "text-sm font-medium leading-normal rounded-md transition-all duration-200 hover:cursor-pointer",
+    variant === "default" && "p-2 hover:bg-accent hover:text-accent-foreground",
+    isActive && "text-primary",
+    className,
+  ]}
+  target={isExternal ? "_blank" : undefined}
+  rel={isExternal ? "noopener noreferrer" : undefined}
+>
+  <slot />
+</a>

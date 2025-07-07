@@ -1,30 +1,70 @@
 import { NumberField } from "@nouance/payload-better-fields-plugin/Number";
 import { SlugField } from "@nouance/payload-better-fields-plugin/Slug";
 import type { CollectionConfig } from "payload";
+import { isAdmin, isAuthenticated, isAuthenticatedOrPublished } from "@/access";
+import { FeatureBlock } from "@/blocks/features";
 import { leadTime } from "@/fields/leadtime";
 import { RangeField } from "@/fields/range";
 
-export const Products: CollectionConfig = {
-	slug: "products",
+export const PumpControllers: CollectionConfig = {
+	slug: "pump-controllers",
 	labels: {
-		singular: "产品",
-		plural: "产品",
+		singular: "水泵控制器",
+		plural: "水泵控制器",
 	},
 	admin: {
 		group: "产品相关",
+		useAsTitle: "title",
+	},
+	access: {
+		read: isAuthenticatedOrPublished,
+		create: isAuthenticated,
+		update: isAuthenticated,
+		delete: isAdmin,
 	},
 	fields: [
 		{
 			name: "title",
 			type: "text",
-			label: "产品名称",
+			label: "名称",
 			required: true,
 		},
 		...SlugField(),
 		{
+			name: "featured",
+			type: "checkbox",
+			label: "是否推荐放在首页",
+			admin: {
+				position: "sidebar",
+			},
+		},
+		{
+			name: "series",
+			type: "select",
+			label: "系列",
+			required: true,
+			admin: {
+				position: "sidebar",
+			},
+			options: [
+				{
+					label: "GS+",
+					value: "gs+",
+				},
+				{
+					label: "GS",
+					value: "gs",
+				},
+				{
+					label: "PS",
+					value: "ps",
+				},
+			],
+		},
+		{
 			name: "category",
 			type: "select",
-			label: "产品分类",
+			label: "分类",
 			required: true,
 			options: [
 				{
@@ -48,7 +88,7 @@ export const Products: CollectionConfig = {
 		{
 			name: "excerpt",
 			type: "textarea",
-			label: "产品概要",
+			label: "简介",
 			required: false,
 			admin: {
 				position: "sidebar",
@@ -70,27 +110,40 @@ export const Products: CollectionConfig = {
 						{
 							name: "gallery",
 							type: "upload",
-							label: "产品媒体文件",
+							label: "媒体文件",
 							relationTo: "media",
 							minRows: 1,
 							maxRows: 10,
 							hasMany: true,
+							required: true,
 						},
 						{
 							name: "description",
 							type: "richText",
-							label: "产品描述",
+							label: "详情描述",
 							required: true,
+						},
+						{
+							name: "features",
+							type: "blocks",
+							label: "产品特性",
+							labels: {
+								singular: "产品特性",
+								plural: "产品特性",
+							},
+							maxRows: 4,
+							blocks: [FeatureBlock],
 						},
 					],
 				},
 				{
-					label: "产品参数",
+					label: "参数",
 					fields: [
 						RangeField({
 							name: "voltage",
 							label: "使用电压范围",
 							unit: "V",
+							required: true,
 						}),
 						{
 							type: "row",
@@ -189,6 +242,7 @@ export const Products: CollectionConfig = {
 									unit: "bar",
 									decimalScale: 1,
 									fixedDecimalScale: true,
+									required: true,
 								}),
 							],
 						},
@@ -311,10 +365,10 @@ export const Products: CollectionConfig = {
 							label: "包装规格",
 						},
 						{
-							name: "relatedProducts",
+							name: "related",
 							type: "relationship",
-							relationTo: "products",
-							label: "相关产品",
+							relationTo: "pump-controllers",
+							label: "相关水泵控制器",
 							hasMany: true,
 							maxRows: 6,
 						},
@@ -324,4 +378,12 @@ export const Products: CollectionConfig = {
 			],
 		},
 	],
+	versions: {
+		drafts: {
+			autosave: {
+				interval: 1000,
+			},
+		},
+		maxPerDoc: 5,
+	},
 };

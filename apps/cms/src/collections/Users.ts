@@ -8,10 +8,25 @@ export const Users: CollectionConfig = {
 	},
 	admin: {
 		useAsTitle: "email",
+		group: "系统管理",
 	},
 	auth: true,
 	fields: [
-		// Email added by default
-		// Add more fields as needed
+		{
+			name: "role",
+			type: "select",
+			label: "角色",
+			required: true,
+			options: [
+				{
+					label: "管理员",
+					value: "admin",
+				},
+				{
+					label: "编辑",
+					value: "editor",
+				},
+			],
+		},
 	],
 };
