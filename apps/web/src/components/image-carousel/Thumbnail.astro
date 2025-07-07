@@ -1,0 +1,40 @@
+---
+import { cn } from "@/lib/utils";
+import type { CarouselImage } from "./types";
+interface Props {
+  index: number;
+  image: CarouselImage;
+  className?: string;
+}
+
+const { image, className, index } = Astro.props;
+---
+
+<button
+  class={cn(
+    "rounded mb-2 transition-opacity duration-200 w-15 h-15 overflow-hidden",
+    className,
+  )}
+  data-thumb-idx={index}
+  aria-label={`Go to slide ${index + 1}`}
+>
+  <img src={image.url} alt={image.title} class="object-cover w-full h-full" />
+</button>
+
+<script>
+  import { currentImageIndex } from "./store";
+
+  document.querySelectorAll("[data-thumb-idx]").forEach((btn) => {
+    currentImageIndex.subscribe((index) => {
+      const idx = Number(btn.getAttribute("data-thumb-idx"));
+      const isActive = index === idx;
+      btn.classList.remove("opacity-100", "opacity-50");
+      btn.classList.add(isActive ? "opacity-100" : "opacity-50");
+    });
+
+    btn.addEventListener("click", (e) => {
+      const idx = Number(btn.getAttribute("data-thumb-idx"));
+      currentImageIndex.set(idx);
+    });
+  });
+</script>
