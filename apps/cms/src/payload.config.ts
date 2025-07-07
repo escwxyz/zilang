@@ -28,6 +28,29 @@ export default buildConfig({
 		importMap: {
 			baseDir: path.resolve(dirname),
 		},
+		meta: {
+			robots: "noindex, nofollow",
+			titleSuffix: " - 紫郎电器",
+			title: "紫郎电器",
+			description: "紫郎电器网站管理后台",
+			icons: [
+				{
+					rel: "icon",
+					type: "image/x-icon",
+					url: "/favicon.svg",
+				},
+			],
+		},
+		components: {
+			graphics: {
+				Logo: {
+					path: "@/components/logo#Logo",
+				},
+				Icon: {
+					path: "@/components/logo#MenuIcon",
+				},
+			},
+		},
 	},
 	i18n: {
 		supportedLanguages: { zh },
@@ -62,7 +85,6 @@ export default buildConfig({
 	sharp,
 	plugins: [],
 	endpoints: [
-		// health check for Railway
 		{
 			path: "/health",
 			method: "get",

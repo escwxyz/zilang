@@ -25,6 +25,8 @@ import { ItalicFeatureClient as ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0
 import { IconComponent as IconComponent_f8022cf35b3d492829ec1a405bd134e9 } from '@/components/icon'
 import { NumberComponent as NumberComponent_cc8ffb4d72cccd0f4440f5702b1e4139 } from '@nouance/payload-better-fields-plugin/Number/client'
 import { TelephoneComponent as TelephoneComponent_6e5fb4301273a9fa708a50ac0479cad5 } from '@nouance/payload-better-fields-plugin/Telephone/client'
+import { MenuIcon as MenuIcon_7a89b5675912f3f4f82dd41bbb03d52e } from '@/components/logo'
+import { Logo as Logo_7a89b5675912f3f4f82dd41bbb03d52e } from '@/components/logo'
 
 export const importMap = {
   "@nouance/payload-better-fields-plugin/Slug/client#SlugComponent": SlugComponent_da067efb33f077846c194de60ea0fbe0,
@@ -53,5 +55,7 @@ export const importMap = {
   "@payloadcms/richtext-lexical/client#ItalicFeatureClient": ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@/components/icon#IconComponent": IconComponent_f8022cf35b3d492829ec1a405bd134e9,
   "@nouance/payload-better-fields-plugin/Number/client#NumberComponent": NumberComponent_cc8ffb4d72cccd0f4440f5702b1e4139,
-  "@nouance/payload-better-fields-plugin/Telephone/client#TelephoneComponent": TelephoneComponent_6e5fb4301273a9fa708a50ac0479cad5
+  "@nouance/payload-better-fields-plugin/Telephone/client#TelephoneComponent": TelephoneComponent_6e5fb4301273a9fa708a50ac0479cad5,
+  "@/components/logo#MenuIcon": MenuIcon_7a89b5675912f3f4f82dd41bbb03d52e,
+  "@/components/logo#Logo": Logo_7a89b5675912f3f4f82dd41bbb03d52e
 }
