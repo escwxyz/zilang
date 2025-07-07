@@ -1,7 +1,8 @@
 import { NumberField } from "@nouance/payload-better-fields-plugin/Number";
 import { SlugField } from "@nouance/payload-better-fields-plugin/Slug";
 import type { CollectionConfig } from "payload";
-import { FeaturesBlock } from "@/blocks/features";
+import { isAdmin, isAuthenticated, isAuthenticatedOrPublished } from "@/access";
+import { FeatureBlock } from "@/blocks/features";
 import { leadTime } from "@/fields/leadtime";
 import { RangeField } from "@/fields/range";
 
@@ -14,6 +15,12 @@ export const PumpControllers: CollectionConfig = {
 	admin: {
 		group: "产品相关",
 		useAsTitle: "title",
+	},
+	access: {
+		read: isAuthenticatedOrPublished,
+		create: isAuthenticated,
+		update: isAuthenticated,
+		delete: isAdmin,
 	},
 	fields: [
 		{
@@ -108,6 +115,7 @@ export const PumpControllers: CollectionConfig = {
 							minRows: 1,
 							maxRows: 10,
 							hasMany: true,
+							required: true,
 						},
 						{
 							name: "description",
@@ -119,7 +127,12 @@ export const PumpControllers: CollectionConfig = {
 							name: "features",
 							type: "blocks",
 							label: "产品特性",
-							blocks: [FeaturesBlock],
+							labels: {
+								singular: "产品特性",
+								plural: "产品特性",
+							},
+							maxRows: 4,
+							blocks: [FeatureBlock],
 						},
 					],
 				},
@@ -365,4 +378,12 @@ export const PumpControllers: CollectionConfig = {
 			],
 		},
 	],
+	versions: {
+		drafts: {
+			autosave: {
+				interval: 1000,
+			},
+		},
+		maxPerDoc: 5,
+	},
 };

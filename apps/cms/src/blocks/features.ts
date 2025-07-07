@@ -2,7 +2,7 @@ import type { Block } from "payload";
 
 import { iconField } from "@/fields/icon";
 
-const FeatureBlock: Block = {
+export const FeatureBlock: Block = {
 	slug: "feature",
 	interfaceName: "FeatureBlock",
 	labels: {
@@ -169,6 +169,10 @@ const FeatureBlock: Block = {
 						{
 							label: "居中",
 							value: "center",
+						},
+						{
+							label: "两端对齐",
+							value: "between",
 						},
 						{
 							label: "反向居中",

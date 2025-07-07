@@ -1,4 +1,5 @@
 import type { GlobalConfig } from "payload";
+import { isPublic } from "@/access";
 
 export const Site: GlobalConfig = {
 	slug: "site",
@@ -6,6 +7,9 @@ export const Site: GlobalConfig = {
 	admin: {
 		group: "设置相关",
 		description: "配置网站信息，用作 SEO 优化",
+	},
+	access: {
+		read: isPublic,
 	},
 	fields: [
 		{

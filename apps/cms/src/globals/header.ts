@@ -1,4 +1,5 @@
 import type { GlobalConfig } from "payload";
+import { isPublic } from "@/access";
 import { linkField } from "@/fields/link";
 
 export const Header: GlobalConfig = {
@@ -6,6 +7,9 @@ export const Header: GlobalConfig = {
 	label: "顶部导航",
 	admin: {
 		group: "设置相关",
+	},
+	access: {
+		read: isPublic,
 	},
 	fields: [
 		{
@@ -35,6 +39,7 @@ export const Header: GlobalConfig = {
 			name: "links",
 			type: "array",
 			label: "导航链接",
+			interfaceName: "HeaderLinks",
 			labels: {
 				singular: "导航链接",
 				plural: "导航链接",

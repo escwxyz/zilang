@@ -23,6 +23,10 @@ export const TestimonialsBlock: Block = {
 			name: "testimonials",
 			type: "array",
 			label: "客户评价",
+			labels: {
+				singular: "客户评价",
+				plural: "客户评价",
+			},
 			minRows: 3,
 			maxRows: 6,
 			fields: [

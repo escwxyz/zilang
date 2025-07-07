@@ -1,11 +1,15 @@
 import { TelephoneField } from "@nouance/payload-better-fields-plugin/Telephone";
 import type { GlobalConfig } from "payload";
+import { isPublic } from "@/access";
 
 export const Company: GlobalConfig = {
 	slug: "company",
 	label: "公司信息",
 	admin: {
 		group: "设置相关",
+	},
+	access: {
+		read: isPublic,
 	},
 	fields: [
 		{

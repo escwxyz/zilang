@@ -33,7 +33,11 @@ export const Pages: CollectionConfig = {
 			label: "页面标题",
 			required: true,
 		},
-		...SlugField(),
+		SlugField("title", {
+			slugOverrides: {
+				label: "页面别名",
+			},
+		})[0],
 		{
 			type: "tabs",
 			tabs: [

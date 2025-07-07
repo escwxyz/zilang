@@ -66,12 +66,13 @@ export default buildConfig({
 		{
 			path: "/health",
 			method: "get",
-			handler: async (req) => {
+			handler: () => {
 				return new Response("OK", { status: 200 });
 			},
 		},
 	],
 	telemetry: false,
+	cors: process.env.NODE_ENV === "production" ? undefined : "*",
 	onInit: async (payload) => {
 		const email =
 			process.env.NODE_ENV === "production"
@@ -87,18 +88,20 @@ export default buildConfig({
 			where: { email: { equals: email } },
 		});
 
-		if (!existing.docs.length) {
-			await payload.create({
-				collection: "users",
-				data: {
-					email,
-					password,
-					role: "admin",
-				},
-			});
-			payload.logger.info(`Admin user ${email} created`);
-		} else {
-			payload.logger.info(`Admin user ${email} already exists`);
+		if (email && password) {
+			if (!existing.docs.length) {
+				await payload.create({
+					collection: "users",
+					data: {
+						email,
+						password,
+						role: "admin",
+					},
+				});
+				payload.logger.info(`Admin user ${email} created`);
+			} else {
+				payload.logger.info(`Admin user ${email} already exists`);
+			}
 		}
 	},
 });

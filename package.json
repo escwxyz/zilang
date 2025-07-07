@@ -19,7 +19,7 @@
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
-		  "sharp"
+			"sharp"
 		]
-	  }
+	}
 }
