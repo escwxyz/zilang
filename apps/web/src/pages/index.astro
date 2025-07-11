@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BlocksRenderer from "@/components/BlocksRenderer.astro";
+import { getCollectionBySlug } from "@/lib/data";
+
+const pageData = await getCollectionBySlug("pages", "home", {
+  where: {
+    _status: {
+      equals: "published",
+    },
+  },
+});
+
+if (pageData.docs.length === 0) {
+  return Astro.redirect("/404");
+}
+
+const { content } = pageData.docs[0];
+---
+
+<Layout pageTitle="Homepage">
+  <BlocksRenderer blocks={content} />
+</Layout>

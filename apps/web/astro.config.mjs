@@ -7,7 +7,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-	output: "server", // TODO: static site
+	output: "server",
 
 	adapter: cloudflare({
 		// imageService: "cloudflare",
@@ -19,10 +19,5 @@ export default defineConfig({
 
 	vite: {
 		plugins: [tailwindcss()],
-	},
-
-	redirects: {
-		"/products": "/products/pump-controllers",
-		"/home": "/",
 	},
 });

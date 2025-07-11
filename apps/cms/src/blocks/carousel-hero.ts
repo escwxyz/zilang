@@ -1,15 +1,5 @@
-import { APIError, type Block, type TextFieldValidation } from "payload";
-
-const validateUrl: TextFieldValidation = (value) => {
-	if (!value) return true;
-
-	try {
-		new URL(value, value.startsWith("/") ? "http://example.com" : undefined);
-		return true;
-	} catch {
-		throw new APIError("请输入有效的URL");
-	}
-};
+import type { Block } from "payload";
+import { validateUrl } from "@/validations/validate-url";
 
 export const CarouselHeroBlock: Block = {
 	slug: "carouselHero",

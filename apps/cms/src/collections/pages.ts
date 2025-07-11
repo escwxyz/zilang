@@ -2,13 +2,17 @@ import { SlugField } from "@nouance/payload-better-fields-plugin/Slug";
 import type { CollectionConfig } from "payload";
 import { isAdmin, isAuthenticated, isAuthenticatedOrPublished } from "@/access";
 import { CarouselHeroBlock } from "@/blocks/carousel-hero";
+import { ContactFormBlock } from "@/blocks/contact-form";
+import { CTABlock } from "@/blocks/cta";
 import { FaqsBlock } from "@/blocks/faqs";
 import { FeaturedProductsBlock } from "@/blocks/featured-products";
 import { FeaturesBlock } from "@/blocks/features";
 import { MediaBlock } from "@/blocks/media";
 import { MediaGridBlock } from "@/blocks/media-grid";
+import { TeamBlock } from "@/blocks/team";
 import { TestimonialsBlock } from "@/blocks/testimonials";
 import { TextBlock } from "@/blocks/text";
+import { TimelineBlock } from "@/blocks/timeline";
 
 export const Pages: CollectionConfig = {
 	slug: "pages",
@@ -36,6 +40,7 @@ export const Pages: CollectionConfig = {
 		SlugField("title", {
 			slugOverrides: {
 				label: "页面别名",
+				required: true,
 			},
 		})[0],
 		{
@@ -69,6 +74,10 @@ export const Pages: CollectionConfig = {
 								TextBlock,
 								FeaturesBlock,
 								MediaGridBlock,
+								ContactFormBlock,
+								TeamBlock,
+								TimelineBlock,
+								CTABlock,
 							],
 						},
 					],

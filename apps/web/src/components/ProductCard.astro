@@ -6,10 +6,19 @@ import Link from "./Link.astro";
 
 type Props = PumpController & {
   className?: string;
+  hideButton?: boolean;
 };
 
-const { className, title, excerpt, category, gallery, slug, series } =
-  Astro.props;
+const {
+  className,
+  title,
+  excerpt,
+  category,
+  gallery,
+  slug,
+  series,
+  hideButton = false,
+} = Astro.props;
 
 const url = `/products/pump-controllers/${slug}`;
 
@@ -19,7 +28,10 @@ const hasImage =
   "url" in gallery[0] &&
   typeof gallery[0].url === "string";
 
-const coverImage = hasImage ? getUrl(gallery[0].url) : null;
+const coverImage =
+  hasImage && typeof gallery[0] === "object"
+    ? getUrl(gallery[0].url ?? "")
+    : null;
 ---
 
 <article
@@ -54,12 +66,12 @@ const coverImage = hasImage ? getUrl(gallery[0].url) : null;
     <span
       class="absolute top-4 right-4 min-w-[72px] inline-flex justify-center items-center px-2.5 py-1 rounded-full text-xs font-medium backdrop-blur-2xl text-muted-foreground bg-muted shadow-sm"
     >
-      {series?.toUpperCase()}
+      {series.toUpperCase()}
     </span>
     <span
       class="absolute top-4 left-4 min-w-[72px] inline-flex justify-center items-center px-2.5 py-1 rounded-full text-xs font-medium backdrop-blur-2xl text-muted-foreground bg-muted shadow-sm"
     >
-      {category?.toUpperCase()}
+      {category.toUpperCase()}
     </span>
   </Link>
   <div class="flex flex-col flex-1 p-4 gap-2">
@@ -67,15 +79,19 @@ const coverImage = hasImage ? getUrl(gallery[0].url) : null;
       {title}
     </h2>
     <p class="text-sm text-muted-foreground line-clamp-2">{excerpt}</p>
-    <div class="mt-auto pt-2">
-      <Link
-        type="internal"
-        url={url}
-        variant="minimal"
-        className="inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
-      >
-        View Product
-      </Link>
-    </div>
+    {
+      !hideButton && (
+        <div class="mt-auto pt-2">
+          <Link
+            type="internal"
+            url={url}
+            variant="minimal"
+            className="inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+          >
+            View Product
+          </Link>
+        </div>
+      )
+    }
   </div>
 </article>

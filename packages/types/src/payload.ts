@@ -1623,6 +1623,32 @@ export type IconName =
   | 'zoom-in'
   | 'zoom-out';
 /**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HeaderLinks".
+ */
+export type HeaderLinks =
+  | {
+      type: 'internal' | 'external' | 'page';
+      page?: (string | null) | Page;
+      url?: string | null;
+      label?: string | null;
+      id?: string | null;
+    }[]
+  | null;
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FooterLinks".
+ */
+export type FooterLinks =
+  | {
+      type: 'internal' | 'external' | 'page';
+      page?: (string | null) | Page;
+      url?: string | null;
+      label?: string | null;
+      id?: string | null;
+    }[]
+  | null;
+/**
  * Supported timezones in IANA format.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1803,8 +1829,7 @@ export interface Media {
 export interface Page {
   id: string;
   title: string;
-  slug?: string | null;
-  slugLock?: boolean | null;
+  slug: string;
   content: (
     | MediaBlockType
     | CarouselHeroBlock
@@ -1814,6 +1839,10 @@ export interface Page {
     | TextBlock
     | FeaturesBlock
     | MediaGridBlock
+    | ContactFormBlock
+    | TeamBlock
+    | TimelineBlock
+    | CTABlock
   )[];
   updatedAt: string;
   createdAt: string;
@@ -1882,14 +1911,13 @@ export interface FeaturedProductsBlock {
 export interface PumpController {
   id: string;
   title: string;
-  slug?: string | null;
-  slugLock?: boolean | null;
+  slug: string;
   featured?: boolean | null;
   series: 'gs+' | 'gs' | 'ps';
   category: 'standard' | 'smart' | 'auto';
   excerpt?: string | null;
   modelName: string;
-  gallery?: (string | Media)[] | null;
+  gallery: (string | Media)[];
   description: {
     root: {
       type: string;
@@ -1905,7 +1933,7 @@ export interface PumpController {
     };
     [k: string]: unknown;
   };
-  features?: FeaturesBlock[] | null;
+  features?: FeatureBlock[] | null;
   voltage: {
     min: number;
     max: number;
@@ -1950,22 +1978,7 @@ export interface PumpController {
     | null;
   updatedAt: string;
   createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "FeaturesBlock".
- */
-export interface FeaturesBlock {
-  title?: string | null;
-  description?: string | null;
-  /**
-   * 特性区块，至少2个，最多6个
-   */
-  features?: FeatureBlock[] | null;
-  columns?: ('2' | '3' | '1') | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'features';
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1983,7 +1996,7 @@ export interface FeatureBlock {
   startValue?: number | null;
   decimalPlaces?: number | null;
   direction?: ('up' | 'down') | null;
-  alignment?: ('default' | 'reverse' | 'center' | 'between-reverse') | null;
+  alignment?: ('default' | 'reverse' | 'center' | 'between' | 'between-reverse') | null;
   opacity?: number | null;
   iconBackground?: boolean | null;
   id?: string | null;
@@ -2080,6 +2093,22 @@ export interface TextBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FeaturesBlock".
+ */
+export interface FeaturesBlock {
+  title?: string | null;
+  description?: string | null;
+  /**
+   * 特性区块，至少2个，最多6个
+   */
+  features?: FeatureBlock[] | null;
+  columns?: ('2' | '3' | '1') | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'features';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "MediaGridBlock".
  */
 export interface MediaGridBlock {
@@ -2093,6 +2122,120 @@ export interface MediaGridBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'media-grid';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContactFormBlock".
+ */
+export interface ContactFormBlock {
+  title: string;
+  description?: string | null;
+  fields?:
+    | {
+        fieldType: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'radio' | 'checkbox';
+        label: string;
+        placeholder?: string | null;
+        required?: boolean | null;
+        options?:
+          | {
+              label: string;
+              value: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  submitButtonText: string;
+  successMessage?: string | null;
+  errorMessage?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'contactForm';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TeamBlock".
+ */
+export interface TeamBlock {
+  title: string;
+  description?: string | null;
+  members?:
+    | {
+        name: string;
+        position: string;
+        bio?: string | null;
+        photo: string | Media;
+        social?:
+          | {
+              platform: 'linkedin' | 'twitter' | 'github' | 'wechat' | 'email';
+              url: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  layout?: ('grid' | 'cards' | 'list') | null;
+  columns?: ('2' | '3' | '4') | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'team';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TimelineBlock".
+ */
+export interface TimelineBlock {
+  title: string;
+  description?: string | null;
+  events?:
+    | {
+        year: number;
+        month?: ('1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12') | null;
+        title: string;
+        description: string;
+        image?: (string | null) | Media;
+        link?: string | null;
+        featured?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  layout?: ('vertical' | 'horizontal' | 'alternating') | null;
+  showImages?: boolean | null;
+  sortOrder?: ('asc' | 'desc') | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'timeline';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CTABlock".
+ */
+export interface CTABlock {
+  title: string;
+  description?: string | null;
+  backgroundImage?: (string | null) | Media;
+  backgroundColor?: ('white' | 'gray' | 'dark' | 'primary' | 'secondary') | null;
+  buttons?:
+    | {
+        text: string;
+        url: string;
+        style?: ('primary' | 'secondary' | 'outline' | 'text') | null;
+        size?: ('sm' | 'md' | 'lg') | null;
+        /**
+         * 图标名称，如：arrow-right、download 等
+         */
+        icon?: string | null;
+        newTab?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  layout?: ('center' | 'left' | 'right' | 'split') | null;
+  padding?: ('sm' | 'md' | 'lg' | 'xl') | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'cta';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -2249,7 +2392,6 @@ export interface MediaSelect<T extends boolean = true> {
 export interface PagesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
-  slugLock?: T;
   content?:
     | T
     | {
@@ -2261,6 +2403,10 @@ export interface PagesSelect<T extends boolean = true> {
         text?: T | TextBlockSelect<T>;
         features?: T | FeaturesBlockSelect<T>;
         'media-grid'?: T | MediaGridBlockSelect<T>;
+        contactForm?: T | ContactFormBlockSelect<T>;
+        team?: T | TeamBlockSelect<T>;
+        timeline?: T | TimelineBlockSelect<T>;
+        cta?: T | CTABlockSelect<T>;
       };
   updatedAt?: T;
   createdAt?: T;
@@ -2405,12 +2551,118 @@ export interface MediaGridBlockSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContactFormBlock_select".
+ */
+export interface ContactFormBlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  fields?:
+    | T
+    | {
+        fieldType?: T;
+        label?: T;
+        placeholder?: T;
+        required?: T;
+        options?:
+          | T
+          | {
+              label?: T;
+              value?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  submitButtonText?: T;
+  successMessage?: T;
+  errorMessage?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TeamBlock_select".
+ */
+export interface TeamBlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  members?:
+    | T
+    | {
+        name?: T;
+        position?: T;
+        bio?: T;
+        photo?: T;
+        social?:
+          | T
+          | {
+              platform?: T;
+              url?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  layout?: T;
+  columns?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TimelineBlock_select".
+ */
+export interface TimelineBlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  events?:
+    | T
+    | {
+        year?: T;
+        month?: T;
+        title?: T;
+        description?: T;
+        image?: T;
+        link?: T;
+        featured?: T;
+        id?: T;
+      };
+  layout?: T;
+  showImages?: T;
+  sortOrder?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CTABlock_select".
+ */
+export interface CTABlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  backgroundImage?: T;
+  backgroundColor?: T;
+  buttons?:
+    | T
+    | {
+        text?: T;
+        url?: T;
+        style?: T;
+        size?: T;
+        icon?: T;
+        newTab?: T;
+        id?: T;
+      };
+  layout?: T;
+  padding?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pump-controllers_select".
  */
 export interface PumpControllersSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
-  slugLock?: T;
   featured?: T;
   series?: T;
   category?: T;
@@ -2421,7 +2673,7 @@ export interface PumpControllersSelect<T extends boolean = true> {
   features?:
     | T
     | {
-        features?: T | FeaturesBlockSelect<T>;
+        feature?: T | FeatureBlockSelect<T>;
       };
   voltage?:
     | T
@@ -2467,6 +2719,7 @@ export interface PumpControllersSelect<T extends boolean = true> {
       };
   updatedAt?: T;
   createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -2568,15 +2821,7 @@ export interface Header {
    */
   showName?: boolean | null;
   name?: string | null;
-  links?:
-    | {
-        type: 'internal' | 'external' | 'page';
-        page?: (string | null) | Page;
-        url?: string | null;
-        label?: string | null;
-        id?: string | null;
-      }[]
-    | null;
+  links?: HeaderLinks;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -2590,15 +2835,7 @@ export interface Footer {
    * 如果勾选，则会在页脚显示联系方式
    */
   showContact?: boolean | null;
-  links?:
-    | {
-        type: 'internal' | 'external' | 'page';
-        page?: (string | null) | Page;
-        url?: string | null;
-        label?: string | null;
-        id?: string | null;
-      }[]
-    | null;
+  links?: FooterLinks;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -2652,18 +2889,21 @@ export interface HeaderSelect<T extends boolean = true> {
   logo?: T;
   showName?: T;
   name?: T;
-  links?:
-    | T
-    | {
-        type?: T;
-        page?: T;
-        url?: T;
-        label?: T;
-        id?: T;
-      };
+  links?: T | HeaderLinksSelect<T>;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HeaderLinks_select".
+ */
+export interface HeaderLinksSelect<T extends boolean = true> {
+  type?: T;
+  page?: T;
+  url?: T;
+  label?: T;
+  id?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -2671,18 +2911,21 @@ export interface HeaderSelect<T extends boolean = true> {
  */
 export interface FooterSelect<T extends boolean = true> {
   showContact?: T;
-  links?:
-    | T
-    | {
-        type?: T;
-        page?: T;
-        url?: T;
-        label?: T;
-        id?: T;
-      };
+  links?: T | FooterLinksSelect<T>;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FooterLinks_select".
+ */
+export interface FooterLinksSelect<T extends boolean = true> {
+  type?: T;
+  page?: T;
+  url?: T;
+  label?: T;
+  id?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

@@ -1,27 +1,9 @@
 ---
 import Link from "@/components/Link.astro";
-import { getCachedGlobalBySlug, getGlobalBySlug } from "@/lib/data";
-import { getDrizzleDB } from "@/db/client";
-import { D1Cache } from "@/lib/cache";
-// import { Image } from "@unpic/astro";
+import { getGlobalBySlug } from "@/lib/data";
 import { getUrl } from "@/lib/utils";
 
-const { env } = Astro.locals.runtime;
-
-const db = getDrizzleDB(env);
-
-const cache = new D1Cache(db.$client);
-
 const header = await getGlobalBySlug("header");
-
-const headerData = await getCachedGlobalBySlug(
-  cache,
-  "header",
-  {},
-  {
-    skipCache: true,
-  },
-);
 
 const { logo, links, showName, name } = header;
 

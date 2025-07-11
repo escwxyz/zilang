@@ -1,0 +1,33 @@
+---
+import ProductCard from "@/components/ProductCard.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getCollectionList } from "@/lib/data";
+
+const pumpControllersData = await getCollectionList("pump-controllers", {
+  limit: 0,
+});
+
+const hasPumpControllers =
+  pumpControllersData && pumpControllersData.docs?.length > 0;
+---
+
+<Layout>
+  <div>
+    <h1 class="text-3xl font-bold mb-6">Pump Switches</h1>
+    <div class="container mx-auto py-12">
+      {
+        hasPumpControllers ? (
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {pumpControllersData.docs.map((pumpController) => (
+              <ProductCard {...pumpController} />
+            ))}
+          </div>
+        ) : (
+          <div class="grid place-items-center">
+            <h2>No pump controllers found</h2>
+          </div>
+        )
+      }
+    </div>
+  </div>
+</Layout>

@@ -29,7 +29,12 @@ export const PumpControllers: CollectionConfig = {
 			label: "名称",
 			required: true,
 		},
-		...SlugField(),
+		SlugField("title", {
+			slugOverrides: {
+				label: "产品别名",
+				required: true,
+			},
+		})[0],
 		{
 			name: "featured",
 			type: "checkbox",

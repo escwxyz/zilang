@@ -7,11 +7,5 @@ compatibility_flags = ["nodejs_compat"]
 binding = "ASSETS"
 directory = "./dist"
 
-[[d1_databases]]
-binding = "DB"
-database_name = "zilang"
-database_id = "c1eb865b-c262-41fe-95e6-76566fddcbeb"
-migrations_dir = "drizzle"
-
 [observability]
 enabled = true

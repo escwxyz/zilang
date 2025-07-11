@@ -1,0 +1,10 @@
+---
+import RichText from "./RichText.astro";
+import type { TextBlock } from "@repo/types";
+
+type Props = TextBlock;
+
+const { content } = Astro.props;
+---
+
+<RichText data={content} />

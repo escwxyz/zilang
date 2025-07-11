@@ -1,0 +1,76 @@
+---
+import { cn } from "@/lib/utils";
+
+interface Props {
+  value: number;
+  startValue?: number;
+  direction?: "up" | "down";
+  delay?: number;
+  decimalPlaces?: number;
+  locale?: string;
+  className?: string;
+}
+
+const {
+  value,
+  startValue = 0,
+  direction = "up",
+  delay = 0,
+  decimalPlaces = 0,
+  locale = "en-US",
+  className,
+} = Astro.props;
+---
+
+<span
+  data-number-ticker
+  class={cn("inline-block tabular-nums tracking-wider", className)}
+  data-value={value}
+  data-start-value={startValue}
+  data-direction={direction}
+  data-delay={delay}
+  data-decimal-places={decimalPlaces}
+  data-locale={locale}>{startValue}</span
+>
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const ticker: HTMLSpanElement | null = document.querySelector(
+    "[data-number-ticker]",
+  );
+  if (ticker) {
+    const { value, startValue, direction, delay, decimalPlaces, locale } =
+      ticker.dataset;
+
+    ScrollTrigger.create({
+      trigger: ticker,
+      start: "top 90%",
+      once: true,
+      onEnter: () => {
+        gsap.fromTo(
+          ticker,
+          { n: direction === "down" ? value : startValue },
+          {
+            n: direction === "down" ? startValue : value,
+            delay: Number(delay) || 0,
+            duration: 1.2,
+            ease: "power2.out",
+            onUpdate: function () {
+              const formatted = Number(this.targets()[0].n).toLocaleString(
+                locale,
+                {
+                  minimumFractionDigits: Number({ decimalPlaces }),
+                  maximumFractionDigits: Number({ decimalPlaces }),
+                },
+              );
+              ticker.textContent = formatted;
+            },
+          },
+        );
+      },
+    });
+  }
+</script>
