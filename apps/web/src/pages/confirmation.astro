@@ -1,0 +1,16 @@
+---
+import Link from "@/components/Link.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+  <div
+    class="container mx-auto flex flex-col items-center justify-center gap-4 py-10"
+  >
+    <h1 class="text-2xl font-bold">Thank you for your inquiry!</h1>
+    <p class="text-gray-600">We will get back to you as soon as possible.</p>
+    <Link type="internal" url="/" className="text-blue-500">
+      Go back to the home page
+    </Link>
+  </div>
+</Layout>
