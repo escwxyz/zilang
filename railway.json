@@ -1,22 +1,22 @@
 {
-	"$schema": "https://railway.com/railway.schema.json",
-	"build": {
-		"builder": "NIXPACKS",
-		"buildCommand": "pnpm --filter \"@repo/cms\" run build",
-		"watchPatterns": ["/apps/cms/**"]
-	},
-	"deploy": {
-		"runtime": "V2",
-		"numReplicas": 1,
-		"startCommand": "pnpm --filter \"@repo/cms\" run start",
-		"preDeployCommand": ["pnpm --filter \"@repo/cms\" run generate:importmap"],
-		"sleepApplication": false,
-		"multiRegionConfig": {
-			"us-west2": {
-				"numReplicas": 1
-			}
-		},
-		"restartPolicyType": "ON_FAILURE",
-		"restartPolicyMaxRetries": 10
-	}
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "pnpm --filter \"@repo/cms\" run build",
+    "watchPatterns": ["/apps/cms/**", "pnpm-lock.yaml", "/packages/**"]
+  },
+  "deploy": {
+    "runtime": "V2",
+    "numReplicas": 1,
+    "startCommand": "pnpm --filter \"@repo/cms\" run start",
+    "preDeployCommand": ["pnpm --filter \"@repo/cms\" run generate:importmap"],
+    "sleepApplication": false,
+    "multiRegionConfig": {
+      "us-west2": {
+        "numReplicas": 1
+      }
+    },
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
 }

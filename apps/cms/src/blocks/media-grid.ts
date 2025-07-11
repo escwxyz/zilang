@@ -5,8 +5,8 @@ export const MediaGridBlock: Block = {
 	slug: "media-grid",
 	interfaceName: "MediaGridBlock",
 	labels: {
-		singular: "媒体网格",
-		plural: "媒体网格",
+		singular: "媒体网格区块",
+		plural: "媒体网格区块",
 	},
 	fields: [
 		{

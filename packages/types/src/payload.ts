@@ -11,1617 +11,1643 @@
  * via the `definition` "IconName".
  */
 export type IconName =
-  | 'a-arrow-down'
-  | 'a-arrow-up'
-  | 'a-large-small'
-  | 'accessibility'
-  | 'activity'
-  | 'air-vent'
-  | 'airplay'
-  | 'alarm-clock-check'
-  | 'alarm-clock-minus'
-  | 'alarm-clock-off'
-  | 'alarm-clock-plus'
-  | 'alarm-clock'
-  | 'alarm-smoke'
-  | 'album'
-  | 'align-center-horizontal'
-  | 'align-center-vertical'
-  | 'align-center'
-  | 'align-end-horizontal'
-  | 'align-end-vertical'
-  | 'align-horizontal-distribute-center'
-  | 'align-horizontal-distribute-end'
-  | 'align-horizontal-distribute-start'
-  | 'align-horizontal-justify-center'
-  | 'align-horizontal-justify-end'
-  | 'align-horizontal-justify-start'
-  | 'align-horizontal-space-around'
-  | 'align-horizontal-space-between'
-  | 'align-justify'
-  | 'align-left'
-  | 'align-right'
-  | 'align-start-horizontal'
-  | 'align-start-vertical'
-  | 'align-vertical-distribute-center'
-  | 'align-vertical-distribute-end'
-  | 'align-vertical-distribute-start'
-  | 'align-vertical-justify-center'
-  | 'align-vertical-justify-end'
-  | 'align-vertical-justify-start'
-  | 'align-vertical-space-around'
-  | 'align-vertical-space-between'
-  | 'ambulance'
-  | 'ampersand'
-  | 'ampersands'
-  | 'amphora'
-  | 'anchor'
-  | 'angry'
-  | 'annoyed'
-  | 'antenna'
-  | 'anvil'
-  | 'aperture'
-  | 'app-window-mac'
-  | 'app-window'
-  | 'apple'
-  | 'archive-restore'
-  | 'archive-x'
-  | 'archive'
-  | 'armchair'
-  | 'arrow-big-down-dash'
-  | 'arrow-big-down'
-  | 'arrow-big-left-dash'
-  | 'arrow-big-left'
-  | 'arrow-big-right-dash'
-  | 'arrow-big-right'
-  | 'arrow-big-up-dash'
-  | 'arrow-big-up'
-  | 'arrow-down-0-1'
-  | 'arrow-down-1-0'
-  | 'arrow-down-a-z'
-  | 'arrow-down-from-line'
-  | 'arrow-down-left'
-  | 'arrow-down-narrow-wide'
-  | 'arrow-down-right'
-  | 'arrow-down-to-dot'
-  | 'arrow-down-to-line'
-  | 'arrow-down-up'
-  | 'arrow-down-wide-narrow'
-  | 'arrow-down-z-a'
-  | 'arrow-down'
-  | 'arrow-left-from-line'
-  | 'arrow-left-right'
-  | 'arrow-left-to-line'
-  | 'arrow-left'
-  | 'arrow-right-from-line'
-  | 'arrow-right-left'
-  | 'arrow-right-to-line'
-  | 'arrow-right'
-  | 'arrow-up-0-1'
-  | 'arrow-up-1-0'
-  | 'arrow-up-a-z'
-  | 'arrow-up-down'
-  | 'arrow-up-from-dot'
-  | 'arrow-up-from-line'
-  | 'arrow-up-left'
-  | 'arrow-up-narrow-wide'
-  | 'arrow-up-right'
-  | 'arrow-up-to-line'
-  | 'arrow-up-wide-narrow'
-  | 'arrow-up-z-a'
-  | 'arrow-up'
-  | 'arrows-up-from-line'
-  | 'asterisk'
-  | 'at-sign'
-  | 'atom'
-  | 'audio-lines'
-  | 'audio-waveform'
-  | 'award'
-  | 'axe'
-  | 'axis-3d'
-  | 'baby'
-  | 'backpack'
-  | 'badge-alert'
-  | 'badge-cent'
-  | 'badge-check'
-  | 'badge-dollar-sign'
-  | 'badge-euro'
-  | 'badge-indian-rupee'
-  | 'badge-info'
-  | 'badge-japanese-yen'
-  | 'badge-minus'
-  | 'badge-percent'
-  | 'badge-plus'
-  | 'badge-pound-sterling'
-  | 'badge-question-mark'
-  | 'badge-russian-ruble'
-  | 'badge-swiss-franc'
-  | 'badge-x'
-  | 'badge'
-  | 'baggage-claim'
-  | 'ban'
-  | 'banana'
-  | 'bandage'
-  | 'banknote-arrow-down'
-  | 'banknote-arrow-up'
-  | 'banknote-x'
-  | 'banknote'
-  | 'barcode'
-  | 'barrel'
-  | 'baseline'
-  | 'bath'
-  | 'battery-charging'
-  | 'battery-full'
-  | 'battery-low'
-  | 'battery-medium'
-  | 'battery-plus'
-  | 'battery-warning'
-  | 'battery'
-  | 'beaker'
-  | 'bean-off'
-  | 'bean'
-  | 'bed-double'
-  | 'bed-single'
-  | 'bed'
-  | 'beef'
-  | 'beer-off'
-  | 'beer'
-  | 'bell-dot'
-  | 'bell-electric'
-  | 'bell-minus'
-  | 'bell-off'
-  | 'bell-plus'
-  | 'bell-ring'
-  | 'bell'
-  | 'between-horizontal-end'
-  | 'between-horizontal-start'
-  | 'between-vertical-end'
-  | 'between-vertical-start'
-  | 'biceps-flexed'
-  | 'bike'
-  | 'binary'
-  | 'binoculars'
-  | 'biohazard'
-  | 'bird'
-  | 'bitcoin'
-  | 'blend'
-  | 'blinds'
-  | 'blocks'
-  | 'bluetooth-connected'
-  | 'bluetooth-off'
-  | 'bluetooth-searching'
-  | 'bluetooth'
-  | 'bold'
-  | 'bolt'
-  | 'bomb'
-  | 'bone'
-  | 'book-a'
-  | 'book-alert'
-  | 'book-audio'
-  | 'book-check'
-  | 'book-copy'
-  | 'book-dashed'
-  | 'book-down'
-  | 'book-headphones'
-  | 'book-heart'
-  | 'book-image'
-  | 'book-key'
-  | 'book-lock'
-  | 'book-marked'
-  | 'book-minus'
-  | 'book-open-check'
-  | 'book-open-text'
-  | 'book-open'
-  | 'book-plus'
-  | 'book-text'
-  | 'book-type'
-  | 'book-up-2'
-  | 'book-up'
-  | 'book-user'
-  | 'book-x'
-  | 'book'
-  | 'bookmark-check'
-  | 'bookmark-minus'
-  | 'bookmark-plus'
-  | 'bookmark-x'
-  | 'bookmark'
-  | 'boom-box'
-  | 'bot-message-square'
-  | 'bot-off'
-  | 'bot'
-  | 'bottle-wine'
-  | 'bow-arrow'
-  | 'box'
-  | 'boxes'
-  | 'braces'
-  | 'brackets'
-  | 'brain-circuit'
-  | 'brain-cog'
-  | 'brain'
-  | 'brick-wall-fire'
-  | 'brick-wall'
-  | 'briefcase-business'
-  | 'briefcase-conveyor-belt'
-  | 'briefcase-medical'
-  | 'briefcase'
-  | 'bring-to-front'
-  | 'brush-cleaning'
-  | 'brush'
-  | 'bubbles'
-  | 'bug-off'
-  | 'bug-play'
-  | 'bug'
-  | 'building-2'
-  | 'building'
-  | 'bus-front'
-  | 'bus'
-  | 'cable-car'
-  | 'cable'
-  | 'cake-slice'
-  | 'cake'
-  | 'calculator'
-  | 'calendar-1'
-  | 'calendar-arrow-down'
-  | 'calendar-arrow-up'
-  | 'calendar-check-2'
-  | 'calendar-check'
-  | 'calendar-clock'
-  | 'calendar-cog'
-  | 'calendar-days'
-  | 'calendar-fold'
-  | 'calendar-heart'
-  | 'calendar-minus-2'
-  | 'calendar-minus'
-  | 'calendar-off'
-  | 'calendar-plus-2'
-  | 'calendar-plus'
-  | 'calendar-range'
-  | 'calendar-search'
-  | 'calendar-sync'
-  | 'calendar-x-2'
-  | 'calendar-x'
-  | 'calendar'
-  | 'camera-off'
-  | 'camera'
-  | 'candy-cane'
-  | 'candy-off'
-  | 'candy'
-  | 'cannabis'
-  | 'captions-off'
-  | 'captions'
-  | 'car-front'
-  | 'car-taxi-front'
-  | 'car'
-  | 'caravan'
-  | 'card-sim'
-  | 'carrot'
-  | 'case-lower'
-  | 'case-sensitive'
-  | 'case-upper'
-  | 'cassette-tape'
-  | 'cast'
-  | 'castle'
-  | 'cat'
-  | 'cctv'
-  | 'chart-area'
-  | 'chart-bar-big'
-  | 'chart-bar-decreasing'
-  | 'chart-bar-increasing'
-  | 'chart-bar-stacked'
-  | 'chart-bar'
-  | 'chart-candlestick'
-  | 'chart-column-big'
-  | 'chart-column-decreasing'
-  | 'chart-column-increasing'
-  | 'chart-column-stacked'
-  | 'chart-column'
-  | 'chart-gantt'
-  | 'chart-line'
-  | 'chart-network'
-  | 'chart-no-axes-column-decreasing'
-  | 'chart-no-axes-column-increasing'
-  | 'chart-no-axes-column'
-  | 'chart-no-axes-combined'
-  | 'chart-no-axes-gantt'
-  | 'chart-pie'
-  | 'chart-scatter'
-  | 'chart-spline'
-  | 'check-check'
-  | 'check-line'
-  | 'check'
-  | 'chef-hat'
-  | 'cherry'
-  | 'chevron-down'
-  | 'chevron-first'
-  | 'chevron-last'
-  | 'chevron-left'
-  | 'chevron-right'
-  | 'chevron-up'
-  | 'chevrons-down-up'
-  | 'chevrons-down'
-  | 'chevrons-left-right-ellipsis'
-  | 'chevrons-left-right'
-  | 'chevrons-left'
-  | 'chevrons-right-left'
-  | 'chevrons-right'
-  | 'chevrons-up-down'
-  | 'chevrons-up'
-  | 'chrome'
-  | 'church'
-  | 'cigarette-off'
-  | 'cigarette'
-  | 'circle-alert'
-  | 'circle-arrow-down'
-  | 'circle-arrow-left'
-  | 'circle-arrow-out-down-left'
-  | 'circle-arrow-out-down-right'
-  | 'circle-arrow-out-up-left'
-  | 'circle-arrow-out-up-right'
-  | 'circle-arrow-right'
-  | 'circle-arrow-up'
-  | 'circle-check-big'
-  | 'circle-check'
-  | 'circle-chevron-down'
-  | 'circle-chevron-left'
-  | 'circle-chevron-right'
-  | 'circle-chevron-up'
-  | 'circle-dashed'
-  | 'circle-divide'
-  | 'circle-dollar-sign'
-  | 'circle-dot-dashed'
-  | 'circle-dot'
-  | 'circle-ellipsis'
-  | 'circle-equal'
-  | 'circle-fading-arrow-up'
-  | 'circle-fading-plus'
-  | 'circle-gauge'
-  | 'circle-minus'
-  | 'circle-off'
-  | 'circle-parking-off'
-  | 'circle-parking'
-  | 'circle-pause'
-  | 'circle-percent'
-  | 'circle-play'
-  | 'circle-plus'
-  | 'circle-pound-sterling'
-  | 'circle-power'
-  | 'circle-question-mark'
-  | 'circle-slash-2'
-  | 'circle-slash'
-  | 'circle-small'
-  | 'circle-stop'
-  | 'circle-user-round'
-  | 'circle-user'
-  | 'circle-x'
-  | 'circle'
-  | 'circuit-board'
-  | 'citrus'
-  | 'clapperboard'
-  | 'clipboard-check'
-  | 'clipboard-copy'
-  | 'clipboard-list'
-  | 'clipboard-minus'
-  | 'clipboard-paste'
-  | 'clipboard-pen-line'
-  | 'clipboard-pen'
-  | 'clipboard-plus'
-  | 'clipboard-type'
-  | 'clipboard-x'
-  | 'clipboard'
-  | 'clock-1'
-  | 'clock-10'
-  | 'clock-11'
-  | 'clock-12'
-  | 'clock-2'
-  | 'clock-3'
-  | 'clock-4'
-  | 'clock-5'
-  | 'clock-6'
-  | 'clock-7'
-  | 'clock-8'
-  | 'clock-9'
-  | 'clock-alert'
-  | 'clock-arrow-down'
-  | 'clock-arrow-up'
-  | 'clock-fading'
-  | 'clock-plus'
-  | 'clock'
-  | 'cloud-alert'
-  | 'cloud-check'
-  | 'cloud-cog'
-  | 'cloud-download'
-  | 'cloud-drizzle'
-  | 'cloud-fog'
-  | 'cloud-hail'
-  | 'cloud-lightning'
-  | 'cloud-moon-rain'
-  | 'cloud-moon'
-  | 'cloud-off'
-  | 'cloud-rain-wind'
-  | 'cloud-rain'
-  | 'cloud-snow'
-  | 'cloud-sun-rain'
-  | 'cloud-sun'
-  | 'cloud-upload'
-  | 'cloud'
-  | 'cloudy'
-  | 'clover'
-  | 'club'
-  | 'code-xml'
-  | 'code'
-  | 'codepen'
-  | 'codesandbox'
-  | 'coffee'
-  | 'cog'
-  | 'coins'
-  | 'columns-2'
-  | 'columns-3-cog'
-  | 'columns-3'
-  | 'columns-4'
-  | 'combine'
-  | 'command'
-  | 'compass'
-  | 'component'
-  | 'computer'
-  | 'concierge-bell'
-  | 'cone'
-  | 'construction'
-  | 'contact-round'
-  | 'contact'
-  | 'container'
-  | 'contrast'
-  | 'cookie'
-  | 'cooking-pot'
-  | 'copy-check'
-  | 'copy-minus'
-  | 'copy-plus'
-  | 'copy-slash'
-  | 'copy-x'
-  | 'copy'
-  | 'copyleft'
-  | 'copyright'
-  | 'corner-down-left'
-  | 'corner-down-right'
-  | 'corner-left-down'
-  | 'corner-left-up'
-  | 'corner-right-down'
-  | 'corner-right-up'
-  | 'corner-up-left'
-  | 'corner-up-right'
-  | 'cpu'
-  | 'creative-commons'
-  | 'credit-card'
-  | 'croissant'
-  | 'crop'
-  | 'cross'
-  | 'crosshair'
-  | 'crown'
-  | 'cuboid'
-  | 'cup-soda'
-  | 'currency'
-  | 'cylinder'
-  | 'dam'
-  | 'database-backup'
-  | 'database-zap'
-  | 'database'
-  | 'decimals-arrow-left'
-  | 'decimals-arrow-right'
-  | 'delete'
-  | 'dessert'
-  | 'diameter'
-  | 'diamond-minus'
-  | 'diamond-percent'
-  | 'diamond-plus'
-  | 'diamond'
-  | 'dice-1'
-  | 'dice-2'
-  | 'dice-3'
-  | 'dice-4'
-  | 'dice-5'
-  | 'dice-6'
-  | 'dices'
-  | 'diff'
-  | 'disc-2'
-  | 'disc-3'
-  | 'disc-album'
-  | 'disc'
-  | 'divide'
-  | 'dna-off'
-  | 'dna'
-  | 'dock'
-  | 'dog'
-  | 'dollar-sign'
-  | 'donut'
-  | 'door-closed-locked'
-  | 'door-closed'
-  | 'door-open'
-  | 'dot'
-  | 'download'
-  | 'drafting-compass'
-  | 'drama'
-  | 'dribbble'
-  | 'drill'
-  | 'drone'
-  | 'droplet-off'
-  | 'droplet'
-  | 'droplets'
-  | 'drum'
-  | 'drumstick'
-  | 'dumbbell'
-  | 'ear-off'
-  | 'ear'
-  | 'earth-lock'
-  | 'earth'
-  | 'eclipse'
-  | 'egg-fried'
-  | 'egg-off'
-  | 'egg'
-  | 'ellipsis-vertical'
-  | 'ellipsis'
-  | 'equal-approximately'
-  | 'equal-not'
-  | 'equal'
-  | 'eraser'
-  | 'ethernet-port'
-  | 'euro'
-  | 'expand'
-  | 'external-link'
-  | 'eye-closed'
-  | 'eye-off'
-  | 'eye'
-  | 'facebook'
-  | 'factory'
-  | 'fan'
-  | 'fast-forward'
-  | 'feather'
-  | 'fence'
-  | 'ferris-wheel'
-  | 'figma'
-  | 'file-archive'
-  | 'file-audio-2'
-  | 'file-audio'
-  | 'file-axis-3d'
-  | 'file-badge-2'
-  | 'file-badge'
-  | 'file-box'
-  | 'file-chart-column-increasing'
-  | 'file-chart-column'
-  | 'file-chart-line'
-  | 'file-chart-pie'
-  | 'file-check-2'
-  | 'file-check'
-  | 'file-clock'
-  | 'file-code-2'
-  | 'file-code'
-  | 'file-cog'
-  | 'file-diff'
-  | 'file-digit'
-  | 'file-down'
-  | 'file-heart'
-  | 'file-image'
-  | 'file-input'
-  | 'file-json-2'
-  | 'file-json'
-  | 'file-key-2'
-  | 'file-key'
-  | 'file-lock-2'
-  | 'file-lock'
-  | 'file-minus-2'
-  | 'file-minus'
-  | 'file-music'
-  | 'file-output'
-  | 'file-pen-line'
-  | 'file-pen'
-  | 'file-plus-2'
-  | 'file-plus'
-  | 'file-question-mark'
-  | 'file-scan'
-  | 'file-search-2'
-  | 'file-search'
-  | 'file-sliders'
-  | 'file-spreadsheet'
-  | 'file-stack'
-  | 'file-symlink'
-  | 'file-terminal'
-  | 'file-text'
-  | 'file-type-2'
-  | 'file-type'
-  | 'file-up'
-  | 'file-user'
-  | 'file-video-2'
-  | 'file-video'
-  | 'file-volume-2'
-  | 'file-volume'
-  | 'file-warning'
-  | 'file-x-2'
-  | 'file-x'
-  | 'file'
-  | 'files'
-  | 'film'
-  | 'fingerprint'
-  | 'fire-extinguisher'
-  | 'fish-off'
-  | 'fish-symbol'
-  | 'fish'
-  | 'flag-off'
-  | 'flag-triangle-left'
-  | 'flag-triangle-right'
-  | 'flag'
-  | 'flame-kindling'
-  | 'flame'
-  | 'flashlight-off'
-  | 'flashlight'
-  | 'flask-conical-off'
-  | 'flask-conical'
-  | 'flask-round'
-  | 'flip-horizontal-2'
-  | 'flip-horizontal'
-  | 'flip-vertical-2'
-  | 'flip-vertical'
-  | 'flower-2'
-  | 'flower'
-  | 'focus'
-  | 'fold-horizontal'
-  | 'fold-vertical'
-  | 'folder-archive'
-  | 'folder-check'
-  | 'folder-clock'
-  | 'folder-closed'
-  | 'folder-code'
-  | 'folder-cog'
-  | 'folder-dot'
-  | 'folder-down'
-  | 'folder-git-2'
-  | 'folder-git'
-  | 'folder-heart'
-  | 'folder-input'
-  | 'folder-kanban'
-  | 'folder-key'
-  | 'folder-lock'
-  | 'folder-minus'
-  | 'folder-open-dot'
-  | 'folder-open'
-  | 'folder-output'
-  | 'folder-pen'
-  | 'folder-plus'
-  | 'folder-root'
-  | 'folder-search-2'
-  | 'folder-search'
-  | 'folder-symlink'
-  | 'folder-sync'
-  | 'folder-tree'
-  | 'folder-up'
-  | 'folder-x'
-  | 'folder'
-  | 'folders'
-  | 'footprints'
-  | 'forklift'
-  | 'forward'
-  | 'frame'
-  | 'framer'
-  | 'frown'
-  | 'fuel'
-  | 'fullscreen'
-  | 'funnel-plus'
-  | 'funnel-x'
-  | 'funnel'
-  | 'gallery-horizontal-end'
-  | 'gallery-horizontal'
-  | 'gallery-thumbnails'
-  | 'gallery-vertical-end'
-  | 'gallery-vertical'
-  | 'gamepad-2'
-  | 'gamepad'
-  | 'gauge'
-  | 'gavel'
-  | 'gem'
-  | 'georgian-lari'
-  | 'ghost'
-  | 'gift'
-  | 'git-branch-plus'
-  | 'git-branch'
-  | 'git-commit-horizontal'
-  | 'git-commit-vertical'
-  | 'git-compare-arrows'
-  | 'git-compare'
-  | 'git-fork'
-  | 'git-graph'
-  | 'git-merge'
-  | 'git-pull-request-arrow'
-  | 'git-pull-request-closed'
-  | 'git-pull-request-create-arrow'
-  | 'git-pull-request-create'
-  | 'git-pull-request-draft'
-  | 'git-pull-request'
-  | 'github'
-  | 'gitlab'
-  | 'glass-water'
-  | 'glasses'
-  | 'globe-lock'
-  | 'globe'
-  | 'goal'
-  | 'gpu'
-  | 'grab'
-  | 'graduation-cap'
-  | 'grape'
-  | 'grid-2x2-check'
-  | 'grid-2x2-plus'
-  | 'grid-2x2-x'
-  | 'grid-2x2'
-  | 'grid-3x2'
-  | 'grid-3x3'
-  | 'grip-horizontal'
-  | 'grip-vertical'
-  | 'grip'
-  | 'group'
-  | 'guitar'
-  | 'ham'
-  | 'hamburger'
-  | 'hammer'
-  | 'hand-coins'
-  | 'hand-heart'
-  | 'hand-helping'
-  | 'hand-metal'
-  | 'hand-platter'
-  | 'hand'
-  | 'handshake'
-  | 'hard-drive-download'
-  | 'hard-drive-upload'
-  | 'hard-drive'
-  | 'hard-hat'
-  | 'hash'
-  | 'haze'
-  | 'hdmi-port'
-  | 'heading-1'
-  | 'heading-2'
-  | 'heading-3'
-  | 'heading-4'
-  | 'heading-5'
-  | 'heading-6'
-  | 'heading'
-  | 'headphone-off'
-  | 'headphones'
-  | 'headset'
-  | 'heart-crack'
-  | 'heart-handshake'
-  | 'heart-minus'
-  | 'heart-off'
-  | 'heart-plus'
-  | 'heart-pulse'
-  | 'heart'
-  | 'heater'
-  | 'hexagon'
-  | 'highlighter'
-  | 'history'
-  | 'hop-off'
-  | 'hop'
-  | 'hospital'
-  | 'hotel'
-  | 'hourglass'
-  | 'house-plug'
-  | 'house-plus'
-  | 'house-wifi'
-  | 'house'
-  | 'ice-cream-bowl'
-  | 'ice-cream-cone'
-  | 'id-card-lanyard'
-  | 'id-card'
-  | 'image-down'
-  | 'image-minus'
-  | 'image-off'
-  | 'image-play'
-  | 'image-plus'
-  | 'image-up'
-  | 'image-upscale'
-  | 'image'
-  | 'images'
-  | 'import'
-  | 'inbox'
-  | 'indent-decrease'
-  | 'indent-increase'
-  | 'indian-rupee'
-  | 'infinity'
-  | 'info'
-  | 'inspection-panel'
-  | 'instagram'
-  | 'italic'
-  | 'iteration-ccw'
-  | 'iteration-cw'
-  | 'japanese-yen'
-  | 'joystick'
-  | 'kanban'
-  | 'key-round'
-  | 'key-square'
-  | 'key'
-  | 'keyboard-music'
-  | 'keyboard-off'
-  | 'keyboard'
-  | 'lamp-ceiling'
-  | 'lamp-desk'
-  | 'lamp-floor'
-  | 'lamp-wall-down'
-  | 'lamp-wall-up'
-  | 'lamp'
-  | 'land-plot'
-  | 'landmark'
-  | 'languages'
-  | 'laptop-minimal-check'
-  | 'laptop-minimal'
-  | 'laptop'
-  | 'lasso-select'
-  | 'lasso'
-  | 'laugh'
-  | 'layers-2'
-  | 'layers'
-  | 'layout-dashboard'
-  | 'layout-grid'
-  | 'layout-list'
-  | 'layout-panel-left'
-  | 'layout-panel-top'
-  | 'layout-template'
-  | 'leaf'
-  | 'leafy-green'
-  | 'lectern'
-  | 'letter-text'
-  | 'library-big'
-  | 'library'
-  | 'life-buoy'
-  | 'ligature'
-  | 'lightbulb-off'
-  | 'lightbulb'
-  | 'line-squiggle'
-  | 'link-2-off'
-  | 'link-2'
-  | 'link'
-  | 'linkedin'
-  | 'list-check'
-  | 'list-checks'
-  | 'list-collapse'
-  | 'list-end'
-  | 'list-filter-plus'
-  | 'list-filter'
-  | 'list-minus'
-  | 'list-music'
-  | 'list-ordered'
-  | 'list-plus'
-  | 'list-restart'
-  | 'list-start'
-  | 'list-todo'
-  | 'list-tree'
-  | 'list-video'
-  | 'list-x'
-  | 'list'
-  | 'loader-circle'
-  | 'loader-pinwheel'
-  | 'loader'
-  | 'locate-fixed'
-  | 'locate-off'
-  | 'locate'
-  | 'location-edit'
-  | 'lock-keyhole-open'
-  | 'lock-keyhole'
-  | 'lock-open'
-  | 'lock'
-  | 'log-in'
-  | 'log-out'
-  | 'logs'
-  | 'lollipop'
-  | 'luggage'
-  | 'magnet'
-  | 'mail-check'
-  | 'mail-minus'
-  | 'mail-open'
-  | 'mail-plus'
-  | 'mail-question-mark'
-  | 'mail-search'
-  | 'mail-warning'
-  | 'mail-x'
-  | 'mail'
-  | 'mailbox'
-  | 'mails'
-  | 'map-pin-check-inside'
-  | 'map-pin-check'
-  | 'map-pin-house'
-  | 'map-pin-minus-inside'
-  | 'map-pin-minus'
-  | 'map-pin-off'
-  | 'map-pin-plus-inside'
-  | 'map-pin-plus'
-  | 'map-pin-x-inside'
-  | 'map-pin-x'
-  | 'map-pin'
-  | 'map-pinned'
-  | 'map-plus'
-  | 'map'
-  | 'mars-stroke'
-  | 'mars'
-  | 'martini'
-  | 'maximize-2'
-  | 'maximize'
-  | 'medal'
-  | 'megaphone-off'
-  | 'megaphone'
-  | 'meh'
-  | 'memory-stick'
-  | 'menu'
-  | 'merge'
-  | 'message-circle-code'
-  | 'message-circle-dashed'
-  | 'message-circle-heart'
-  | 'message-circle-more'
-  | 'message-circle-off'
-  | 'message-circle-plus'
-  | 'message-circle-question-mark'
-  | 'message-circle-reply'
-  | 'message-circle-warning'
-  | 'message-circle-x'
-  | 'message-circle'
-  | 'message-square-code'
-  | 'message-square-dashed'
-  | 'message-square-diff'
-  | 'message-square-dot'
-  | 'message-square-heart'
-  | 'message-square-lock'
-  | 'message-square-more'
-  | 'message-square-off'
-  | 'message-square-plus'
-  | 'message-square-quote'
-  | 'message-square-reply'
-  | 'message-square-share'
-  | 'message-square-text'
-  | 'message-square-warning'
-  | 'message-square-x'
-  | 'message-square'
-  | 'messages-square'
-  | 'mic-off'
-  | 'mic-vocal'
-  | 'mic'
-  | 'microchip'
-  | 'microscope'
-  | 'microwave'
-  | 'milestone'
-  | 'milk-off'
-  | 'milk'
-  | 'minimize-2'
-  | 'minimize'
-  | 'minus'
-  | 'monitor-check'
-  | 'monitor-cog'
-  | 'monitor-dot'
-  | 'monitor-down'
-  | 'monitor-off'
-  | 'monitor-pause'
-  | 'monitor-play'
-  | 'monitor-smartphone'
-  | 'monitor-speaker'
-  | 'monitor-stop'
-  | 'monitor-up'
-  | 'monitor-x'
-  | 'monitor'
-  | 'moon-star'
-  | 'moon'
-  | 'mountain-snow'
-  | 'mountain'
-  | 'mouse-off'
-  | 'mouse-pointer-2'
-  | 'mouse-pointer-ban'
-  | 'mouse-pointer-click'
-  | 'mouse-pointer'
-  | 'mouse'
-  | 'move-3d'
-  | 'move-diagonal-2'
-  | 'move-diagonal'
-  | 'move-down-left'
-  | 'move-down-right'
-  | 'move-down'
-  | 'move-horizontal'
-  | 'move-left'
-  | 'move-right'
-  | 'move-up-left'
-  | 'move-up-right'
-  | 'move-up'
-  | 'move-vertical'
-  | 'move'
-  | 'music-2'
-  | 'music-3'
-  | 'music-4'
-  | 'music'
-  | 'navigation-2-off'
-  | 'navigation-2'
-  | 'navigation-off'
-  | 'navigation'
-  | 'network'
-  | 'newspaper'
-  | 'nfc'
-  | 'non-binary'
-  | 'notebook-pen'
-  | 'notebook-tabs'
-  | 'notebook-text'
-  | 'notebook'
-  | 'notepad-text-dashed'
-  | 'notepad-text'
-  | 'nut-off'
-  | 'nut'
-  | 'octagon-alert'
-  | 'octagon-minus'
-  | 'octagon-pause'
-  | 'octagon-x'
-  | 'octagon'
-  | 'omega'
-  | 'option'
-  | 'orbit'
-  | 'origami'
-  | 'package-2'
-  | 'package-check'
-  | 'package-minus'
-  | 'package-open'
-  | 'package-plus'
-  | 'package-search'
-  | 'package-x'
-  | 'package'
-  | 'paint-bucket'
-  | 'paint-roller'
-  | 'paintbrush-vertical'
-  | 'paintbrush'
-  | 'palette'
-  | 'panda'
-  | 'panel-bottom-close'
-  | 'panel-bottom-dashed'
-  | 'panel-bottom-open'
-  | 'panel-bottom'
-  | 'panel-left-close'
-  | 'panel-left-dashed'
-  | 'panel-left-open'
-  | 'panel-left'
-  | 'panel-right-close'
-  | 'panel-right-dashed'
-  | 'panel-right-open'
-  | 'panel-right'
-  | 'panel-top-close'
-  | 'panel-top-dashed'
-  | 'panel-top-open'
-  | 'panel-top'
-  | 'panels-left-bottom'
-  | 'panels-right-bottom'
-  | 'panels-top-left'
-  | 'paperclip'
-  | 'parentheses'
-  | 'parking-meter'
-  | 'party-popper'
-  | 'pause'
-  | 'paw-print'
-  | 'pc-case'
-  | 'pen-line'
-  | 'pen-off'
-  | 'pen-tool'
-  | 'pen'
-  | 'pencil-line'
-  | 'pencil-off'
-  | 'pencil-ruler'
-  | 'pencil'
-  | 'pentagon'
-  | 'percent'
-  | 'person-standing'
-  | 'philippine-peso'
-  | 'phone-call'
-  | 'phone-forwarded'
-  | 'phone-incoming'
-  | 'phone-missed'
-  | 'phone-off'
-  | 'phone-outgoing'
-  | 'phone'
-  | 'pi'
-  | 'piano'
-  | 'pickaxe'
-  | 'picture-in-picture-2'
-  | 'picture-in-picture'
-  | 'piggy-bank'
-  | 'pilcrow-left'
-  | 'pilcrow-right'
-  | 'pilcrow'
-  | 'pill-bottle'
-  | 'pill'
-  | 'pin-off'
-  | 'pin'
-  | 'pipette'
-  | 'pizza'
-  | 'plane-landing'
-  | 'plane-takeoff'
-  | 'plane'
-  | 'play'
-  | 'plug-2'
-  | 'plug-zap'
-  | 'plug'
-  | 'plus'
-  | 'pocket-knife'
-  | 'pocket'
-  | 'podcast'
-  | 'pointer-off'
-  | 'pointer'
-  | 'popcorn'
-  | 'popsicle'
-  | 'pound-sterling'
-  | 'power-off'
-  | 'power'
-  | 'presentation'
-  | 'printer-check'
-  | 'printer'
-  | 'projector'
-  | 'proportions'
-  | 'puzzle'
-  | 'pyramid'
-  | 'qr-code'
-  | 'quote'
-  | 'rabbit'
-  | 'radar'
-  | 'radiation'
-  | 'radical'
-  | 'radio-receiver'
-  | 'radio-tower'
-  | 'radio'
-  | 'radius'
-  | 'rail-symbol'
-  | 'rainbow'
-  | 'rat'
-  | 'ratio'
-  | 'receipt-cent'
-  | 'receipt-euro'
-  | 'receipt-indian-rupee'
-  | 'receipt-japanese-yen'
-  | 'receipt-pound-sterling'
-  | 'receipt-russian-ruble'
-  | 'receipt-swiss-franc'
-  | 'receipt-text'
-  | 'receipt'
-  | 'rectangle-circle'
-  | 'rectangle-ellipsis'
-  | 'rectangle-goggles'
-  | 'rectangle-horizontal'
-  | 'rectangle-vertical'
-  | 'recycle'
-  | 'redo-2'
-  | 'redo-dot'
-  | 'redo'
-  | 'refresh-ccw-dot'
-  | 'refresh-ccw'
-  | 'refresh-cw-off'
-  | 'refresh-cw'
-  | 'refrigerator'
-  | 'regex'
-  | 'remove-formatting'
-  | 'repeat-1'
-  | 'repeat-2'
-  | 'repeat'
-  | 'replace-all'
-  | 'replace'
-  | 'reply-all'
-  | 'reply'
-  | 'rewind'
-  | 'ribbon'
-  | 'rocket'
-  | 'rocking-chair'
-  | 'roller-coaster'
-  | 'rotate-3d'
-  | 'rotate-ccw-key'
-  | 'rotate-ccw-square'
-  | 'rotate-ccw'
-  | 'rotate-cw-square'
-  | 'rotate-cw'
-  | 'route-off'
-  | 'route'
-  | 'router'
-  | 'rows-2'
-  | 'rows-3'
-  | 'rows-4'
-  | 'rss'
-  | 'ruler-dimension-line'
-  | 'ruler'
-  | 'russian-ruble'
-  | 'sailboat'
-  | 'salad'
-  | 'sandwich'
-  | 'satellite-dish'
-  | 'satellite'
-  | 'saudi-riyal'
-  | 'save-all'
-  | 'save-off'
-  | 'save'
-  | 'scale-3d'
-  | 'scale'
-  | 'scaling'
-  | 'scan-barcode'
-  | 'scan-eye'
-  | 'scan-face'
-  | 'scan-heart'
-  | 'scan-line'
-  | 'scan-qr-code'
-  | 'scan-search'
-  | 'scan-text'
-  | 'scan'
-  | 'school'
-  | 'scissors-line-dashed'
-  | 'scissors'
-  | 'screen-share-off'
-  | 'screen-share'
-  | 'scroll-text'
-  | 'scroll'
-  | 'search-check'
-  | 'search-code'
-  | 'search-slash'
-  | 'search-x'
-  | 'search'
-  | 'section'
-  | 'send-horizontal'
-  | 'send-to-back'
-  | 'send'
-  | 'separator-horizontal'
-  | 'separator-vertical'
-  | 'server-cog'
-  | 'server-crash'
-  | 'server-off'
-  | 'server'
-  | 'settings-2'
-  | 'settings'
-  | 'shapes'
-  | 'share-2'
-  | 'share'
-  | 'sheet'
-  | 'shell'
-  | 'shield-alert'
-  | 'shield-ban'
-  | 'shield-check'
-  | 'shield-ellipsis'
-  | 'shield-half'
-  | 'shield-minus'
-  | 'shield-off'
-  | 'shield-plus'
-  | 'shield-question-mark'
-  | 'shield-user'
-  | 'shield-x'
-  | 'shield'
-  | 'ship-wheel'
-  | 'ship'
-  | 'shirt'
-  | 'shopping-bag'
-  | 'shopping-basket'
-  | 'shopping-cart'
-  | 'shovel'
-  | 'shower-head'
-  | 'shredder'
-  | 'shrimp'
-  | 'shrink'
-  | 'shrub'
-  | 'shuffle'
-  | 'sigma'
-  | 'signal-high'
-  | 'signal-low'
-  | 'signal-medium'
-  | 'signal-zero'
-  | 'signal'
-  | 'signature'
-  | 'signpost-big'
-  | 'signpost'
-  | 'siren'
-  | 'skip-back'
-  | 'skip-forward'
-  | 'skull'
-  | 'slack'
-  | 'slash'
-  | 'slice'
-  | 'sliders-horizontal'
-  | 'sliders-vertical'
-  | 'smartphone-charging'
-  | 'smartphone-nfc'
-  | 'smartphone'
-  | 'smile-plus'
-  | 'smile'
-  | 'snail'
-  | 'snowflake'
-  | 'soap-dispenser-droplet'
-  | 'sofa'
-  | 'soup'
-  | 'space'
-  | 'spade'
-  | 'sparkle'
-  | 'sparkles'
-  | 'speaker'
-  | 'speech'
-  | 'spell-check-2'
-  | 'spell-check'
-  | 'spline-pointer'
-  | 'spline'
-  | 'split'
-  | 'spool'
-  | 'spray-can'
-  | 'sprout'
-  | 'square-activity'
-  | 'square-arrow-down-left'
-  | 'square-arrow-down-right'
-  | 'square-arrow-down'
-  | 'square-arrow-left'
-  | 'square-arrow-out-down-left'
-  | 'square-arrow-out-down-right'
-  | 'square-arrow-out-up-left'
-  | 'square-arrow-out-up-right'
-  | 'square-arrow-right'
-  | 'square-arrow-up-left'
-  | 'square-arrow-up-right'
-  | 'square-arrow-up'
-  | 'square-asterisk'
-  | 'square-bottom-dashed-scissors'
-  | 'square-chart-gantt'
-  | 'square-check-big'
-  | 'square-check'
-  | 'square-chevron-down'
-  | 'square-chevron-left'
-  | 'square-chevron-right'
-  | 'square-chevron-up'
-  | 'square-code'
-  | 'square-dashed-bottom-code'
-  | 'square-dashed-bottom'
-  | 'square-dashed-kanban'
-  | 'square-dashed-mouse-pointer'
-  | 'square-dashed-top-solid'
-  | 'square-dashed'
-  | 'square-divide'
-  | 'square-dot'
-  | 'square-equal'
-  | 'square-function'
-  | 'square-kanban'
-  | 'square-library'
-  | 'square-m'
-  | 'square-menu'
-  | 'square-minus'
-  | 'square-mouse-pointer'
-  | 'square-parking-off'
-  | 'square-parking'
-  | 'square-pen'
-  | 'square-percent'
-  | 'square-pi'
-  | 'square-pilcrow'
-  | 'square-play'
-  | 'square-plus'
-  | 'square-power'
-  | 'square-radical'
-  | 'square-round-corner'
-  | 'square-scissors'
-  | 'square-sigma'
-  | 'square-slash'
-  | 'square-split-horizontal'
-  | 'square-split-vertical'
-  | 'square-square'
-  | 'square-stack'
-  | 'square-terminal'
-  | 'square-user-round'
-  | 'square-user'
-  | 'square-x'
-  | 'square'
-  | 'squares-exclude'
-  | 'squares-intersect'
-  | 'squares-subtract'
-  | 'squares-unite'
-  | 'squircle-dashed'
-  | 'squircle'
-  | 'squirrel'
-  | 'stamp'
-  | 'star-half'
-  | 'star-off'
-  | 'star'
-  | 'step-back'
-  | 'step-forward'
-  | 'stethoscope'
-  | 'sticker'
-  | 'sticky-note'
-  | 'store'
-  | 'stretch-horizontal'
-  | 'stretch-vertical'
-  | 'strikethrough'
-  | 'subscript'
-  | 'sun-dim'
-  | 'sun-medium'
-  | 'sun-moon'
-  | 'sun-snow'
-  | 'sun'
-  | 'sunrise'
-  | 'sunset'
-  | 'superscript'
-  | 'swatch-book'
-  | 'swiss-franc'
-  | 'switch-camera'
-  | 'sword'
-  | 'swords'
-  | 'syringe'
-  | 'table-2'
-  | 'table-cells-merge'
-  | 'table-cells-split'
-  | 'table-columns-split'
-  | 'table-of-contents'
-  | 'table-properties'
-  | 'table-rows-split'
-  | 'table'
-  | 'tablet-smartphone'
-  | 'tablet'
-  | 'tablets'
-  | 'tag'
-  | 'tags'
-  | 'tally-1'
-  | 'tally-2'
-  | 'tally-3'
-  | 'tally-4'
-  | 'tally-5'
-  | 'tangent'
-  | 'target'
-  | 'telescope'
-  | 'tent-tree'
-  | 'tent'
-  | 'terminal'
-  | 'test-tube-diagonal'
-  | 'test-tube'
-  | 'test-tubes'
-  | 'text-cursor-input'
-  | 'text-cursor'
-  | 'text-quote'
-  | 'text-search'
-  | 'text-select'
-  | 'text'
-  | 'theater'
-  | 'thermometer-snowflake'
-  | 'thermometer-sun'
-  | 'thermometer'
-  | 'thumbs-down'
-  | 'thumbs-up'
-  | 'ticket-check'
-  | 'ticket-minus'
-  | 'ticket-percent'
-  | 'ticket-plus'
-  | 'ticket-slash'
-  | 'ticket-x'
-  | 'ticket'
-  | 'tickets-plane'
-  | 'tickets'
-  | 'timer-off'
-  | 'timer-reset'
-  | 'timer'
-  | 'toggle-left'
-  | 'toggle-right'
-  | 'toilet'
-  | 'tool-case'
-  | 'tornado'
-  | 'torus'
-  | 'touchpad-off'
-  | 'touchpad'
-  | 'tower-control'
-  | 'toy-brick'
-  | 'tractor'
-  | 'traffic-cone'
-  | 'train-front-tunnel'
-  | 'train-front'
-  | 'train-track'
-  | 'tram-front'
-  | 'transgender'
-  | 'trash-2'
-  | 'trash'
-  | 'tree-deciduous'
-  | 'tree-palm'
-  | 'tree-pine'
-  | 'trees'
-  | 'trello'
-  | 'trending-down'
-  | 'trending-up-down'
-  | 'trending-up'
-  | 'triangle-alert'
-  | 'triangle-dashed'
-  | 'triangle-right'
-  | 'triangle'
-  | 'trophy'
-  | 'truck-electric'
-  | 'truck'
-  | 'turtle'
-  | 'tv-minimal-play'
-  | 'tv-minimal'
-  | 'tv'
-  | 'twitch'
-  | 'twitter'
-  | 'type-outline'
-  | 'type'
-  | 'umbrella-off'
-  | 'umbrella'
-  | 'underline'
-  | 'undo-2'
-  | 'undo-dot'
-  | 'undo'
-  | 'unfold-horizontal'
-  | 'unfold-vertical'
-  | 'ungroup'
-  | 'university'
-  | 'unlink-2'
-  | 'unlink'
-  | 'unplug'
-  | 'upload'
-  | 'usb'
-  | 'user-check'
-  | 'user-cog'
-  | 'user-lock'
-  | 'user-minus'
-  | 'user-pen'
-  | 'user-plus'
-  | 'user-round-check'
-  | 'user-round-cog'
-  | 'user-round-minus'
-  | 'user-round-pen'
-  | 'user-round-plus'
-  | 'user-round-search'
-  | 'user-round-x'
-  | 'user-round'
-  | 'user-search'
-  | 'user-x'
-  | 'user'
-  | 'users-round'
-  | 'users'
-  | 'utensils-crossed'
-  | 'utensils'
-  | 'utility-pole'
-  | 'variable'
-  | 'vault'
-  | 'vector-square'
-  | 'vegan'
-  | 'venetian-mask'
-  | 'venus-and-mars'
-  | 'venus'
-  | 'vibrate-off'
-  | 'vibrate'
-  | 'video-off'
-  | 'video'
-  | 'videotape'
-  | 'view'
-  | 'voicemail'
-  | 'volleyball'
-  | 'volume-1'
-  | 'volume-2'
-  | 'volume-off'
-  | 'volume-x'
-  | 'volume'
-  | 'vote'
-  | 'wallet-cards'
-  | 'wallet-minimal'
-  | 'wallet'
-  | 'wallpaper'
-  | 'wand-sparkles'
-  | 'wand'
-  | 'warehouse'
-  | 'washing-machine'
-  | 'watch'
-  | 'waves-ladder'
-  | 'waves'
-  | 'waypoints'
-  | 'webcam'
-  | 'webhook-off'
-  | 'webhook'
-  | 'weight'
-  | 'wheat-off'
-  | 'wheat'
-  | 'whole-word'
-  | 'wifi-cog'
-  | 'wifi-high'
-  | 'wifi-low'
-  | 'wifi-off'
-  | 'wifi-pen'
-  | 'wifi-zero'
-  | 'wifi'
-  | 'wind-arrow-down'
-  | 'wind'
-  | 'wine-off'
-  | 'wine'
-  | 'workflow'
-  | 'worm'
-  | 'wrap-text'
-  | 'wrench'
-  | 'x'
-  | 'youtube'
-  | 'zap-off'
-  | 'zap'
-  | 'zoom-in'
-  | 'zoom-out';
+	| "a-arrow-down"
+	| "a-arrow-up"
+	| "a-large-small"
+	| "accessibility"
+	| "activity"
+	| "air-vent"
+	| "airplay"
+	| "alarm-clock-check"
+	| "alarm-clock-minus"
+	| "alarm-clock-off"
+	| "alarm-clock-plus"
+	| "alarm-clock"
+	| "alarm-smoke"
+	| "album"
+	| "align-center-horizontal"
+	| "align-center-vertical"
+	| "align-center"
+	| "align-end-horizontal"
+	| "align-end-vertical"
+	| "align-horizontal-distribute-center"
+	| "align-horizontal-distribute-end"
+	| "align-horizontal-distribute-start"
+	| "align-horizontal-justify-center"
+	| "align-horizontal-justify-end"
+	| "align-horizontal-justify-start"
+	| "align-horizontal-space-around"
+	| "align-horizontal-space-between"
+	| "align-justify"
+	| "align-left"
+	| "align-right"
+	| "align-start-horizontal"
+	| "align-start-vertical"
+	| "align-vertical-distribute-center"
+	| "align-vertical-distribute-end"
+	| "align-vertical-distribute-start"
+	| "align-vertical-justify-center"
+	| "align-vertical-justify-end"
+	| "align-vertical-justify-start"
+	| "align-vertical-space-around"
+	| "align-vertical-space-between"
+	| "ambulance"
+	| "ampersand"
+	| "ampersands"
+	| "amphora"
+	| "anchor"
+	| "angry"
+	| "annoyed"
+	| "antenna"
+	| "anvil"
+	| "aperture"
+	| "app-window-mac"
+	| "app-window"
+	| "apple"
+	| "archive-restore"
+	| "archive-x"
+	| "archive"
+	| "armchair"
+	| "arrow-big-down-dash"
+	| "arrow-big-down"
+	| "arrow-big-left-dash"
+	| "arrow-big-left"
+	| "arrow-big-right-dash"
+	| "arrow-big-right"
+	| "arrow-big-up-dash"
+	| "arrow-big-up"
+	| "arrow-down-0-1"
+	| "arrow-down-1-0"
+	| "arrow-down-a-z"
+	| "arrow-down-from-line"
+	| "arrow-down-left"
+	| "arrow-down-narrow-wide"
+	| "arrow-down-right"
+	| "arrow-down-to-dot"
+	| "arrow-down-to-line"
+	| "arrow-down-up"
+	| "arrow-down-wide-narrow"
+	| "arrow-down-z-a"
+	| "arrow-down"
+	| "arrow-left-from-line"
+	| "arrow-left-right"
+	| "arrow-left-to-line"
+	| "arrow-left"
+	| "arrow-right-from-line"
+	| "arrow-right-left"
+	| "arrow-right-to-line"
+	| "arrow-right"
+	| "arrow-up-0-1"
+	| "arrow-up-1-0"
+	| "arrow-up-a-z"
+	| "arrow-up-down"
+	| "arrow-up-from-dot"
+	| "arrow-up-from-line"
+	| "arrow-up-left"
+	| "arrow-up-narrow-wide"
+	| "arrow-up-right"
+	| "arrow-up-to-line"
+	| "arrow-up-wide-narrow"
+	| "arrow-up-z-a"
+	| "arrow-up"
+	| "arrows-up-from-line"
+	| "asterisk"
+	| "at-sign"
+	| "atom"
+	| "audio-lines"
+	| "audio-waveform"
+	| "award"
+	| "axe"
+	| "axis-3d"
+	| "baby"
+	| "backpack"
+	| "badge-alert"
+	| "badge-cent"
+	| "badge-check"
+	| "badge-dollar-sign"
+	| "badge-euro"
+	| "badge-indian-rupee"
+	| "badge-info"
+	| "badge-japanese-yen"
+	| "badge-minus"
+	| "badge-percent"
+	| "badge-plus"
+	| "badge-pound-sterling"
+	| "badge-question-mark"
+	| "badge-russian-ruble"
+	| "badge-swiss-franc"
+	| "badge-x"
+	| "badge"
+	| "baggage-claim"
+	| "ban"
+	| "banana"
+	| "bandage"
+	| "banknote-arrow-down"
+	| "banknote-arrow-up"
+	| "banknote-x"
+	| "banknote"
+	| "barcode"
+	| "barrel"
+	| "baseline"
+	| "bath"
+	| "battery-charging"
+	| "battery-full"
+	| "battery-low"
+	| "battery-medium"
+	| "battery-plus"
+	| "battery-warning"
+	| "battery"
+	| "beaker"
+	| "bean-off"
+	| "bean"
+	| "bed-double"
+	| "bed-single"
+	| "bed"
+	| "beef"
+	| "beer-off"
+	| "beer"
+	| "bell-dot"
+	| "bell-electric"
+	| "bell-minus"
+	| "bell-off"
+	| "bell-plus"
+	| "bell-ring"
+	| "bell"
+	| "between-horizontal-end"
+	| "between-horizontal-start"
+	| "between-vertical-end"
+	| "between-vertical-start"
+	| "biceps-flexed"
+	| "bike"
+	| "binary"
+	| "binoculars"
+	| "biohazard"
+	| "bird"
+	| "bitcoin"
+	| "blend"
+	| "blinds"
+	| "blocks"
+	| "bluetooth-connected"
+	| "bluetooth-off"
+	| "bluetooth-searching"
+	| "bluetooth"
+	| "bold"
+	| "bolt"
+	| "bomb"
+	| "bone"
+	| "book-a"
+	| "book-alert"
+	| "book-audio"
+	| "book-check"
+	| "book-copy"
+	| "book-dashed"
+	| "book-down"
+	| "book-headphones"
+	| "book-heart"
+	| "book-image"
+	| "book-key"
+	| "book-lock"
+	| "book-marked"
+	| "book-minus"
+	| "book-open-check"
+	| "book-open-text"
+	| "book-open"
+	| "book-plus"
+	| "book-text"
+	| "book-type"
+	| "book-up-2"
+	| "book-up"
+	| "book-user"
+	| "book-x"
+	| "book"
+	| "bookmark-check"
+	| "bookmark-minus"
+	| "bookmark-plus"
+	| "bookmark-x"
+	| "bookmark"
+	| "boom-box"
+	| "bot-message-square"
+	| "bot-off"
+	| "bot"
+	| "bottle-wine"
+	| "bow-arrow"
+	| "box"
+	| "boxes"
+	| "braces"
+	| "brackets"
+	| "brain-circuit"
+	| "brain-cog"
+	| "brain"
+	| "brick-wall-fire"
+	| "brick-wall"
+	| "briefcase-business"
+	| "briefcase-conveyor-belt"
+	| "briefcase-medical"
+	| "briefcase"
+	| "bring-to-front"
+	| "brush-cleaning"
+	| "brush"
+	| "bubbles"
+	| "bug-off"
+	| "bug-play"
+	| "bug"
+	| "building-2"
+	| "building"
+	| "bus-front"
+	| "bus"
+	| "cable-car"
+	| "cable"
+	| "cake-slice"
+	| "cake"
+	| "calculator"
+	| "calendar-1"
+	| "calendar-arrow-down"
+	| "calendar-arrow-up"
+	| "calendar-check-2"
+	| "calendar-check"
+	| "calendar-clock"
+	| "calendar-cog"
+	| "calendar-days"
+	| "calendar-fold"
+	| "calendar-heart"
+	| "calendar-minus-2"
+	| "calendar-minus"
+	| "calendar-off"
+	| "calendar-plus-2"
+	| "calendar-plus"
+	| "calendar-range"
+	| "calendar-search"
+	| "calendar-sync"
+	| "calendar-x-2"
+	| "calendar-x"
+	| "calendar"
+	| "camera-off"
+	| "camera"
+	| "candy-cane"
+	| "candy-off"
+	| "candy"
+	| "cannabis"
+	| "captions-off"
+	| "captions"
+	| "car-front"
+	| "car-taxi-front"
+	| "car"
+	| "caravan"
+	| "card-sim"
+	| "carrot"
+	| "case-lower"
+	| "case-sensitive"
+	| "case-upper"
+	| "cassette-tape"
+	| "cast"
+	| "castle"
+	| "cat"
+	| "cctv"
+	| "chart-area"
+	| "chart-bar-big"
+	| "chart-bar-decreasing"
+	| "chart-bar-increasing"
+	| "chart-bar-stacked"
+	| "chart-bar"
+	| "chart-candlestick"
+	| "chart-column-big"
+	| "chart-column-decreasing"
+	| "chart-column-increasing"
+	| "chart-column-stacked"
+	| "chart-column"
+	| "chart-gantt"
+	| "chart-line"
+	| "chart-network"
+	| "chart-no-axes-column-decreasing"
+	| "chart-no-axes-column-increasing"
+	| "chart-no-axes-column"
+	| "chart-no-axes-combined"
+	| "chart-no-axes-gantt"
+	| "chart-pie"
+	| "chart-scatter"
+	| "chart-spline"
+	| "check-check"
+	| "check-line"
+	| "check"
+	| "chef-hat"
+	| "cherry"
+	| "chevron-down"
+	| "chevron-first"
+	| "chevron-last"
+	| "chevron-left"
+	| "chevron-right"
+	| "chevron-up"
+	| "chevrons-down-up"
+	| "chevrons-down"
+	| "chevrons-left-right-ellipsis"
+	| "chevrons-left-right"
+	| "chevrons-left"
+	| "chevrons-right-left"
+	| "chevrons-right"
+	| "chevrons-up-down"
+	| "chevrons-up"
+	| "chrome"
+	| "church"
+	| "cigarette-off"
+	| "cigarette"
+	| "circle-alert"
+	| "circle-arrow-down"
+	| "circle-arrow-left"
+	| "circle-arrow-out-down-left"
+	| "circle-arrow-out-down-right"
+	| "circle-arrow-out-up-left"
+	| "circle-arrow-out-up-right"
+	| "circle-arrow-right"
+	| "circle-arrow-up"
+	| "circle-check-big"
+	| "circle-check"
+	| "circle-chevron-down"
+	| "circle-chevron-left"
+	| "circle-chevron-right"
+	| "circle-chevron-up"
+	| "circle-dashed"
+	| "circle-divide"
+	| "circle-dollar-sign"
+	| "circle-dot-dashed"
+	| "circle-dot"
+	| "circle-ellipsis"
+	| "circle-equal"
+	| "circle-fading-arrow-up"
+	| "circle-fading-plus"
+	| "circle-gauge"
+	| "circle-minus"
+	| "circle-off"
+	| "circle-parking-off"
+	| "circle-parking"
+	| "circle-pause"
+	| "circle-percent"
+	| "circle-play"
+	| "circle-plus"
+	| "circle-pound-sterling"
+	| "circle-power"
+	| "circle-question-mark"
+	| "circle-slash-2"
+	| "circle-slash"
+	| "circle-small"
+	| "circle-stop"
+	| "circle-user-round"
+	| "circle-user"
+	| "circle-x"
+	| "circle"
+	| "circuit-board"
+	| "citrus"
+	| "clapperboard"
+	| "clipboard-check"
+	| "clipboard-copy"
+	| "clipboard-list"
+	| "clipboard-minus"
+	| "clipboard-paste"
+	| "clipboard-pen-line"
+	| "clipboard-pen"
+	| "clipboard-plus"
+	| "clipboard-type"
+	| "clipboard-x"
+	| "clipboard"
+	| "clock-1"
+	| "clock-10"
+	| "clock-11"
+	| "clock-12"
+	| "clock-2"
+	| "clock-3"
+	| "clock-4"
+	| "clock-5"
+	| "clock-6"
+	| "clock-7"
+	| "clock-8"
+	| "clock-9"
+	| "clock-alert"
+	| "clock-arrow-down"
+	| "clock-arrow-up"
+	| "clock-fading"
+	| "clock-plus"
+	| "clock"
+	| "cloud-alert"
+	| "cloud-check"
+	| "cloud-cog"
+	| "cloud-download"
+	| "cloud-drizzle"
+	| "cloud-fog"
+	| "cloud-hail"
+	| "cloud-lightning"
+	| "cloud-moon-rain"
+	| "cloud-moon"
+	| "cloud-off"
+	| "cloud-rain-wind"
+	| "cloud-rain"
+	| "cloud-snow"
+	| "cloud-sun-rain"
+	| "cloud-sun"
+	| "cloud-upload"
+	| "cloud"
+	| "cloudy"
+	| "clover"
+	| "club"
+	| "code-xml"
+	| "code"
+	| "codepen"
+	| "codesandbox"
+	| "coffee"
+	| "cog"
+	| "coins"
+	| "columns-2"
+	| "columns-3-cog"
+	| "columns-3"
+	| "columns-4"
+	| "combine"
+	| "command"
+	| "compass"
+	| "component"
+	| "computer"
+	| "concierge-bell"
+	| "cone"
+	| "construction"
+	| "contact-round"
+	| "contact"
+	| "container"
+	| "contrast"
+	| "cookie"
+	| "cooking-pot"
+	| "copy-check"
+	| "copy-minus"
+	| "copy-plus"
+	| "copy-slash"
+	| "copy-x"
+	| "copy"
+	| "copyleft"
+	| "copyright"
+	| "corner-down-left"
+	| "corner-down-right"
+	| "corner-left-down"
+	| "corner-left-up"
+	| "corner-right-down"
+	| "corner-right-up"
+	| "corner-up-left"
+	| "corner-up-right"
+	| "cpu"
+	| "creative-commons"
+	| "credit-card"
+	| "croissant"
+	| "crop"
+	| "cross"
+	| "crosshair"
+	| "crown"
+	| "cuboid"
+	| "cup-soda"
+	| "currency"
+	| "cylinder"
+	| "dam"
+	| "database-backup"
+	| "database-zap"
+	| "database"
+	| "decimals-arrow-left"
+	| "decimals-arrow-right"
+	| "delete"
+	| "dessert"
+	| "diameter"
+	| "diamond-minus"
+	| "diamond-percent"
+	| "diamond-plus"
+	| "diamond"
+	| "dice-1"
+	| "dice-2"
+	| "dice-3"
+	| "dice-4"
+	| "dice-5"
+	| "dice-6"
+	| "dices"
+	| "diff"
+	| "disc-2"
+	| "disc-3"
+	| "disc-album"
+	| "disc"
+	| "divide"
+	| "dna-off"
+	| "dna"
+	| "dock"
+	| "dog"
+	| "dollar-sign"
+	| "donut"
+	| "door-closed-locked"
+	| "door-closed"
+	| "door-open"
+	| "dot"
+	| "download"
+	| "drafting-compass"
+	| "drama"
+	| "dribbble"
+	| "drill"
+	| "drone"
+	| "droplet-off"
+	| "droplet"
+	| "droplets"
+	| "drum"
+	| "drumstick"
+	| "dumbbell"
+	| "ear-off"
+	| "ear"
+	| "earth-lock"
+	| "earth"
+	| "eclipse"
+	| "egg-fried"
+	| "egg-off"
+	| "egg"
+	| "ellipsis-vertical"
+	| "ellipsis"
+	| "equal-approximately"
+	| "equal-not"
+	| "equal"
+	| "eraser"
+	| "ethernet-port"
+	| "euro"
+	| "expand"
+	| "external-link"
+	| "eye-closed"
+	| "eye-off"
+	| "eye"
+	| "facebook"
+	| "factory"
+	| "fan"
+	| "fast-forward"
+	| "feather"
+	| "fence"
+	| "ferris-wheel"
+	| "figma"
+	| "file-archive"
+	| "file-audio-2"
+	| "file-audio"
+	| "file-axis-3d"
+	| "file-badge-2"
+	| "file-badge"
+	| "file-box"
+	| "file-chart-column-increasing"
+	| "file-chart-column"
+	| "file-chart-line"
+	| "file-chart-pie"
+	| "file-check-2"
+	| "file-check"
+	| "file-clock"
+	| "file-code-2"
+	| "file-code"
+	| "file-cog"
+	| "file-diff"
+	| "file-digit"
+	| "file-down"
+	| "file-heart"
+	| "file-image"
+	| "file-input"
+	| "file-json-2"
+	| "file-json"
+	| "file-key-2"
+	| "file-key"
+	| "file-lock-2"
+	| "file-lock"
+	| "file-minus-2"
+	| "file-minus"
+	| "file-music"
+	| "file-output"
+	| "file-pen-line"
+	| "file-pen"
+	| "file-plus-2"
+	| "file-plus"
+	| "file-question-mark"
+	| "file-scan"
+	| "file-search-2"
+	| "file-search"
+	| "file-sliders"
+	| "file-spreadsheet"
+	| "file-stack"
+	| "file-symlink"
+	| "file-terminal"
+	| "file-text"
+	| "file-type-2"
+	| "file-type"
+	| "file-up"
+	| "file-user"
+	| "file-video-2"
+	| "file-video"
+	| "file-volume-2"
+	| "file-volume"
+	| "file-warning"
+	| "file-x-2"
+	| "file-x"
+	| "file"
+	| "files"
+	| "film"
+	| "fingerprint"
+	| "fire-extinguisher"
+	| "fish-off"
+	| "fish-symbol"
+	| "fish"
+	| "flag-off"
+	| "flag-triangle-left"
+	| "flag-triangle-right"
+	| "flag"
+	| "flame-kindling"
+	| "flame"
+	| "flashlight-off"
+	| "flashlight"
+	| "flask-conical-off"
+	| "flask-conical"
+	| "flask-round"
+	| "flip-horizontal-2"
+	| "flip-horizontal"
+	| "flip-vertical-2"
+	| "flip-vertical"
+	| "flower-2"
+	| "flower"
+	| "focus"
+	| "fold-horizontal"
+	| "fold-vertical"
+	| "folder-archive"
+	| "folder-check"
+	| "folder-clock"
+	| "folder-closed"
+	| "folder-code"
+	| "folder-cog"
+	| "folder-dot"
+	| "folder-down"
+	| "folder-git-2"
+	| "folder-git"
+	| "folder-heart"
+	| "folder-input"
+	| "folder-kanban"
+	| "folder-key"
+	| "folder-lock"
+	| "folder-minus"
+	| "folder-open-dot"
+	| "folder-open"
+	| "folder-output"
+	| "folder-pen"
+	| "folder-plus"
+	| "folder-root"
+	| "folder-search-2"
+	| "folder-search"
+	| "folder-symlink"
+	| "folder-sync"
+	| "folder-tree"
+	| "folder-up"
+	| "folder-x"
+	| "folder"
+	| "folders"
+	| "footprints"
+	| "forklift"
+	| "forward"
+	| "frame"
+	| "framer"
+	| "frown"
+	| "fuel"
+	| "fullscreen"
+	| "funnel-plus"
+	| "funnel-x"
+	| "funnel"
+	| "gallery-horizontal-end"
+	| "gallery-horizontal"
+	| "gallery-thumbnails"
+	| "gallery-vertical-end"
+	| "gallery-vertical"
+	| "gamepad-2"
+	| "gamepad"
+	| "gauge"
+	| "gavel"
+	| "gem"
+	| "georgian-lari"
+	| "ghost"
+	| "gift"
+	| "git-branch-plus"
+	| "git-branch"
+	| "git-commit-horizontal"
+	| "git-commit-vertical"
+	| "git-compare-arrows"
+	| "git-compare"
+	| "git-fork"
+	| "git-graph"
+	| "git-merge"
+	| "git-pull-request-arrow"
+	| "git-pull-request-closed"
+	| "git-pull-request-create-arrow"
+	| "git-pull-request-create"
+	| "git-pull-request-draft"
+	| "git-pull-request"
+	| "github"
+	| "gitlab"
+	| "glass-water"
+	| "glasses"
+	| "globe-lock"
+	| "globe"
+	| "goal"
+	| "gpu"
+	| "grab"
+	| "graduation-cap"
+	| "grape"
+	| "grid-2x2-check"
+	| "grid-2x2-plus"
+	| "grid-2x2-x"
+	| "grid-2x2"
+	| "grid-3x2"
+	| "grid-3x3"
+	| "grip-horizontal"
+	| "grip-vertical"
+	| "grip"
+	| "group"
+	| "guitar"
+	| "ham"
+	| "hamburger"
+	| "hammer"
+	| "hand-coins"
+	| "hand-heart"
+	| "hand-helping"
+	| "hand-metal"
+	| "hand-platter"
+	| "hand"
+	| "handshake"
+	| "hard-drive-download"
+	| "hard-drive-upload"
+	| "hard-drive"
+	| "hard-hat"
+	| "hash"
+	| "haze"
+	| "hdmi-port"
+	| "heading-1"
+	| "heading-2"
+	| "heading-3"
+	| "heading-4"
+	| "heading-5"
+	| "heading-6"
+	| "heading"
+	| "headphone-off"
+	| "headphones"
+	| "headset"
+	| "heart-crack"
+	| "heart-handshake"
+	| "heart-minus"
+	| "heart-off"
+	| "heart-plus"
+	| "heart-pulse"
+	| "heart"
+	| "heater"
+	| "hexagon"
+	| "highlighter"
+	| "history"
+	| "hop-off"
+	| "hop"
+	| "hospital"
+	| "hotel"
+	| "hourglass"
+	| "house-plug"
+	| "house-plus"
+	| "house-wifi"
+	| "house"
+	| "ice-cream-bowl"
+	| "ice-cream-cone"
+	| "id-card-lanyard"
+	| "id-card"
+	| "image-down"
+	| "image-minus"
+	| "image-off"
+	| "image-play"
+	| "image-plus"
+	| "image-up"
+	| "image-upscale"
+	| "image"
+	| "images"
+	| "import"
+	| "inbox"
+	| "indent-decrease"
+	| "indent-increase"
+	| "indian-rupee"
+	| "infinity"
+	| "info"
+	| "inspection-panel"
+	| "instagram"
+	| "italic"
+	| "iteration-ccw"
+	| "iteration-cw"
+	| "japanese-yen"
+	| "joystick"
+	| "kanban"
+	| "key-round"
+	| "key-square"
+	| "key"
+	| "keyboard-music"
+	| "keyboard-off"
+	| "keyboard"
+	| "lamp-ceiling"
+	| "lamp-desk"
+	| "lamp-floor"
+	| "lamp-wall-down"
+	| "lamp-wall-up"
+	| "lamp"
+	| "land-plot"
+	| "landmark"
+	| "languages"
+	| "laptop-minimal-check"
+	| "laptop-minimal"
+	| "laptop"
+	| "lasso-select"
+	| "lasso"
+	| "laugh"
+	| "layers-2"
+	| "layers"
+	| "layout-dashboard"
+	| "layout-grid"
+	| "layout-list"
+	| "layout-panel-left"
+	| "layout-panel-top"
+	| "layout-template"
+	| "leaf"
+	| "leafy-green"
+	| "lectern"
+	| "letter-text"
+	| "library-big"
+	| "library"
+	| "life-buoy"
+	| "ligature"
+	| "lightbulb-off"
+	| "lightbulb"
+	| "line-squiggle"
+	| "link-2-off"
+	| "link-2"
+	| "link"
+	| "linkedin"
+	| "list-check"
+	| "list-checks"
+	| "list-collapse"
+	| "list-end"
+	| "list-filter-plus"
+	| "list-filter"
+	| "list-minus"
+	| "list-music"
+	| "list-ordered"
+	| "list-plus"
+	| "list-restart"
+	| "list-start"
+	| "list-todo"
+	| "list-tree"
+	| "list-video"
+	| "list-x"
+	| "list"
+	| "loader-circle"
+	| "loader-pinwheel"
+	| "loader"
+	| "locate-fixed"
+	| "locate-off"
+	| "locate"
+	| "location-edit"
+	| "lock-keyhole-open"
+	| "lock-keyhole"
+	| "lock-open"
+	| "lock"
+	| "log-in"
+	| "log-out"
+	| "logs"
+	| "lollipop"
+	| "luggage"
+	| "magnet"
+	| "mail-check"
+	| "mail-minus"
+	| "mail-open"
+	| "mail-plus"
+	| "mail-question-mark"
+	| "mail-search"
+	| "mail-warning"
+	| "mail-x"
+	| "mail"
+	| "mailbox"
+	| "mails"
+	| "map-pin-check-inside"
+	| "map-pin-check"
+	| "map-pin-house"
+	| "map-pin-minus-inside"
+	| "map-pin-minus"
+	| "map-pin-off"
+	| "map-pin-plus-inside"
+	| "map-pin-plus"
+	| "map-pin-x-inside"
+	| "map-pin-x"
+	| "map-pin"
+	| "map-pinned"
+	| "map-plus"
+	| "map"
+	| "mars-stroke"
+	| "mars"
+	| "martini"
+	| "maximize-2"
+	| "maximize"
+	| "medal"
+	| "megaphone-off"
+	| "megaphone"
+	| "meh"
+	| "memory-stick"
+	| "menu"
+	| "merge"
+	| "message-circle-code"
+	| "message-circle-dashed"
+	| "message-circle-heart"
+	| "message-circle-more"
+	| "message-circle-off"
+	| "message-circle-plus"
+	| "message-circle-question-mark"
+	| "message-circle-reply"
+	| "message-circle-warning"
+	| "message-circle-x"
+	| "message-circle"
+	| "message-square-code"
+	| "message-square-dashed"
+	| "message-square-diff"
+	| "message-square-dot"
+	| "message-square-heart"
+	| "message-square-lock"
+	| "message-square-more"
+	| "message-square-off"
+	| "message-square-plus"
+	| "message-square-quote"
+	| "message-square-reply"
+	| "message-square-share"
+	| "message-square-text"
+	| "message-square-warning"
+	| "message-square-x"
+	| "message-square"
+	| "messages-square"
+	| "mic-off"
+	| "mic-vocal"
+	| "mic"
+	| "microchip"
+	| "microscope"
+	| "microwave"
+	| "milestone"
+	| "milk-off"
+	| "milk"
+	| "minimize-2"
+	| "minimize"
+	| "minus"
+	| "monitor-check"
+	| "monitor-cog"
+	| "monitor-dot"
+	| "monitor-down"
+	| "monitor-off"
+	| "monitor-pause"
+	| "monitor-play"
+	| "monitor-smartphone"
+	| "monitor-speaker"
+	| "monitor-stop"
+	| "monitor-up"
+	| "monitor-x"
+	| "monitor"
+	| "moon-star"
+	| "moon"
+	| "mountain-snow"
+	| "mountain"
+	| "mouse-off"
+	| "mouse-pointer-2"
+	| "mouse-pointer-ban"
+	| "mouse-pointer-click"
+	| "mouse-pointer"
+	| "mouse"
+	| "move-3d"
+	| "move-diagonal-2"
+	| "move-diagonal"
+	| "move-down-left"
+	| "move-down-right"
+	| "move-down"
+	| "move-horizontal"
+	| "move-left"
+	| "move-right"
+	| "move-up-left"
+	| "move-up-right"
+	| "move-up"
+	| "move-vertical"
+	| "move"
+	| "music-2"
+	| "music-3"
+	| "music-4"
+	| "music"
+	| "navigation-2-off"
+	| "navigation-2"
+	| "navigation-off"
+	| "navigation"
+	| "network"
+	| "newspaper"
+	| "nfc"
+	| "non-binary"
+	| "notebook-pen"
+	| "notebook-tabs"
+	| "notebook-text"
+	| "notebook"
+	| "notepad-text-dashed"
+	| "notepad-text"
+	| "nut-off"
+	| "nut"
+	| "octagon-alert"
+	| "octagon-minus"
+	| "octagon-pause"
+	| "octagon-x"
+	| "octagon"
+	| "omega"
+	| "option"
+	| "orbit"
+	| "origami"
+	| "package-2"
+	| "package-check"
+	| "package-minus"
+	| "package-open"
+	| "package-plus"
+	| "package-search"
+	| "package-x"
+	| "package"
+	| "paint-bucket"
+	| "paint-roller"
+	| "paintbrush-vertical"
+	| "paintbrush"
+	| "palette"
+	| "panda"
+	| "panel-bottom-close"
+	| "panel-bottom-dashed"
+	| "panel-bottom-open"
+	| "panel-bottom"
+	| "panel-left-close"
+	| "panel-left-dashed"
+	| "panel-left-open"
+	| "panel-left"
+	| "panel-right-close"
+	| "panel-right-dashed"
+	| "panel-right-open"
+	| "panel-right"
+	| "panel-top-close"
+	| "panel-top-dashed"
+	| "panel-top-open"
+	| "panel-top"
+	| "panels-left-bottom"
+	| "panels-right-bottom"
+	| "panels-top-left"
+	| "paperclip"
+	| "parentheses"
+	| "parking-meter"
+	| "party-popper"
+	| "pause"
+	| "paw-print"
+	| "pc-case"
+	| "pen-line"
+	| "pen-off"
+	| "pen-tool"
+	| "pen"
+	| "pencil-line"
+	| "pencil-off"
+	| "pencil-ruler"
+	| "pencil"
+	| "pentagon"
+	| "percent"
+	| "person-standing"
+	| "philippine-peso"
+	| "phone-call"
+	| "phone-forwarded"
+	| "phone-incoming"
+	| "phone-missed"
+	| "phone-off"
+	| "phone-outgoing"
+	| "phone"
+	| "pi"
+	| "piano"
+	| "pickaxe"
+	| "picture-in-picture-2"
+	| "picture-in-picture"
+	| "piggy-bank"
+	| "pilcrow-left"
+	| "pilcrow-right"
+	| "pilcrow"
+	| "pill-bottle"
+	| "pill"
+	| "pin-off"
+	| "pin"
+	| "pipette"
+	| "pizza"
+	| "plane-landing"
+	| "plane-takeoff"
+	| "plane"
+	| "play"
+	| "plug-2"
+	| "plug-zap"
+	| "plug"
+	| "plus"
+	| "pocket-knife"
+	| "pocket"
+	| "podcast"
+	| "pointer-off"
+	| "pointer"
+	| "popcorn"
+	| "popsicle"
+	| "pound-sterling"
+	| "power-off"
+	| "power"
+	| "presentation"
+	| "printer-check"
+	| "printer"
+	| "projector"
+	| "proportions"
+	| "puzzle"
+	| "pyramid"
+	| "qr-code"
+	| "quote"
+	| "rabbit"
+	| "radar"
+	| "radiation"
+	| "radical"
+	| "radio-receiver"
+	| "radio-tower"
+	| "radio"
+	| "radius"
+	| "rail-symbol"
+	| "rainbow"
+	| "rat"
+	| "ratio"
+	| "receipt-cent"
+	| "receipt-euro"
+	| "receipt-indian-rupee"
+	| "receipt-japanese-yen"
+	| "receipt-pound-sterling"
+	| "receipt-russian-ruble"
+	| "receipt-swiss-franc"
+	| "receipt-text"
+	| "receipt"
+	| "rectangle-circle"
+	| "rectangle-ellipsis"
+	| "rectangle-goggles"
+	| "rectangle-horizontal"
+	| "rectangle-vertical"
+	| "recycle"
+	| "redo-2"
+	| "redo-dot"
+	| "redo"
+	| "refresh-ccw-dot"
+	| "refresh-ccw"
+	| "refresh-cw-off"
+	| "refresh-cw"
+	| "refrigerator"
+	| "regex"
+	| "remove-formatting"
+	| "repeat-1"
+	| "repeat-2"
+	| "repeat"
+	| "replace-all"
+	| "replace"
+	| "reply-all"
+	| "reply"
+	| "rewind"
+	| "ribbon"
+	| "rocket"
+	| "rocking-chair"
+	| "roller-coaster"
+	| "rotate-3d"
+	| "rotate-ccw-key"
+	| "rotate-ccw-square"
+	| "rotate-ccw"
+	| "rotate-cw-square"
+	| "rotate-cw"
+	| "route-off"
+	| "route"
+	| "router"
+	| "rows-2"
+	| "rows-3"
+	| "rows-4"
+	| "rss"
+	| "ruler-dimension-line"
+	| "ruler"
+	| "russian-ruble"
+	| "sailboat"
+	| "salad"
+	| "sandwich"
+	| "satellite-dish"
+	| "satellite"
+	| "saudi-riyal"
+	| "save-all"
+	| "save-off"
+	| "save"
+	| "scale-3d"
+	| "scale"
+	| "scaling"
+	| "scan-barcode"
+	| "scan-eye"
+	| "scan-face"
+	| "scan-heart"
+	| "scan-line"
+	| "scan-qr-code"
+	| "scan-search"
+	| "scan-text"
+	| "scan"
+	| "school"
+	| "scissors-line-dashed"
+	| "scissors"
+	| "screen-share-off"
+	| "screen-share"
+	| "scroll-text"
+	| "scroll"
+	| "search-check"
+	| "search-code"
+	| "search-slash"
+	| "search-x"
+	| "search"
+	| "section"
+	| "send-horizontal"
+	| "send-to-back"
+	| "send"
+	| "separator-horizontal"
+	| "separator-vertical"
+	| "server-cog"
+	| "server-crash"
+	| "server-off"
+	| "server"
+	| "settings-2"
+	| "settings"
+	| "shapes"
+	| "share-2"
+	| "share"
+	| "sheet"
+	| "shell"
+	| "shield-alert"
+	| "shield-ban"
+	| "shield-check"
+	| "shield-ellipsis"
+	| "shield-half"
+	| "shield-minus"
+	| "shield-off"
+	| "shield-plus"
+	| "shield-question-mark"
+	| "shield-user"
+	| "shield-x"
+	| "shield"
+	| "ship-wheel"
+	| "ship"
+	| "shirt"
+	| "shopping-bag"
+	| "shopping-basket"
+	| "shopping-cart"
+	| "shovel"
+	| "shower-head"
+	| "shredder"
+	| "shrimp"
+	| "shrink"
+	| "shrub"
+	| "shuffle"
+	| "sigma"
+	| "signal-high"
+	| "signal-low"
+	| "signal-medium"
+	| "signal-zero"
+	| "signal"
+	| "signature"
+	| "signpost-big"
+	| "signpost"
+	| "siren"
+	| "skip-back"
+	| "skip-forward"
+	| "skull"
+	| "slack"
+	| "slash"
+	| "slice"
+	| "sliders-horizontal"
+	| "sliders-vertical"
+	| "smartphone-charging"
+	| "smartphone-nfc"
+	| "smartphone"
+	| "smile-plus"
+	| "smile"
+	| "snail"
+	| "snowflake"
+	| "soap-dispenser-droplet"
+	| "sofa"
+	| "soup"
+	| "space"
+	| "spade"
+	| "sparkle"
+	| "sparkles"
+	| "speaker"
+	| "speech"
+	| "spell-check-2"
+	| "spell-check"
+	| "spline-pointer"
+	| "spline"
+	| "split"
+	| "spool"
+	| "spray-can"
+	| "sprout"
+	| "square-activity"
+	| "square-arrow-down-left"
+	| "square-arrow-down-right"
+	| "square-arrow-down"
+	| "square-arrow-left"
+	| "square-arrow-out-down-left"
+	| "square-arrow-out-down-right"
+	| "square-arrow-out-up-left"
+	| "square-arrow-out-up-right"
+	| "square-arrow-right"
+	| "square-arrow-up-left"
+	| "square-arrow-up-right"
+	| "square-arrow-up"
+	| "square-asterisk"
+	| "square-bottom-dashed-scissors"
+	| "square-chart-gantt"
+	| "square-check-big"
+	| "square-check"
+	| "square-chevron-down"
+	| "square-chevron-left"
+	| "square-chevron-right"
+	| "square-chevron-up"
+	| "square-code"
+	| "square-dashed-bottom-code"
+	| "square-dashed-bottom"
+	| "square-dashed-kanban"
+	| "square-dashed-mouse-pointer"
+	| "square-dashed-top-solid"
+	| "square-dashed"
+	| "square-divide"
+	| "square-dot"
+	| "square-equal"
+	| "square-function"
+	| "square-kanban"
+	| "square-library"
+	| "square-m"
+	| "square-menu"
+	| "square-minus"
+	| "square-mouse-pointer"
+	| "square-parking-off"
+	| "square-parking"
+	| "square-pen"
+	| "square-percent"
+	| "square-pi"
+	| "square-pilcrow"
+	| "square-play"
+	| "square-plus"
+	| "square-power"
+	| "square-radical"
+	| "square-round-corner"
+	| "square-scissors"
+	| "square-sigma"
+	| "square-slash"
+	| "square-split-horizontal"
+	| "square-split-vertical"
+	| "square-square"
+	| "square-stack"
+	| "square-terminal"
+	| "square-user-round"
+	| "square-user"
+	| "square-x"
+	| "square"
+	| "squares-exclude"
+	| "squares-intersect"
+	| "squares-subtract"
+	| "squares-unite"
+	| "squircle-dashed"
+	| "squircle"
+	| "squirrel"
+	| "stamp"
+	| "star-half"
+	| "star-off"
+	| "star"
+	| "step-back"
+	| "step-forward"
+	| "stethoscope"
+	| "sticker"
+	| "sticky-note"
+	| "store"
+	| "stretch-horizontal"
+	| "stretch-vertical"
+	| "strikethrough"
+	| "subscript"
+	| "sun-dim"
+	| "sun-medium"
+	| "sun-moon"
+	| "sun-snow"
+	| "sun"
+	| "sunrise"
+	| "sunset"
+	| "superscript"
+	| "swatch-book"
+	| "swiss-franc"
+	| "switch-camera"
+	| "sword"
+	| "swords"
+	| "syringe"
+	| "table-2"
+	| "table-cells-merge"
+	| "table-cells-split"
+	| "table-columns-split"
+	| "table-of-contents"
+	| "table-properties"
+	| "table-rows-split"
+	| "table"
+	| "tablet-smartphone"
+	| "tablet"
+	| "tablets"
+	| "tag"
+	| "tags"
+	| "tally-1"
+	| "tally-2"
+	| "tally-3"
+	| "tally-4"
+	| "tally-5"
+	| "tangent"
+	| "target"
+	| "telescope"
+	| "tent-tree"
+	| "tent"
+	| "terminal"
+	| "test-tube-diagonal"
+	| "test-tube"
+	| "test-tubes"
+	| "text-cursor-input"
+	| "text-cursor"
+	| "text-quote"
+	| "text-search"
+	| "text-select"
+	| "text"
+	| "theater"
+	| "thermometer-snowflake"
+	| "thermometer-sun"
+	| "thermometer"
+	| "thumbs-down"
+	| "thumbs-up"
+	| "ticket-check"
+	| "ticket-minus"
+	| "ticket-percent"
+	| "ticket-plus"
+	| "ticket-slash"
+	| "ticket-x"
+	| "ticket"
+	| "tickets-plane"
+	| "tickets"
+	| "timer-off"
+	| "timer-reset"
+	| "timer"
+	| "toggle-left"
+	| "toggle-right"
+	| "toilet"
+	| "tool-case"
+	| "tornado"
+	| "torus"
+	| "touchpad-off"
+	| "touchpad"
+	| "tower-control"
+	| "toy-brick"
+	| "tractor"
+	| "traffic-cone"
+	| "train-front-tunnel"
+	| "train-front"
+	| "train-track"
+	| "tram-front"
+	| "transgender"
+	| "trash-2"
+	| "trash"
+	| "tree-deciduous"
+	| "tree-palm"
+	| "tree-pine"
+	| "trees"
+	| "trello"
+	| "trending-down"
+	| "trending-up-down"
+	| "trending-up"
+	| "triangle-alert"
+	| "triangle-dashed"
+	| "triangle-right"
+	| "triangle"
+	| "trophy"
+	| "truck-electric"
+	| "truck"
+	| "turtle"
+	| "tv-minimal-play"
+	| "tv-minimal"
+	| "tv"
+	| "twitch"
+	| "twitter"
+	| "type-outline"
+	| "type"
+	| "umbrella-off"
+	| "umbrella"
+	| "underline"
+	| "undo-2"
+	| "undo-dot"
+	| "undo"
+	| "unfold-horizontal"
+	| "unfold-vertical"
+	| "ungroup"
+	| "university"
+	| "unlink-2"
+	| "unlink"
+	| "unplug"
+	| "upload"
+	| "usb"
+	| "user-check"
+	| "user-cog"
+	| "user-lock"
+	| "user-minus"
+	| "user-pen"
+	| "user-plus"
+	| "user-round-check"
+	| "user-round-cog"
+	| "user-round-minus"
+	| "user-round-pen"
+	| "user-round-plus"
+	| "user-round-search"
+	| "user-round-x"
+	| "user-round"
+	| "user-search"
+	| "user-x"
+	| "user"
+	| "users-round"
+	| "users"
+	| "utensils-crossed"
+	| "utensils"
+	| "utility-pole"
+	| "variable"
+	| "vault"
+	| "vector-square"
+	| "vegan"
+	| "venetian-mask"
+	| "venus-and-mars"
+	| "venus"
+	| "vibrate-off"
+	| "vibrate"
+	| "video-off"
+	| "video"
+	| "videotape"
+	| "view"
+	| "voicemail"
+	| "volleyball"
+	| "volume-1"
+	| "volume-2"
+	| "volume-off"
+	| "volume-x"
+	| "volume"
+	| "vote"
+	| "wallet-cards"
+	| "wallet-minimal"
+	| "wallet"
+	| "wallpaper"
+	| "wand-sparkles"
+	| "wand"
+	| "warehouse"
+	| "washing-machine"
+	| "watch"
+	| "waves-ladder"
+	| "waves"
+	| "waypoints"
+	| "webcam"
+	| "webhook-off"
+	| "webhook"
+	| "weight"
+	| "wheat-off"
+	| "wheat"
+	| "whole-word"
+	| "wifi-cog"
+	| "wifi-high"
+	| "wifi-low"
+	| "wifi-off"
+	| "wifi-pen"
+	| "wifi-zero"
+	| "wifi"
+	| "wind-arrow-down"
+	| "wind"
+	| "wine-off"
+	| "wine"
+	| "workflow"
+	| "worm"
+	| "wrap-text"
+	| "wrench"
+	| "x"
+	| "youtube"
+	| "zap-off"
+	| "zap"
+	| "zoom-in"
+	| "zoom-out";
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HeaderLinks".
+ */
+export type HeaderLinks =
+	| {
+			type: "internal" | "external" | "page";
+			page?: (string | null) | Page;
+			url?: string | null;
+			label?: string | null;
+			id?: string | null;
+	  }[]
+	| null;
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FooterLinks".
+ */
+export type FooterLinks =
+	| {
+			type: "internal" | "external" | "page";
+			page?: (string | null) | Page;
+			url?: string | null;
+			label?: string | null;
+			id?: string | null;
+	  }[]
+	| null;
 /**
  * Supported timezones in IANA format.
  *
@@ -1629,978 +1655,1223 @@ export type IconName =
  * via the `definition` "supportedTimezones".
  */
 export type SupportedTimezones =
-  | 'Pacific/Midway'
-  | 'Pacific/Niue'
-  | 'Pacific/Honolulu'
-  | 'Pacific/Rarotonga'
-  | 'America/Anchorage'
-  | 'Pacific/Gambier'
-  | 'America/Los_Angeles'
-  | 'America/Tijuana'
-  | 'America/Denver'
-  | 'America/Phoenix'
-  | 'America/Chicago'
-  | 'America/Guatemala'
-  | 'America/New_York'
-  | 'America/Bogota'
-  | 'America/Caracas'
-  | 'America/Santiago'
-  | 'America/Buenos_Aires'
-  | 'America/Sao_Paulo'
-  | 'Atlantic/South_Georgia'
-  | 'Atlantic/Azores'
-  | 'Atlantic/Cape_Verde'
-  | 'Europe/London'
-  | 'Europe/Berlin'
-  | 'Africa/Lagos'
-  | 'Europe/Athens'
-  | 'Africa/Cairo'
-  | 'Europe/Moscow'
-  | 'Asia/Riyadh'
-  | 'Asia/Dubai'
-  | 'Asia/Baku'
-  | 'Asia/Karachi'
-  | 'Asia/Tashkent'
-  | 'Asia/Calcutta'
-  | 'Asia/Dhaka'
-  | 'Asia/Almaty'
-  | 'Asia/Jakarta'
-  | 'Asia/Bangkok'
-  | 'Asia/Shanghai'
-  | 'Asia/Singapore'
-  | 'Asia/Tokyo'
-  | 'Asia/Seoul'
-  | 'Australia/Brisbane'
-  | 'Australia/Sydney'
-  | 'Pacific/Guam'
-  | 'Pacific/Noumea'
-  | 'Pacific/Auckland'
-  | 'Pacific/Fiji';
+	| "Pacific/Midway"
+	| "Pacific/Niue"
+	| "Pacific/Honolulu"
+	| "Pacific/Rarotonga"
+	| "America/Anchorage"
+	| "Pacific/Gambier"
+	| "America/Los_Angeles"
+	| "America/Tijuana"
+	| "America/Denver"
+	| "America/Phoenix"
+	| "America/Chicago"
+	| "America/Guatemala"
+	| "America/New_York"
+	| "America/Bogota"
+	| "America/Caracas"
+	| "America/Santiago"
+	| "America/Buenos_Aires"
+	| "America/Sao_Paulo"
+	| "Atlantic/South_Georgia"
+	| "Atlantic/Azores"
+	| "Atlantic/Cape_Verde"
+	| "Europe/London"
+	| "Europe/Berlin"
+	| "Africa/Lagos"
+	| "Europe/Athens"
+	| "Africa/Cairo"
+	| "Europe/Moscow"
+	| "Asia/Riyadh"
+	| "Asia/Dubai"
+	| "Asia/Baku"
+	| "Asia/Karachi"
+	| "Asia/Tashkent"
+	| "Asia/Calcutta"
+	| "Asia/Dhaka"
+	| "Asia/Almaty"
+	| "Asia/Jakarta"
+	| "Asia/Bangkok"
+	| "Asia/Shanghai"
+	| "Asia/Singapore"
+	| "Asia/Tokyo"
+	| "Asia/Seoul"
+	| "Australia/Brisbane"
+	| "Australia/Sydney"
+	| "Pacific/Guam"
+	| "Pacific/Noumea"
+	| "Pacific/Auckland"
+	| "Pacific/Fiji";
 
 export interface Config {
-  auth: {
-    users: UserAuthOperations;
-  };
-  blocks: {};
-  collections: {
-    users: User;
-    media: Media;
-    pages: Page;
-    'pump-controllers': PumpController;
-    packaging: Packaging;
-    faqs: Faq;
-    inquiries: Inquiry;
-    newsletters: Newsletter;
-    'payload-locked-documents': PayloadLockedDocument;
-    'payload-preferences': PayloadPreference;
-    'payload-migrations': PayloadMigration;
-  };
-  collectionsJoins: {};
-  collectionsSelect: {
-    users: UsersSelect<false> | UsersSelect<true>;
-    media: MediaSelect<false> | MediaSelect<true>;
-    pages: PagesSelect<false> | PagesSelect<true>;
-    'pump-controllers': PumpControllersSelect<false> | PumpControllersSelect<true>;
-    packaging: PackagingSelect<false> | PackagingSelect<true>;
-    faqs: FaqsSelect<false> | FaqsSelect<true>;
-    inquiries: InquiriesSelect<false> | InquiriesSelect<true>;
-    newsletters: NewslettersSelect<false> | NewslettersSelect<true>;
-    'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
-    'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
-    'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
-  };
-  db: {
-    defaultIDType: string;
-  };
-  globals: {
-    header: Header;
-    footer: Footer;
-    site: Site;
-    company: Company;
-  };
-  globalsSelect: {
-    header: HeaderSelect<false> | HeaderSelect<true>;
-    footer: FooterSelect<false> | FooterSelect<true>;
-    site: SiteSelect<false> | SiteSelect<true>;
-    company: CompanySelect<false> | CompanySelect<true>;
-  };
-  locale: null;
-  user: User & {
-    collection: 'users';
-  };
-  jobs: {
-    tasks: unknown;
-    workflows: unknown;
-  };
+	auth: {
+		users: UserAuthOperations;
+	};
+	blocks: {};
+	collections: {
+		users: User;
+		media: Media;
+		pages: Page;
+		"pump-controllers": PumpController;
+		packaging: Packaging;
+		faqs: Faq;
+		inquiries: Inquiry;
+		newsletters: Newsletter;
+		"payload-locked-documents": PayloadLockedDocument;
+		"payload-preferences": PayloadPreference;
+		"payload-migrations": PayloadMigration;
+	};
+	collectionsJoins: {};
+	collectionsSelect: {
+		users: UsersSelect<false> | UsersSelect<true>;
+		media: MediaSelect<false> | MediaSelect<true>;
+		pages: PagesSelect<false> | PagesSelect<true>;
+		"pump-controllers":
+			| PumpControllersSelect<false>
+			| PumpControllersSelect<true>;
+		packaging: PackagingSelect<false> | PackagingSelect<true>;
+		faqs: FaqsSelect<false> | FaqsSelect<true>;
+		inquiries: InquiriesSelect<false> | InquiriesSelect<true>;
+		newsletters: NewslettersSelect<false> | NewslettersSelect<true>;
+		"payload-locked-documents":
+			| PayloadLockedDocumentsSelect<false>
+			| PayloadLockedDocumentsSelect<true>;
+		"payload-preferences":
+			| PayloadPreferencesSelect<false>
+			| PayloadPreferencesSelect<true>;
+		"payload-migrations":
+			| PayloadMigrationsSelect<false>
+			| PayloadMigrationsSelect<true>;
+	};
+	db: {
+		defaultIDType: string;
+	};
+	globals: {
+		header: Header;
+		footer: Footer;
+		site: Site;
+		company: Company;
+	};
+	globalsSelect: {
+		header: HeaderSelect<false> | HeaderSelect<true>;
+		footer: FooterSelect<false> | FooterSelect<true>;
+		site: SiteSelect<false> | SiteSelect<true>;
+		company: CompanySelect<false> | CompanySelect<true>;
+	};
+	locale: null;
+	user: User & {
+		collection: "users";
+	};
+	jobs: {
+		tasks: unknown;
+		workflows: unknown;
+	};
 }
 export interface UserAuthOperations {
-  forgotPassword: {
-    email: string;
-    password: string;
-  };
-  login: {
-    email: string;
-    password: string;
-  };
-  registerFirstUser: {
-    email: string;
-    password: string;
-  };
-  unlock: {
-    email: string;
-    password: string;
-  };
+	forgotPassword: {
+		email: string;
+		password: string;
+	};
+	login: {
+		email: string;
+		password: string;
+	};
+	registerFirstUser: {
+		email: string;
+		password: string;
+	};
+	unlock: {
+		email: string;
+		password: string;
+	};
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
 export interface User {
-  id: string;
-  role: 'admin' | 'editor';
-  updatedAt: string;
-  createdAt: string;
-  email: string;
-  resetPasswordToken?: string | null;
-  resetPasswordExpiration?: string | null;
-  salt?: string | null;
-  hash?: string | null;
-  loginAttempts?: number | null;
-  lockUntil?: string | null;
-  password?: string | null;
+	id: string;
+	role: "admin" | "editor";
+	updatedAt: string;
+	createdAt: string;
+	email: string;
+	resetPasswordToken?: string | null;
+	resetPasswordExpiration?: string | null;
+	salt?: string | null;
+	hash?: string | null;
+	loginAttempts?: number | null;
+	lockUntil?: string | null;
+	password?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media".
  */
 export interface Media {
-  id: string;
-  /**
-   * 替代文本是媒体内容的描述，当媒体无法显示时，替代文本会显示在客户端
-   */
-  alt: string;
-  caption?: string | null;
-  /**
-   * 用于在客户端显示模糊的预览图，无需手动设置
-   */
-  blurDataUrl?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  url?: string | null;
-  thumbnailURL?: string | null;
-  filename?: string | null;
-  mimeType?: string | null;
-  filesize?: number | null;
-  width?: number | null;
-  height?: number | null;
-  focalX?: number | null;
-  focalY?: number | null;
+	id: string;
+	/**
+	 * 替代文本是媒体内容的描述，当媒体无法显示时，替代文本会显示在客户端
+	 */
+	alt: string;
+	caption?: string | null;
+	/**
+	 * 用于在客户端显示模糊的预览图，无需手动设置
+	 */
+	blurDataUrl?: string | null;
+	updatedAt: string;
+	createdAt: string;
+	url?: string | null;
+	thumbnailURL?: string | null;
+	filename?: string | null;
+	mimeType?: string | null;
+	filesize?: number | null;
+	width?: number | null;
+	height?: number | null;
+	focalX?: number | null;
+	focalY?: number | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages".
  */
 export interface Page {
-  id: string;
-  title: string;
-  slug?: string | null;
-  slugLock?: boolean | null;
-  content: (
-    | MediaBlockType
-    | CarouselHeroBlock
-    | FeaturedProductsBlock
-    | TestimonialsBlock
-    | FaqsBlock
-    | TextBlock
-    | FeaturesBlock
-    | MediaGridBlock
-  )[];
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
+	id: string;
+	title: string;
+	slug: string;
+	content: (
+		| MediaBlockType
+		| CarouselHeroBlock
+		| FeaturedProductsBlock
+		| TestimonialsBlock
+		| FaqsBlock
+		| TextBlock
+		| FeaturesBlock
+		| MediaGridBlock
+		| ContactFormBlock
+		| TeamBlock
+		| TimelineBlock
+		| CTABlock
+	)[];
+	updatedAt: string;
+	createdAt: string;
+	_status?: ("draft" | "published") | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "MediaBlockType".
  */
 export interface MediaBlockType {
-  /**
-   * 选择一个媒体文件
-   */
-  media: string | Media;
-  description?: string | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'mediaBlock';
+	/**
+	 * 选择一个媒体文件
+	 */
+	media: string | Media;
+	description?: string | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "mediaBlock";
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "CarouselHeroBlock".
  */
 export interface CarouselHeroBlock {
-  carousel?:
-    | {
-        media: string | Media;
-        title: string;
-        description: string;
-        primaryCTA: string;
-        primaryCTAUrl: string;
-        secondaryCTA?: string | null;
-        secondaryCTAUrl?: string | null;
-        id?: string | null;
-      }[]
-    | null;
-  /**
-   * 如果勾选，则滚动横幅会循环播放
-   */
-  loop?: boolean | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'carouselHero';
+	carousel?:
+		| {
+				media: string | Media;
+				title: string;
+				description: string;
+				primaryCTA: string;
+				primaryCTAUrl: string;
+				secondaryCTA?: string | null;
+				secondaryCTAUrl?: string | null;
+				id?: string | null;
+		  }[]
+		| null;
+	/**
+	 * 如果勾选，则滚动横幅会循环播放
+	 */
+	loop?: boolean | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "carouselHero";
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "FeaturedProductsBlock".
  */
 export interface FeaturedProductsBlock {
-  title: string;
-  description?: string | null;
-  products?:
-    | {
-        relationTo: 'pump-controllers';
-        value: string | PumpController;
-      }[]
-    | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'featuredProducts';
+	title: string;
+	description?: string | null;
+	products?:
+		| {
+				relationTo: "pump-controllers";
+				value: string | PumpController;
+		  }[]
+		| null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "featuredProducts";
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pump-controllers".
  */
 export interface PumpController {
-  id: string;
-  title: string;
-  slug?: string | null;
-  slugLock?: boolean | null;
-  featured?: boolean | null;
-  series: 'gs+' | 'gs' | 'ps';
-  category: 'standard' | 'smart' | 'auto';
-  excerpt?: string | null;
-  modelName: string;
-  gallery?: (string | Media)[] | null;
-  description: {
-    root: {
-      type: string;
-      children: {
-        type: string;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  };
-  features?: FeaturesBlock[] | null;
-  voltage: {
-    min: number;
-    max: number;
-  };
-  contactLoad: string;
-  relayLife: number;
-  maxCurrent: number;
-  maxPower: number;
-  maxPressure: number;
-  extremePressure: number;
-  startingPressure: {
-    min: number;
-    max: number;
-  };
-  frequency?: {
-    min?: number | null;
-    max?: number | null;
-  };
-  protectionGrade: string;
-  threadInterface: string;
-  switchChar?: string | null;
-  temperature: number;
-  flowSwitch?: ('reed' | 'none') | null;
-  startingMethod?: ('auto' | 'manual' | 'pressure' | 'temperature') | null;
-  buffer?: string | null;
-  verticalHeight: number;
-  packaging: string | Packaging;
-  related?: (string | PumpController)[] | null;
-  /**
-   * 根据数量不同填写不同的交货时间
-   */
-  leadTime?:
-    | {
-        min?: number | null;
-        max?: number | null;
-        /**
-         * 填写交货时间，如：10 days
-         */
-        duration: string;
-        id?: string | null;
-      }[]
-    | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "FeaturesBlock".
- */
-export interface FeaturesBlock {
-  title?: string | null;
-  description?: string | null;
-  /**
-   * 特性区块，至少2个，最多6个
-   */
-  features?: FeatureBlock[] | null;
-  columns?: ('2' | '3' | '1') | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'features';
+	id: string;
+	title: string;
+	slug: string;
+	featured?: boolean | null;
+	series: "gs+" | "gs" | "ps";
+	category: "standard" | "smart" | "auto";
+	excerpt?: string | null;
+	modelName: string;
+	gallery: (string | Media)[];
+	description: {
+		root: {
+			type: string;
+			children: {
+				type: string;
+				version: number;
+				[k: string]: unknown;
+			}[];
+			direction: ("ltr" | "rtl") | null;
+			format: "left" | "start" | "center" | "right" | "end" | "justify" | "";
+			indent: number;
+			version: number;
+		};
+		[k: string]: unknown;
+	};
+	features?: FeatureBlock[] | null;
+	voltage: {
+		min: number;
+		max: number;
+	};
+	contactLoad: string;
+	relayLife: number;
+	maxCurrent: number;
+	maxPower: number;
+	maxPressure: number;
+	extremePressure: number;
+	startingPressure: {
+		min: number;
+		max: number;
+	};
+	frequency?: {
+		min?: number | null;
+		max?: number | null;
+	};
+	protectionGrade: string;
+	threadInterface: string;
+	switchChar?: string | null;
+	temperature: number;
+	flowSwitch?: ("reed" | "none") | null;
+	startingMethod?: ("auto" | "manual" | "pressure" | "temperature") | null;
+	buffer?: string | null;
+	verticalHeight: number;
+	packaging: string | Packaging;
+	related?: (string | PumpController)[] | null;
+	/**
+	 * 根据数量不同填写不同的交货时间
+	 */
+	leadTime?:
+		| {
+				min?: number | null;
+				max?: number | null;
+				/**
+				 * 填写交货时间，如：10 days
+				 */
+				duration: string;
+				id?: string | null;
+		  }[]
+		| null;
+	updatedAt: string;
+	createdAt: string;
+	_status?: ("draft" | "published") | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "FeatureBlock".
  */
 export interface FeatureBlock {
-  type: 'text' | 'number';
-  title?: string | null;
-  number?: number | null;
-  description?: string | null;
-  icon: IconName;
-  delay?: number | null;
-  withPlus?: boolean | null;
-  isPercentage?: boolean | null;
-  startValue?: number | null;
-  decimalPlaces?: number | null;
-  direction?: ('up' | 'down') | null;
-  alignment?: ('default' | 'reverse' | 'center' | 'between-reverse') | null;
-  opacity?: number | null;
-  iconBackground?: boolean | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'feature';
+	type: "text" | "number";
+	title?: string | null;
+	number?: number | null;
+	description?: string | null;
+	icon: IconName;
+	delay?: number | null;
+	withPlus?: boolean | null;
+	isPercentage?: boolean | null;
+	startValue?: number | null;
+	decimalPlaces?: number | null;
+	direction?: ("up" | "down") | null;
+	alignment?:
+		| ("default" | "reverse" | "center" | "between" | "between-reverse")
+		| null;
+	opacity?: number | null;
+	iconBackground?: boolean | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "feature";
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "packaging".
  */
 export interface Packaging {
-  id: string;
-  title: string;
-  description?: string | null;
-  size: {
-    length: number;
-    width: number;
-    height: number;
-  };
-  quantity: number;
-  weight: number;
-  updatedAt: string;
-  createdAt: string;
+	id: string;
+	title: string;
+	description?: string | null;
+	size: {
+		length: number;
+		width: number;
+		height: number;
+	};
+	quantity: number;
+	weight: number;
+	updatedAt: string;
+	createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "TestimonialsBlock".
  */
 export interface TestimonialsBlock {
-  title: string;
-  description?: string | null;
-  testimonials?:
-    | {
-        name: string;
-        avatar?: (string | null) | Media;
-        country: string;
-        star: '1' | '2' | '3' | '4' | '5';
-        content: string;
-        id?: string | null;
-      }[]
-    | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'testimonials';
+	title: string;
+	description?: string | null;
+	testimonials?:
+		| {
+				name: string;
+				avatar?: (string | null) | Media;
+				country: string;
+				star: "1" | "2" | "3" | "4" | "5";
+				content: string;
+				id?: string | null;
+		  }[]
+		| null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "testimonials";
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "FaqsBlock".
  */
 export interface FaqsBlock {
-  title: string;
-  description?: string | null;
-  faqs?: (string | Faq)[] | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'faqs';
+	title: string;
+	description?: string | null;
+	faqs?: (string | Faq)[] | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "faqs";
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "faqs".
  */
 export interface Faq {
-  id: string;
-  question: string;
-  answer: string;
-  type: 'general' | 'product';
-  updatedAt: string;
-  createdAt: string;
+	id: string;
+	question: string;
+	answer: string;
+	type: "general" | "product";
+	updatedAt: string;
+	createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "TextBlock".
  */
 export interface TextBlock {
-  content: {
-    root: {
-      type: string;
-      children: {
-        type: string;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  };
-  width?: ('full' | '1/4' | '1/2' | '3/4') | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'text';
+	content: {
+		root: {
+			type: string;
+			children: {
+				type: string;
+				version: number;
+				[k: string]: unknown;
+			}[];
+			direction: ("ltr" | "rtl") | null;
+			format: "left" | "start" | "center" | "right" | "end" | "justify" | "";
+			indent: number;
+			version: number;
+		};
+		[k: string]: unknown;
+	};
+	width?: ("full" | "1/4" | "1/2" | "3/4") | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "text";
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FeaturesBlock".
+ */
+export interface FeaturesBlock {
+	title?: string | null;
+	description?: string | null;
+	/**
+	 * 特性区块，至少2个，最多6个
+	 */
+	features?: FeatureBlock[] | null;
+	columns?: ("2" | "3" | "1") | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "features";
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "MediaGridBlock".
  */
 export interface MediaGridBlock {
-  title?: string | null;
-  description?: string | null;
-  contents?: MediaBlockType[] | null;
-  /**
-   * 列数，至少2列，最多6列
-   */
-  columns?: number | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'media-grid';
+	title?: string | null;
+	description?: string | null;
+	contents?: MediaBlockType[] | null;
+	/**
+	 * 列数，至少2列，最多6列
+	 */
+	columns?: number | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "media-grid";
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContactFormBlock".
+ */
+export interface ContactFormBlock {
+	title: string;
+	description?: string | null;
+	fields?:
+		| {
+				fieldType:
+					| "text"
+					| "email"
+					| "tel"
+					| "textarea"
+					| "select"
+					| "radio"
+					| "checkbox";
+				label: string;
+				placeholder?: string | null;
+				required?: boolean | null;
+				options?:
+					| {
+							label: string;
+							value: string;
+							id?: string | null;
+					  }[]
+					| null;
+				id?: string | null;
+		  }[]
+		| null;
+	submitButtonText: string;
+	successMessage?: string | null;
+	errorMessage?: string | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "contactForm";
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TeamBlock".
+ */
+export interface TeamBlock {
+	title: string;
+	description?: string | null;
+	members?:
+		| {
+				name: string;
+				position: string;
+				bio?: string | null;
+				photo: string | Media;
+				social?:
+					| {
+							platform: "linkedin" | "twitter" | "github" | "wechat" | "email";
+							url: string;
+							id?: string | null;
+					  }[]
+					| null;
+				id?: string | null;
+		  }[]
+		| null;
+	layout?: ("grid" | "cards" | "list") | null;
+	columns?: ("2" | "3" | "4") | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "team";
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TimelineBlock".
+ */
+export interface TimelineBlock {
+	title: string;
+	description?: string | null;
+	events?:
+		| {
+				year: number;
+				month?:
+					| (
+							| "1"
+							| "2"
+							| "3"
+							| "4"
+							| "5"
+							| "6"
+							| "7"
+							| "8"
+							| "9"
+							| "10"
+							| "11"
+							| "12"
+					  )
+					| null;
+				title: string;
+				description: string;
+				image?: (string | null) | Media;
+				link?: string | null;
+				featured?: boolean | null;
+				id?: string | null;
+		  }[]
+		| null;
+	layout?: ("vertical" | "horizontal" | "alternating") | null;
+	showImages?: boolean | null;
+	sortOrder?: ("asc" | "desc") | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "timeline";
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CTABlock".
+ */
+export interface CTABlock {
+	title: string;
+	description?: string | null;
+	backgroundImage?: (string | null) | Media;
+	backgroundColor?:
+		| ("white" | "gray" | "dark" | "primary" | "secondary")
+		| null;
+	buttons?:
+		| {
+				text: string;
+				url: string;
+				style?: ("primary" | "secondary" | "outline" | "text") | null;
+				size?: ("sm" | "md" | "lg") | null;
+				/**
+				 * 图标名称，如：arrow-right、download 等
+				 */
+				icon?: string | null;
+				newTab?: boolean | null;
+				id?: string | null;
+		  }[]
+		| null;
+	layout?: ("center" | "left" | "right" | "split") | null;
+	padding?: ("sm" | "md" | "lg" | "xl") | null;
+	id?: string | null;
+	blockName?: string | null;
+	blockType: "cta";
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "inquiries".
  */
 export interface Inquiry {
-  id: string;
-  status: 'pending' | 'processed';
-  /**
-   * 管理员可以在这里添加备注
-   */
-  notes?: string | null;
-  name: string;
-  email: string;
-  phone?: string | null;
-  company?: string | null;
-  product?: (string | null) | PumpController;
-  message: string;
-  updatedAt: string;
-  createdAt: string;
+	id: string;
+	status: "pending" | "processed";
+	/**
+	 * 管理员可以在这里添加备注
+	 */
+	notes?: string | null;
+	name: string;
+	email: string;
+	phone?: string | null;
+	company?: string | null;
+	product?: (string | null) | PumpController;
+	message: string;
+	updatedAt: string;
+	createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "newsletters".
  */
 export interface Newsletter {
-  id: string;
-  email: string;
-  status?: ('subscribed' | 'unsubscribed') | null;
-  updatedAt: string;
-  createdAt: string;
+	id: string;
+	email: string;
+	status?: ("subscribed" | "unsubscribed") | null;
+	updatedAt: string;
+	createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
-  id: string;
-  document?:
-    | ({
-        relationTo: 'users';
-        value: string | User;
-      } | null)
-    | ({
-        relationTo: 'media';
-        value: string | Media;
-      } | null)
-    | ({
-        relationTo: 'pages';
-        value: string | Page;
-      } | null)
-    | ({
-        relationTo: 'pump-controllers';
-        value: string | PumpController;
-      } | null)
-    | ({
-        relationTo: 'packaging';
-        value: string | Packaging;
-      } | null)
-    | ({
-        relationTo: 'faqs';
-        value: string | Faq;
-      } | null)
-    | ({
-        relationTo: 'inquiries';
-        value: string | Inquiry;
-      } | null)
-    | ({
-        relationTo: 'newsletters';
-        value: string | Newsletter;
-      } | null);
-  globalSlug?: string | null;
-  user: {
-    relationTo: 'users';
-    value: string | User;
-  };
-  updatedAt: string;
-  createdAt: string;
+	id: string;
+	document?:
+		| ({
+				relationTo: "users";
+				value: string | User;
+		  } | null)
+		| ({
+				relationTo: "media";
+				value: string | Media;
+		  } | null)
+		| ({
+				relationTo: "pages";
+				value: string | Page;
+		  } | null)
+		| ({
+				relationTo: "pump-controllers";
+				value: string | PumpController;
+		  } | null)
+		| ({
+				relationTo: "packaging";
+				value: string | Packaging;
+		  } | null)
+		| ({
+				relationTo: "faqs";
+				value: string | Faq;
+		  } | null)
+		| ({
+				relationTo: "inquiries";
+				value: string | Inquiry;
+		  } | null)
+		| ({
+				relationTo: "newsletters";
+				value: string | Newsletter;
+		  } | null);
+	globalSlug?: string | null;
+	user: {
+		relationTo: "users";
+		value: string | User;
+	};
+	updatedAt: string;
+	createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
-  id: string;
-  user: {
-    relationTo: 'users';
-    value: string | User;
-  };
-  key?: string | null;
-  value?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  updatedAt: string;
-  createdAt: string;
+	id: string;
+	user: {
+		relationTo: "users";
+		value: string | User;
+	};
+	key?: string | null;
+	value?:
+		| {
+				[k: string]: unknown;
+		  }
+		| unknown[]
+		| string
+		| number
+		| boolean
+		| null;
+	updatedAt: string;
+	createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-migrations".
  */
 export interface PayloadMigration {
-  id: string;
-  name?: string | null;
-  batch?: number | null;
-  updatedAt: string;
-  createdAt: string;
+	id: string;
+	name?: string | null;
+	batch?: number | null;
+	updatedAt: string;
+	createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
-  role?: T;
-  updatedAt?: T;
-  createdAt?: T;
-  email?: T;
-  resetPasswordToken?: T;
-  resetPasswordExpiration?: T;
-  salt?: T;
-  hash?: T;
-  loginAttempts?: T;
-  lockUntil?: T;
+	role?: T;
+	updatedAt?: T;
+	createdAt?: T;
+	email?: T;
+	resetPasswordToken?: T;
+	resetPasswordExpiration?: T;
+	salt?: T;
+	hash?: T;
+	loginAttempts?: T;
+	lockUntil?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media_select".
  */
 export interface MediaSelect<T extends boolean = true> {
-  alt?: T;
-  caption?: T;
-  blurDataUrl?: T;
-  updatedAt?: T;
-  createdAt?: T;
-  url?: T;
-  thumbnailURL?: T;
-  filename?: T;
-  mimeType?: T;
-  filesize?: T;
-  width?: T;
-  height?: T;
-  focalX?: T;
-  focalY?: T;
+	alt?: T;
+	caption?: T;
+	blurDataUrl?: T;
+	updatedAt?: T;
+	createdAt?: T;
+	url?: T;
+	thumbnailURL?: T;
+	filename?: T;
+	mimeType?: T;
+	filesize?: T;
+	width?: T;
+	height?: T;
+	focalX?: T;
+	focalY?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
-  title?: T;
-  slug?: T;
-  slugLock?: T;
-  content?:
-    | T
-    | {
-        mediaBlock?: T | MediaBlockTypeSelect<T>;
-        carouselHero?: T | CarouselHeroBlockSelect<T>;
-        featuredProducts?: T | FeaturedProductsBlockSelect<T>;
-        testimonials?: T | TestimonialsBlockSelect<T>;
-        faqs?: T | FaqsBlockSelect<T>;
-        text?: T | TextBlockSelect<T>;
-        features?: T | FeaturesBlockSelect<T>;
-        'media-grid'?: T | MediaGridBlockSelect<T>;
-      };
-  updatedAt?: T;
-  createdAt?: T;
-  _status?: T;
+	title?: T;
+	slug?: T;
+	content?:
+		| T
+		| {
+				mediaBlock?: T | MediaBlockTypeSelect<T>;
+				carouselHero?: T | CarouselHeroBlockSelect<T>;
+				featuredProducts?: T | FeaturedProductsBlockSelect<T>;
+				testimonials?: T | TestimonialsBlockSelect<T>;
+				faqs?: T | FaqsBlockSelect<T>;
+				text?: T | TextBlockSelect<T>;
+				features?: T | FeaturesBlockSelect<T>;
+				"media-grid"?: T | MediaGridBlockSelect<T>;
+				contactForm?: T | ContactFormBlockSelect<T>;
+				team?: T | TeamBlockSelect<T>;
+				timeline?: T | TimelineBlockSelect<T>;
+				cta?: T | CTABlockSelect<T>;
+		  };
+	updatedAt?: T;
+	createdAt?: T;
+	_status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "MediaBlockType_select".
  */
 export interface MediaBlockTypeSelect<T extends boolean = true> {
-  media?: T;
-  description?: T;
-  id?: T;
-  blockName?: T;
+	media?: T;
+	description?: T;
+	id?: T;
+	blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "CarouselHeroBlock_select".
  */
 export interface CarouselHeroBlockSelect<T extends boolean = true> {
-  carousel?:
-    | T
-    | {
-        media?: T;
-        title?: T;
-        description?: T;
-        primaryCTA?: T;
-        primaryCTAUrl?: T;
-        secondaryCTA?: T;
-        secondaryCTAUrl?: T;
-        id?: T;
-      };
-  loop?: T;
-  id?: T;
-  blockName?: T;
+	carousel?:
+		| T
+		| {
+				media?: T;
+				title?: T;
+				description?: T;
+				primaryCTA?: T;
+				primaryCTAUrl?: T;
+				secondaryCTA?: T;
+				secondaryCTAUrl?: T;
+				id?: T;
+		  };
+	loop?: T;
+	id?: T;
+	blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "FeaturedProductsBlock_select".
  */
 export interface FeaturedProductsBlockSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  products?: T;
-  id?: T;
-  blockName?: T;
+	title?: T;
+	description?: T;
+	products?: T;
+	id?: T;
+	blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "TestimonialsBlock_select".
  */
 export interface TestimonialsBlockSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  testimonials?:
-    | T
-    | {
-        name?: T;
-        avatar?: T;
-        country?: T;
-        star?: T;
-        content?: T;
-        id?: T;
-      };
-  id?: T;
-  blockName?: T;
+	title?: T;
+	description?: T;
+	testimonials?:
+		| T
+		| {
+				name?: T;
+				avatar?: T;
+				country?: T;
+				star?: T;
+				content?: T;
+				id?: T;
+		  };
+	id?: T;
+	blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "FaqsBlock_select".
  */
 export interface FaqsBlockSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  faqs?: T;
-  id?: T;
-  blockName?: T;
+	title?: T;
+	description?: T;
+	faqs?: T;
+	id?: T;
+	blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "TextBlock_select".
  */
 export interface TextBlockSelect<T extends boolean = true> {
-  content?: T;
-  width?: T;
-  id?: T;
-  blockName?: T;
+	content?: T;
+	width?: T;
+	id?: T;
+	blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "FeaturesBlock_select".
  */
 export interface FeaturesBlockSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  features?:
-    | T
-    | {
-        feature?: T | FeatureBlockSelect<T>;
-      };
-  columns?: T;
-  id?: T;
-  blockName?: T;
+	title?: T;
+	description?: T;
+	features?:
+		| T
+		| {
+				feature?: T | FeatureBlockSelect<T>;
+		  };
+	columns?: T;
+	id?: T;
+	blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "FeatureBlock_select".
  */
 export interface FeatureBlockSelect<T extends boolean = true> {
-  type?: T;
-  title?: T;
-  number?: T;
-  description?: T;
-  icon?: T;
-  delay?: T;
-  withPlus?: T;
-  isPercentage?: T;
-  startValue?: T;
-  decimalPlaces?: T;
-  direction?: T;
-  alignment?: T;
-  opacity?: T;
-  iconBackground?: T;
-  id?: T;
-  blockName?: T;
+	type?: T;
+	title?: T;
+	number?: T;
+	description?: T;
+	icon?: T;
+	delay?: T;
+	withPlus?: T;
+	isPercentage?: T;
+	startValue?: T;
+	decimalPlaces?: T;
+	direction?: T;
+	alignment?: T;
+	opacity?: T;
+	iconBackground?: T;
+	id?: T;
+	blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "MediaGridBlock_select".
  */
 export interface MediaGridBlockSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  contents?:
-    | T
-    | {
-        mediaBlock?: T | MediaBlockTypeSelect<T>;
-      };
-  columns?: T;
-  id?: T;
-  blockName?: T;
+	title?: T;
+	description?: T;
+	contents?:
+		| T
+		| {
+				mediaBlock?: T | MediaBlockTypeSelect<T>;
+		  };
+	columns?: T;
+	id?: T;
+	blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContactFormBlock_select".
+ */
+export interface ContactFormBlockSelect<T extends boolean = true> {
+	title?: T;
+	description?: T;
+	fields?:
+		| T
+		| {
+				fieldType?: T;
+				label?: T;
+				placeholder?: T;
+				required?: T;
+				options?:
+					| T
+					| {
+							label?: T;
+							value?: T;
+							id?: T;
+					  };
+				id?: T;
+		  };
+	submitButtonText?: T;
+	successMessage?: T;
+	errorMessage?: T;
+	id?: T;
+	blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TeamBlock_select".
+ */
+export interface TeamBlockSelect<T extends boolean = true> {
+	title?: T;
+	description?: T;
+	members?:
+		| T
+		| {
+				name?: T;
+				position?: T;
+				bio?: T;
+				photo?: T;
+				social?:
+					| T
+					| {
+							platform?: T;
+							url?: T;
+							id?: T;
+					  };
+				id?: T;
+		  };
+	layout?: T;
+	columns?: T;
+	id?: T;
+	blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TimelineBlock_select".
+ */
+export interface TimelineBlockSelect<T extends boolean = true> {
+	title?: T;
+	description?: T;
+	events?:
+		| T
+		| {
+				year?: T;
+				month?: T;
+				title?: T;
+				description?: T;
+				image?: T;
+				link?: T;
+				featured?: T;
+				id?: T;
+		  };
+	layout?: T;
+	showImages?: T;
+	sortOrder?: T;
+	id?: T;
+	blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CTABlock_select".
+ */
+export interface CTABlockSelect<T extends boolean = true> {
+	title?: T;
+	description?: T;
+	backgroundImage?: T;
+	backgroundColor?: T;
+	buttons?:
+		| T
+		| {
+				text?: T;
+				url?: T;
+				style?: T;
+				size?: T;
+				icon?: T;
+				newTab?: T;
+				id?: T;
+		  };
+	layout?: T;
+	padding?: T;
+	id?: T;
+	blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pump-controllers_select".
  */
 export interface PumpControllersSelect<T extends boolean = true> {
-  title?: T;
-  slug?: T;
-  slugLock?: T;
-  featured?: T;
-  series?: T;
-  category?: T;
-  excerpt?: T;
-  modelName?: T;
-  gallery?: T;
-  description?: T;
-  features?:
-    | T
-    | {
-        features?: T | FeaturesBlockSelect<T>;
-      };
-  voltage?:
-    | T
-    | {
-        min?: T;
-        max?: T;
-      };
-  contactLoad?: T;
-  relayLife?: T;
-  maxCurrent?: T;
-  maxPower?: T;
-  maxPressure?: T;
-  extremePressure?: T;
-  startingPressure?:
-    | T
-    | {
-        min?: T;
-        max?: T;
-      };
-  frequency?:
-    | T
-    | {
-        min?: T;
-        max?: T;
-      };
-  protectionGrade?: T;
-  threadInterface?: T;
-  switchChar?: T;
-  temperature?: T;
-  flowSwitch?: T;
-  startingMethod?: T;
-  buffer?: T;
-  verticalHeight?: T;
-  packaging?: T;
-  related?: T;
-  leadTime?:
-    | T
-    | {
-        min?: T;
-        max?: T;
-        duration?: T;
-        id?: T;
-      };
-  updatedAt?: T;
-  createdAt?: T;
+	title?: T;
+	slug?: T;
+	featured?: T;
+	series?: T;
+	category?: T;
+	excerpt?: T;
+	modelName?: T;
+	gallery?: T;
+	description?: T;
+	features?:
+		| T
+		| {
+				feature?: T | FeatureBlockSelect<T>;
+		  };
+	voltage?:
+		| T
+		| {
+				min?: T;
+				max?: T;
+		  };
+	contactLoad?: T;
+	relayLife?: T;
+	maxCurrent?: T;
+	maxPower?: T;
+	maxPressure?: T;
+	extremePressure?: T;
+	startingPressure?:
+		| T
+		| {
+				min?: T;
+				max?: T;
+		  };
+	frequency?:
+		| T
+		| {
+				min?: T;
+				max?: T;
+		  };
+	protectionGrade?: T;
+	threadInterface?: T;
+	switchChar?: T;
+	temperature?: T;
+	flowSwitch?: T;
+	startingMethod?: T;
+	buffer?: T;
+	verticalHeight?: T;
+	packaging?: T;
+	related?: T;
+	leadTime?:
+		| T
+		| {
+				min?: T;
+				max?: T;
+				duration?: T;
+				id?: T;
+		  };
+	updatedAt?: T;
+	createdAt?: T;
+	_status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "packaging_select".
  */
 export interface PackagingSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  size?:
-    | T
-    | {
-        length?: T;
-        width?: T;
-        height?: T;
-      };
-  quantity?: T;
-  weight?: T;
-  updatedAt?: T;
-  createdAt?: T;
+	title?: T;
+	description?: T;
+	size?:
+		| T
+		| {
+				length?: T;
+				width?: T;
+				height?: T;
+		  };
+	quantity?: T;
+	weight?: T;
+	updatedAt?: T;
+	createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "faqs_select".
  */
 export interface FaqsSelect<T extends boolean = true> {
-  question?: T;
-  answer?: T;
-  type?: T;
-  updatedAt?: T;
-  createdAt?: T;
+	question?: T;
+	answer?: T;
+	type?: T;
+	updatedAt?: T;
+	createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "inquiries_select".
  */
 export interface InquiriesSelect<T extends boolean = true> {
-  status?: T;
-  notes?: T;
-  name?: T;
-  email?: T;
-  phone?: T;
-  company?: T;
-  product?: T;
-  message?: T;
-  updatedAt?: T;
-  createdAt?: T;
+	status?: T;
+	notes?: T;
+	name?: T;
+	email?: T;
+	phone?: T;
+	company?: T;
+	product?: T;
+	message?: T;
+	updatedAt?: T;
+	createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "newsletters_select".
  */
 export interface NewslettersSelect<T extends boolean = true> {
-  email?: T;
-  status?: T;
-  updatedAt?: T;
-  createdAt?: T;
+	email?: T;
+	status?: T;
+	updatedAt?: T;
+	createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents_select".
  */
 export interface PayloadLockedDocumentsSelect<T extends boolean = true> {
-  document?: T;
-  globalSlug?: T;
-  user?: T;
-  updatedAt?: T;
-  createdAt?: T;
+	document?: T;
+	globalSlug?: T;
+	user?: T;
+	updatedAt?: T;
+	createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-preferences_select".
  */
 export interface PayloadPreferencesSelect<T extends boolean = true> {
-  user?: T;
-  key?: T;
-  value?: T;
-  updatedAt?: T;
-  createdAt?: T;
+	user?: T;
+	key?: T;
+	value?: T;
+	updatedAt?: T;
+	createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-migrations_select".
  */
 export interface PayloadMigrationsSelect<T extends boolean = true> {
-  name?: T;
-  batch?: T;
-  updatedAt?: T;
-  createdAt?: T;
+	name?: T;
+	batch?: T;
+	updatedAt?: T;
+	createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header".
  */
 export interface Header {
-  id: string;
-  logo: string | Media;
-  /**
-   * 如果勾选，则会在顶部导航栏显示品牌名称
-   */
-  showName?: boolean | null;
-  name?: string | null;
-  links?:
-    | {
-        type: 'internal' | 'external' | 'page';
-        page?: (string | null) | Page;
-        url?: string | null;
-        label?: string | null;
-        id?: string | null;
-      }[]
-    | null;
-  updatedAt?: string | null;
-  createdAt?: string | null;
+	id: string;
+	logo: string | Media;
+	/**
+	 * 如果勾选，则会在顶部导航栏显示品牌名称
+	 */
+	showName?: boolean | null;
+	name?: string | null;
+	links?: HeaderLinks;
+	updatedAt?: string | null;
+	createdAt?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "footer".
  */
 export interface Footer {
-  id: string;
-  /**
-   * 如果勾选，则会在页脚显示联系方式
-   */
-  showContact?: boolean | null;
-  links?:
-    | {
-        type: 'internal' | 'external' | 'page';
-        page?: (string | null) | Page;
-        url?: string | null;
-        label?: string | null;
-        id?: string | null;
-      }[]
-    | null;
-  updatedAt?: string | null;
-  createdAt?: string | null;
+	id: string;
+	/**
+	 * 如果勾选，则会在页脚显示联系方式
+	 */
+	showContact?: boolean | null;
+	links?: FooterLinks;
+	updatedAt?: string | null;
+	createdAt?: string | null;
 }
 /**
  * 配置网站信息，用作 SEO 优化
@@ -2609,131 +2880,136 @@ export interface Footer {
  * via the `definition` "site".
  */
 export interface Site {
-  id: string;
-  name: string;
-  /**
-   * 选择 svg 格式的图片
-   */
-  logo: string | Media;
-  slogan?: string | null;
-  description?: string | null;
-  keywords?: string[] | null;
-  updatedAt?: string | null;
-  createdAt?: string | null;
+	id: string;
+	name: string;
+	/**
+	 * 选择 svg 格式的图片
+	 */
+	logo: string | Media;
+	slogan?: string | null;
+	description?: string | null;
+	keywords?: string[] | null;
+	updatedAt?: string | null;
+	createdAt?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "company".
  */
 export interface Company {
-  id: string;
-  name: string;
-  logo?: (string | null) | Media;
-  slogan?: string | null;
-  address: {
-    street: string;
-    zip: string;
-    city: string;
-    country: string;
-  };
-  contact: {
-    email: string;
-    telephone: string;
-    whatsapp: string;
-  };
-  updatedAt?: string | null;
-  createdAt?: string | null;
+	id: string;
+	name: string;
+	logo?: (string | null) | Media;
+	slogan?: string | null;
+	address: {
+		street: string;
+		zip: string;
+		city: string;
+		country: string;
+	};
+	contact: {
+		email: string;
+		telephone: string;
+		whatsapp: string;
+	};
+	updatedAt?: string | null;
+	createdAt?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
-  logo?: T;
-  showName?: T;
-  name?: T;
-  links?:
-    | T
-    | {
-        type?: T;
-        page?: T;
-        url?: T;
-        label?: T;
-        id?: T;
-      };
-  updatedAt?: T;
-  createdAt?: T;
-  globalType?: T;
+	logo?: T;
+	showName?: T;
+	name?: T;
+	links?: T | HeaderLinksSelect<T>;
+	updatedAt?: T;
+	createdAt?: T;
+	globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HeaderLinks_select".
+ */
+export interface HeaderLinksSelect<T extends boolean = true> {
+	type?: T;
+	page?: T;
+	url?: T;
+	label?: T;
+	id?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "footer_select".
  */
 export interface FooterSelect<T extends boolean = true> {
-  showContact?: T;
-  links?:
-    | T
-    | {
-        type?: T;
-        page?: T;
-        url?: T;
-        label?: T;
-        id?: T;
-      };
-  updatedAt?: T;
-  createdAt?: T;
-  globalType?: T;
+	showContact?: T;
+	links?: T | FooterLinksSelect<T>;
+	updatedAt?: T;
+	createdAt?: T;
+	globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FooterLinks_select".
+ */
+export interface FooterLinksSelect<T extends boolean = true> {
+	type?: T;
+	page?: T;
+	url?: T;
+	label?: T;
+	id?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "site_select".
  */
 export interface SiteSelect<T extends boolean = true> {
-  name?: T;
-  logo?: T;
-  slogan?: T;
-  description?: T;
-  keywords?: T;
-  updatedAt?: T;
-  createdAt?: T;
-  globalType?: T;
+	name?: T;
+	logo?: T;
+	slogan?: T;
+	description?: T;
+	keywords?: T;
+	updatedAt?: T;
+	createdAt?: T;
+	globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "company_select".
  */
 export interface CompanySelect<T extends boolean = true> {
-  name?: T;
-  logo?: T;
-  slogan?: T;
-  address?:
-    | T
-    | {
-        street?: T;
-        zip?: T;
-        city?: T;
-        country?: T;
-      };
-  contact?:
-    | T
-    | {
-        email?: T;
-        telephone?: T;
-        whatsapp?: T;
-      };
-  updatedAt?: T;
-  createdAt?: T;
-  globalType?: T;
+	name?: T;
+	logo?: T;
+	slogan?: T;
+	address?:
+		| T
+		| {
+				street?: T;
+				zip?: T;
+				city?: T;
+				country?: T;
+		  };
+	contact?:
+		| T
+		| {
+				email?: T;
+				telephone?: T;
+				whatsapp?: T;
+		  };
+	updatedAt?: T;
+	createdAt?: T;
+	globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "auth".
  */
 export interface Auth {
-  [k: string]: unknown;
+	[k: string]: unknown;
 }
 
-
-declare module 'payload' {
-  export interface GeneratedTypes extends Config {}
+declare module "payload" {
+	export interface GeneratedTypes extends Config {}
 }

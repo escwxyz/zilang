@@ -1,7 +1,7 @@
 import { APIError, type Validate } from "payload";
 
 const getNumericValue = (
-	value: { value: number } | number | undefined,
+	value: { value: number } | number | undefined
 ): number | undefined => {
 	if (typeof value === "undefined") {
 		return undefined;

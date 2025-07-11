@@ -1,0 +1,45 @@
+name: Deploy Web
+
+on:
+  repository_dispatch:
+    types: [railway_deploy, content_update]
+
+jobs:
+  format:
+    uses: ./.github/workflows/format.yaml
+
+  build:
+    needs: format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm --filter @repo/web run build
+        env:
+          # Add any CMS API keys needed for build-time content fetching
+          PAYLOAD_API_URL: ${{ secrets.PAYLOAD_API_URL }}
+          PAYLOAD_API_KEY: ${{ secrets.PAYLOAD_API_KEY }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          workingDirectory: apps/web

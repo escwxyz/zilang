@@ -1,0 +1,60 @@
+---
+import Link from "@/components/Link.astro";
+import { getGlobalBySlug } from "@/lib/data";
+import { getUrl } from "@/lib/utils";
+
+const header = await getGlobalBySlug("header");
+
+const { logo, links, showName, name } = header;
+
+if (typeof logo !== "object") {
+  throw new Error("Logo is not populated in the header");
+}
+
+const { alt, url } = logo;
+---
+
+<header
+  class="flex items-center justify-between whitespace-nowrap border-b border-solid px-2 md:px-10 py-3"
+>
+  <div class="flex items-center gap-4 text-[#141216]">
+    <div class="w-15 md:w-auto">
+      <Link type="internal" url="/" variant="minimal" className="p-0">
+        <img src={getUrl(url ?? "")} alt={alt} width={100} loading="eager" />
+      </Link>
+    </div>
+    {
+      showName && (
+        <h2 class="text-[#141216] text-lg font-bold leading-tight tracking-[-0.015em]">
+          {name}
+        </h2>
+      )
+    }
+  </div>
+  <div class="hidden md:flex flex-1 justify-end gap-8">
+    <div class="flex items-center gap-9">
+      <Link type="internal" url="/products" variant="minimal"> Products </Link>
+      {
+        links
+          ?.filter(
+            (link) =>
+              !(typeof link.page === "object" && link.page?.slug === "home"),
+          )
+          .map((link) => (
+            <Link {...link}>
+              {link.label ??
+                (typeof link.page === "object" ? link?.page?.title : link.url)}
+            </Link>
+          ))
+      }
+    </div>
+    <Link
+      type="internal"
+      url="/contact"
+      variant="minimal"
+      className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+    >
+      Request Quote
+    </Link>
+  </div>
+</header>

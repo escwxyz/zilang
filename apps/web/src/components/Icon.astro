@@ -11,6 +11,10 @@ const { name, ...restProps } = Astro.props;
 
 const iconName = kebabToPascal(name);
 const IconComponent = icons[iconName as keyof typeof icons];
+
+if (!IconComponent) {
+  throw new Error(`Icon "${name}" (${iconName}) not found in icons collection`);
+}
 ---
 
 <IconComponent {...restProps} />

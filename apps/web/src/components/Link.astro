@@ -9,7 +9,7 @@ type Props = NonNullable<HeaderLinks | FooterLinks>[number] & {
 const { page, url, variant = "default", type, className } = Astro.props;
 
 if (type === "page" && typeof page !== "object") {
-  throw new Error("Page is not populated in the link");
+  console.warn("Page is not populated in the link, falling back to '#'");
 }
 
 const isExternal = type === "external";
@@ -17,8 +17,10 @@ const isExternal = type === "external";
 const href = isExternal
   ? url
   : type === "page" && typeof page === "object"
-    ? `/${page?.slug}`
-    : url;
+    ? page?.slug
+      ? `/${page.slug}`
+      : "#"
+    : url || "#";
 
 const isActive = Astro.url.pathname === href;
 ---

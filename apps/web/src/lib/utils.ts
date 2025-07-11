@@ -6,13 +6,20 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const getUrl = (path: string) => {
+	const siteUrl = import.meta.env.PAYLOAD_SITE_URL;
+	if (!siteUrl) {
+		throw new Error("PAYLOAD_SITE_URL is not set");
+	}
+
+	const baseUrl = siteUrl.endsWith("/") ? siteUrl.slice(0, -1) : siteUrl;
+
 	if (path.startsWith("/")) {
-		return import.meta.env.PAYLOAD_SITE_URL + path;
+		return baseUrl + path;
 	}
 	if (path.startsWith("http")) {
 		return path;
 	}
-	return `${import.meta.env.PAYLOAD_SITE_URL}/${path}`;
+	return `${baseUrl}/${path}`;
 };
 
 export function kebabToPascal(kebab: string): string {

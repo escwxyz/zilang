@@ -1,0 +1,89 @@
+---
+import Link from "@/components/Link.astro";
+import { PhoneIcon, MailIcon } from "@lucide/astro";
+import WhatsAppIcon from "@/assets/whatsapp.svg";
+import { getGlobalBySlug } from "@/lib/data";
+
+const company = await getGlobalBySlug("company");
+
+const { contact } = company;
+
+const footer = await getGlobalBySlug("footer");
+
+const { showContact, links } = footer;
+
+const year = new Date().getFullYear();
+---
+
+<footer class="flex justify-center border-t">
+  <div class="flex container flex-1 flex-col">
+    <div
+      class="flex flex-col gap-6 px-5 py-10 text-center @container items-center"
+    >
+      {
+        showContact && (
+          <div class="flex gap-4">
+            <Link
+              variant="minimal"
+              type="external"
+              url={`tel:${contact.telephone}`}
+            >
+              <PhoneIcon class="size-6" />
+            </Link>
+
+            <Link
+              variant="minimal"
+              type="external"
+              url={`mailto:${contact.email}`}
+            >
+              <MailIcon class="size-6" />
+            </Link>
+
+            <Link
+              variant="minimal"
+              type="external"
+              url={`https://wa.me/${contact.whatsapp}`}
+            >
+              <WhatsAppIcon class="size-6" />
+            </Link>
+          </div>
+        )
+      }
+
+      {
+        links && links.length > 0 && (
+          <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+            {links.map((link) => {
+              const { type, id } = link;
+              // TODO
+              return (
+                <Link
+                  type={type}
+                  page={id}
+                  variant="minimal"
+                  className={"text-base font-normal leading-normal min-w-40"}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
+        )
+      }
+
+      <span class="text-muted-foreground text-base font-normal leading-normal">
+        <p>
+          © {year}
+          {company.name}. All rights reserved. Made by <a
+            href="https://jiewa.ng/?ref=llaveroswitch"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline"
+          >
+            Jie Wang
+          </a>
+        </p>
+      </span>
+    </div>
+  </div>
+</footer>

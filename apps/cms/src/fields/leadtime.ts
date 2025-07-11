@@ -23,7 +23,7 @@ export const leadTime: ArrayField = {
 			},
 			{
 				suffix: " 只",
-			},
+			}
 		),
 		...NumberField(
 			{
@@ -32,7 +32,7 @@ export const leadTime: ArrayField = {
 			},
 			{
 				suffix: " 只",
-			},
+			}
 		),
 
 		{

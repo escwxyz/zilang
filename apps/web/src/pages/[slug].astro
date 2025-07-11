@@ -1,0 +1,38 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BlocksRenderer from "@/components/BlocksRenderer.astro";
+import { getCollectionList } from "@/lib/data";
+
+export const prerender = true;
+
+export const getStaticPaths = async () => {
+  const pages = await getCollectionList("pages", {
+    where: {
+      _status: {
+        equals: "published",
+      },
+      slug: {
+        not_equals: "home",
+      },
+    },
+    limit: 0,
+  });
+
+  return pages.docs.map((page) => ({
+    params: {
+      slug: page.slug,
+    },
+    props: {
+      page: page,
+    },
+  }));
+};
+
+const { page } = Astro.props;
+
+const { title, content } = page;
+---
+
+<Layout pageTitle={title}>
+  <BlocksRenderer blocks={content} />
+</Layout>

@@ -1,0 +1,49 @@
+name: Build CMS
+
+on:
+  workflow_call:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - "apps/cms/**"
+      - "packages/**"
+      - "pnpm-workspace.yaml"
+      - "package.json"
+      - "pnpm-lock.yaml"
+  pull_request:
+    branches-ignore:
+      - main
+    paths:
+      - "apps/cms/**"
+      - "packages/**"
+      - "pnpm-workspace.yaml"
+      - "package.json"
+      - "pnpm-lock.yaml"
+
+jobs:
+  format:
+    uses: ./.github/workflows/format.yaml
+  build:
+    needs: format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm --filter @repo/cms run build
+
+        # TODO: may add a step to seed the data to test if it's working

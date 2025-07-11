@@ -1,0 +1,61 @@
+---
+import { getCollectionList } from "@/lib/data";
+import { cn, getUrl } from "@/lib/utils";
+import type { FeaturedProductsBlock } from "@repo/types";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/starwind/card";
+import ProductCard from "./ProductCard.astro";
+
+type Props = FeaturedProductsBlock & {
+  className?: string;
+};
+
+const { title, description, products, className } = Astro.props;
+
+const hasProducts = Array.isArray(products) && products.length > 0;
+
+const productsData = await Promise.all(
+  (products ?? []).map(async (product) => {
+    if (typeof product.value === "string") {
+      const pumpController = await getCollectionList(product.relationTo, {
+        where: {
+          id: {
+            equals: product.value,
+          },
+        },
+        limit: 1,
+      });
+
+      return pumpController.docs[0];
+    } else {
+      return product.value;
+    }
+  }),
+);
+---
+
+{
+  hasProducts && (
+    <div
+      class={cn(
+        "flex flex-col gap-4 container mx-auto items-center",
+        className,
+      )}
+    >
+      {title && <h3 class="text-3xl font-bold text-center">{title}</h3>}
+      {description && (
+        <div class="text-muted-foreground text-center">{description}</div>
+      )}
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {productsData.map((product) => {
+          return <ProductCard {...product} hideButton />;
+        })}
+      </div>
+    </div>
+  )
+}
