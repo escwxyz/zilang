@@ -32,7 +32,7 @@ export async function findGlobalVersionByID<
 >(
 	sdk: PayloadSDK<T>,
 	options: FindGlobalVersionByIDOptions<T, TSlug, TDisableErrors>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<
 	ApplyDisableErrors<
 		TypeWithVersion<DataFromGlobalSlug<T, TSlug>>,
@@ -59,7 +59,7 @@ export async function findGlobalVersionByID<
 		}
 
 		throw new Error(
-			`Error retrieving the version document ${options.slug}/${options.id}`,
+			`Error retrieving the version document ${options.slug}/${options.id}`
 		);
 	}
 }

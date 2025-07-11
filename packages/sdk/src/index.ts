@@ -137,7 +137,7 @@ export class PayloadSDK<
 	 */
 	count<TSlug extends CollectionSlug<T>>(
 		options: CountOptions<T, TSlug>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<{ totalDocs: number }> {
 		return count(this, options, init);
 	}
@@ -149,7 +149,7 @@ export class PayloadSDK<
 	 */
 	create<TSlug extends CollectionSlug<T>, TSelect extends SelectType>(
 		options: CreateOptions<T, TSlug, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<TransformCollectionWithSelect<T, TSlug, TSelect>> {
 		return create(this, options, init);
 	}
@@ -159,14 +159,14 @@ export class PayloadSDK<
 		TSelect extends SelectFromCollectionSlug<T, TSlug>,
 	>(
 		options: DeleteManyOptions<T, TSlug, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<BulkOperationResult<T, TSlug, TSelect>>;
 	delete<
 		TSlug extends CollectionSlug<T>,
 		TSelect extends SelectFromCollectionSlug<T, TSlug>,
 	>(
 		options: DeleteByIDOptions<T, TSlug, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<TransformCollectionWithSelect<T, TSlug, TSelect>>;
 
 	/**
@@ -179,7 +179,7 @@ export class PayloadSDK<
 		TSelect extends SelectFromCollectionSlug<T, TSlug>,
 	>(
 		options: DeleteOptions<T, TSlug, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<
 		| BulkOperationResult<T, TSlug, TSelect>
 		| TransformCollectionWithSelect<T, TSlug, TSelect>
@@ -194,7 +194,7 @@ export class PayloadSDK<
 	 */
 	find<TSlug extends CollectionSlug<T>, TSelect extends SelectType>(
 		options: FindOptions<T, TSlug, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<PaginatedDocs<TransformCollectionWithSelect<T, TSlug, TSelect>>> {
 		return find(this, options, init);
 	}
@@ -210,7 +210,7 @@ export class PayloadSDK<
 		TSelect extends SelectType,
 	>(
 		options: FindByIDOptions<T, TSlug, TDisableErrors, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<
 		ApplyDisableErrors<
 			TransformCollectionWithSelect<T, TSlug, TSelect>,
@@ -225,7 +225,7 @@ export class PayloadSDK<
 		TSelect extends SelectFromGlobalSlug<T, TSlug>,
 	>(
 		options: FindGlobalOptions<T, TSlug, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<TransformGlobalWithSelect<T, TSlug, TSelect>> {
 		return findGlobal(this, options, init);
 	}
@@ -235,7 +235,7 @@ export class PayloadSDK<
 		TDisableErrors extends boolean,
 	>(
 		options: FindGlobalVersionByIDOptions<T, TSlug, TDisableErrors>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<
 		ApplyDisableErrors<
 			TypeWithVersion<DataFromGlobalSlug<T, TSlug>>,
@@ -247,7 +247,7 @@ export class PayloadSDK<
 
 	findGlobalVersions<TSlug extends GlobalSlug<T>>(
 		options: FindGlobalVersionsOptions<T, TSlug>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<PaginatedDocs<TypeWithVersion<DataFromGlobalSlug<T, TSlug>>>> {
 		return findGlobalVersions(this, options, init);
 	}
@@ -256,7 +256,7 @@ export class PayloadSDK<
 		TDisableErrors extends boolean,
 	>(
 		options: FindVersionByIDOptions<T, TSlug, TDisableErrors>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<
 		ApplyDisableErrors<
 			TypeWithVersion<DataFromCollectionSlug<T, TSlug>>,
@@ -268,7 +268,7 @@ export class PayloadSDK<
 
 	findVersions<TSlug extends CollectionSlug<T>>(
 		options: FindVersionsOptions<T, TSlug>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<PaginatedDocs<TypeWithVersion<DataFromCollectionSlug<T, TSlug>>>> {
 		return findVersions(this, options, init);
 	}
@@ -314,7 +314,7 @@ export class PayloadSDK<
 
 		const response = await this.fetch(
 			`${this.baseURL}${path}${buildSearchParams(args)}`,
-			init,
+			init
 		);
 
 		return response;
@@ -322,14 +322,14 @@ export class PayloadSDK<
 
 	restoreGlobalVersion<TSlug extends GlobalSlug<T>>(
 		options: RestoreGlobalVersionByIDOptions<T, TSlug>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<TypeWithVersion<DataFromGlobalSlug<T, TSlug>>> {
 		return restoreGlobalVersion(this, options, init);
 	}
 
 	restoreVersion<TSlug extends CollectionSlug<T>>(
 		options: RestoreVersionByIDOptions<T, TSlug>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<DataFromCollectionSlug<T, TSlug>> {
 		return restoreVersion(this, options, init);
 	}
@@ -339,7 +339,7 @@ export class PayloadSDK<
 		TSelect extends SelectFromCollectionSlug<T, TSlug>,
 	>(
 		options: UpdateManyOptions<T, TSlug, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<BulkOperationResult<T, TSlug, TSelect>>;
 
 	update<
@@ -347,7 +347,7 @@ export class PayloadSDK<
 		TSelect extends SelectFromCollectionSlug<T, TSlug>,
 	>(
 		options: UpdateByIDOptions<T, TSlug, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<TransformCollectionWithSelect<T, TSlug, TSelect>>;
 
 	/**
@@ -360,7 +360,7 @@ export class PayloadSDK<
 		TSelect extends SelectFromCollectionSlug<T, TSlug>,
 	>(
 		options: UpdateOptions<T, TSlug, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<
 		| BulkOperationResult<T, TSlug, TSelect>
 		| TransformCollectionWithSelect<T, TSlug, TSelect>
@@ -373,7 +373,7 @@ export class PayloadSDK<
 		TSelect extends SelectFromGlobalSlug<T, TSlug>,
 	>(
 		options: UpdateGlobalOptions<T, TSlug, TSelect>,
-		init?: RequestInit,
+		init?: RequestInit
 	): Promise<TransformGlobalWithSelect<T, TSlug, TSelect>> {
 		return updateGlobal(this, options, init);
 	}

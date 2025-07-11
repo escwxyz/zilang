@@ -108,7 +108,7 @@ export default buildConfig({
 		if (process.env.NODE_ENV === "production") {
 			if (!email || !password) {
 				payload.logger.error(
-					"ADMIN_EMAIL and ADMIN_PASSWORD are required in production",
+					"ADMIN_EMAIL and ADMIN_PASSWORD are required in production"
 				);
 				return;
 			}

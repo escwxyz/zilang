@@ -38,7 +38,7 @@ export async function findGlobalVersions<
 >(
 	sdk: PayloadSDK<T>,
 	options: FindGlobalVersionsOptions<T, TSlug>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<PaginatedDocs<TypeWithVersion<DataFromGlobalSlug<T, TSlug>>>> {
 	const response = await sdk.request({
 		args: options,

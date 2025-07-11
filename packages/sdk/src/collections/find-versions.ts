@@ -38,7 +38,7 @@ export async function findVersions<
 >(
 	sdk: PayloadSDK<T>,
 	options: FindVersionsOptions<T, TSlug>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<PaginatedDocs<TypeWithVersion<DataFromCollectionSlug<T, TSlug>>>> {
 	const response = await sdk.request({
 		args: options,

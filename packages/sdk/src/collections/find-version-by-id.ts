@@ -32,7 +32,7 @@ export async function findVersionByID<
 >(
 	sdk: PayloadSDK<T>,
 	options: FindVersionByIDOptions<T, TSlug, TDisableErrors>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<
 	ApplyDisableErrors<
 		TypeWithVersion<DataFromCollectionSlug<T, TSlug>>,
@@ -59,7 +59,7 @@ export async function findVersionByID<
 		}
 
 		throw new Error(
-			`Error retrieving the version document ${options.collection}/${options.id}`,
+			`Error retrieving the version document ${options.collection}/${options.id}`
 		);
 	}
 }

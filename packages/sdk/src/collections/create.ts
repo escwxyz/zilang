@@ -37,7 +37,7 @@ export async function create<
 >(
 	sdk: PayloadSDK<T>,
 	options: CreateOptions<T, TSlug, TSelect>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<TransformCollectionWithSelect<T, TSlug, TSelect>> {
 	let file: Blob | undefined;
 

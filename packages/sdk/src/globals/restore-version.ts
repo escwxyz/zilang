@@ -28,7 +28,7 @@ export async function restoreGlobalVersion<
 >(
 	sdk: PayloadSDK<T>,
 	options: RestoreGlobalVersionByIDOptions<T, TSlug>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<TypeWithVersion<DataFromGlobalSlug<T, TSlug>>> {
 	const response = await sdk.request({
 		args: options,

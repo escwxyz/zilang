@@ -35,7 +35,7 @@ export async function updateGlobal<
 >(
 	sdk: PayloadSDK<T>,
 	options: UpdateGlobalOptions<T, TSlug, TSelect>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<TransformGlobalWithSelect<T, TSlug, TSelect>> {
 	const response = await sdk.request({
 		args: options,

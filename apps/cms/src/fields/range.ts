@@ -47,7 +47,7 @@ export function RangeField({
 							suffix: unit ? ` ${unit}` : undefined,
 							decimalScale,
 							fixedDecimalScale,
-						},
+						}
 					),
 					...NumberField(
 						{
@@ -61,7 +61,7 @@ export function RangeField({
 							suffix: unit ? ` ${unit}` : undefined,
 							decimalScale,
 							fixedDecimalScale,
-						},
+						}
 					),
 				],
 			},

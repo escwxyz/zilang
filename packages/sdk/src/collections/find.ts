@@ -36,7 +36,7 @@ export async function find<
 >(
 	sdk: PayloadSDK<T>,
 	options: FindOptions<T, TSlug, TSelect>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<PaginatedDocs<TransformCollectionWithSelect<T, TSlug, TSelect>>> {
 	const response = await sdk.request({
 		args: options,

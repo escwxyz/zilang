@@ -67,7 +67,7 @@ export async function update<
 >(
 	sdk: PayloadSDK<T>,
 	options: UpdateOptions<T, TSlug, TSelect>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<
 	| BulkOperationResult<T, TSlug, TSelect>
 	| TransformCollectionWithSelect<T, TSlug, TSelect>

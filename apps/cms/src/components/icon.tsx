@@ -15,19 +15,19 @@ export const IconPreview: React.FC<{ name: string }> = React.memo(
 
 		return (
 			<Image
-				src={src}
 				alt={name}
-				width={20}
+				className="mr-2 h-4 w-4 flex-shrink-0 dark:invert"
 				height={20}
 				loading="lazy"
-				className="w-4 h-4 mr-2 flex-shrink-0 dark:invert"
 				onError={(e) => {
 					e.currentTarget.style.display = "none";
 				}}
+				src={src}
 				unoptimized
+				width={20}
 			/>
 		);
-	},
+	}
 );
 
 IconPreview.displayName = "IconPreview";
@@ -41,7 +41,7 @@ interface CustomOptionProps {
 const CustomOption = ({ data, innerProps, isSelected }: CustomOptionProps) => (
 	<div
 		{...innerProps}
-		className={`cursor-pointer flex items-center p-2 hover:bg-accent-500 ${isSelected ? "bg-accent-500" : ""}`}
+		className={`flex cursor-pointer items-center p-2 hover:bg-accent-500 ${isSelected ? "bg-accent-500" : ""}`}
 	>
 		<IconPreview name={data.value} />
 		{data.label}
@@ -49,7 +49,7 @@ const CustomOption = ({ data, innerProps, isSelected }: CustomOptionProps) => (
 );
 
 const SingleValue = ({ data }: { data: { value: string; label: string } }) => (
-	<div className="flex items-center absolute">
+	<div className="absolute flex items-center">
 		<IconPreview name={data.value} />
 		{data.label}
 	</div>
@@ -65,10 +65,12 @@ type RowProps = {
 
 const Row = React.memo(({ index, style, data }: RowProps) => {
 	const child = data[index];
-	if (!child) return null;
+	if (!child) {
+		return null;
+	}
 
 	return (
-		<div style={style} key={(child as React.ReactElement).key}>
+		<div key={(child as React.ReactElement).key} style={style}>
 			{child}
 		</div>
 	);
@@ -91,9 +93,9 @@ const VirtualMenuList = ({
 		<List
 			height={listHeight}
 			itemCount={itemCount}
+			itemData={items}
 			itemSize={ITEM_HEIGHT}
 			width="100%"
-			itemData={items}
 		>
 			{Row}
 		</List>
@@ -108,7 +110,7 @@ const reactSelectComponents = {
 
 const IconComponent: SelectFieldClientComponent = ({ field, path }) => {
 	const { label, admin, hasMany = false } = field;
-	const { value, setValue } = useField({ path: path });
+	const { value, setValue } = useField({ path });
 	const placeholder =
 		typeof admin?.placeholder === "function"
 			? admin?.placeholder(field)
@@ -128,7 +130,7 @@ const IconComponent: SelectFieldClientComponent = ({ field, path }) => {
 		(selected: Option | null) => {
 			setValue(selected ? selected.value : null);
 		},
-		[setValue],
+		[setValue]
 	);
 
 	return (
@@ -143,15 +145,15 @@ const IconComponent: SelectFieldClientComponent = ({ field, path }) => {
 			</div>
 
 			<ReactSelect
-				value={currentOption}
-				placeholder={placeholder}
-				onChange={(opt) => handleChange(opt as Option | null)}
-				isClearable={isClearable}
-				options={options}
-				components={reactSelectComponents}
 				className={className}
+				components={reactSelectComponents}
+				isClearable={isClearable}
 				isCreatable={false}
 				isMulti={hasMany}
+				onChange={(opt) => handleChange(opt as Option | null)}
+				options={options}
+				placeholder={placeholder}
+				value={currentOption}
 			/>
 		</div>
 	);

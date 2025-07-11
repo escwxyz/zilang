@@ -56,7 +56,7 @@ export async function deleteOperation<
 >(
 	sdk: PayloadSDK<T>,
 	options: DeleteOptions<T, TSlug, TSelect>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<
 	| BulkOperationResult<T, TSlug, TSelect>
 	| TransformCollectionWithSelect<T, TSlug, TSelect>

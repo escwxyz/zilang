@@ -26,7 +26,7 @@ export async function restoreVersion<
 >(
 	sdk: PayloadSDK<T>,
 	options: RestoreVersionByIDOptions<T, TSlug>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<DataFromCollectionSlug<T, TSlug>> {
 	const response = await sdk.request({
 		args: options,

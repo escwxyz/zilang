@@ -31,7 +31,7 @@ export async function findGlobal<
 >(
 	sdk: PayloadSDK<T>,
 	options: FindGlobalOptions<T, TSlug, TSelect>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<TransformGlobalWithSelect<T, TSlug, TSelect>> {
 	const response = await sdk.request({
 		args: options,

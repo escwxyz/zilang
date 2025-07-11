@@ -36,7 +36,7 @@ export async function findByID<
 >(
 	sdk: PayloadSDK<T>,
 	options: FindByIDOptions<T, TSlug, TDisableErrors, TSelect>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<
 	ApplyDisableErrors<
 		TransformCollectionWithSelect<T, TSlug, TSelect>,
@@ -63,7 +63,7 @@ export async function findByID<
 		}
 
 		throw new Error(
-			`Error retrieving the document ${options.collection}/${options.id}`,
+			`Error retrieving the document ${options.collection}/${options.id}`
 		);
 	}
 }

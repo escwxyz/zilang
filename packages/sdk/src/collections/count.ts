@@ -22,7 +22,7 @@ export async function count<
 >(
 	sdk: PayloadSDK<T>,
 	options: CountOptions<T, TSlug>,
-	init?: RequestInit,
+	init?: RequestInit
 ): Promise<{ totalDocs: number }> {
 	const response = await sdk.request({
 		args: options,
